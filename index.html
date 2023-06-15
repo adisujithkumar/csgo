@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>awpy &mdash; awpy 1.2.3 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            awpy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Example Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License and Acknowledgments</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">awpy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">awpy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="awpy">
+<h1>awpy<a class="headerlink" href="#awpy" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="https://discord.gg/W34XjsSs2H"><img alt="Discord" src="https://img.shields.io/discord/868146581419999232?color=blue&amp;label=Discord&amp;logo=discord" /></a> <a class="reference external" href="https://github.com/pnxenopoulos/awpy"><img alt="Github" src="https://img.shields.io/badge/github-repo-yellowgreen" /></a> <a class="reference external" href="https://github.com/pnxenopoulos/awpy/actions/workflows/build.yml"><img alt="Build" src="https://github.com/pnxenopoulos/awpy/actions/workflows/build.yml/badge.svg" /></a> <a class="reference external" href="https://github.com/pnxenopoulos/awpy/blob/main/LICENSE"><img alt="Licence" src="https://img.shields.io/badge/license-MIT-lightgrey" /></a></p>
+<p><cite>awpy</cite> allows a user to parse, analyze and visualize Counter-Strike: Global Offensive (CSGO) demo files. You can visit the <a class="reference external" href="https://github.com/pnxenopoulos/awpy">repository</a> to view the source code, examples and data. Please join the <a class="reference external" href="https://discord.gg/W34XjsSs2H">Discord</a> server if you would like to join our esports analytics community or to receive help with the library. To install the library, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">awpy</span></code> (Python &gt;= 3.9).</p>
+<p>Using this library to parse CSGO demos is as easy as the few lines of code shown below. To see what output looks like, check out <a class="reference internal" href="parser_output.html"><span class="doc">Example Parser JSON</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">awpy.parser</span> <span class="kn">import</span> <span class="n">DemoParser</span>
+
+<span class="c1"># Set the parse_rate equal to the tick rate at which you would like to parse the frames of the demo.</span>
+<span class="c1"># This parameter only matters if parse_frames=True</span>
+<span class="c1"># For reference, MM demos are usually 64 ticks, and pro/FACEIT demos are usually 128 ticks.</span>
+<span class="n">demo_parser</span> <span class="o">=</span> <span class="n">DemoParser</span><span class="p">(</span><span class="n">demofile</span><span class="o">=</span><span class="s2">&quot;og-vs-natus-vincere-m1-dust2.dem&quot;</span><span class="p">,</span>
+                         <span class="n">demo_id</span><span class="o">=</span><span class="s2">&quot;og-vs-natus-vincere&quot;</span><span class="p">,</span>
+                         <span class="n">parse_frames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                         <span class="n">parse_rate</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+
+
+<span class="c1"># Parse the demofile, output results to dictionary with df name as key</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">demo_parser</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+
+
+<span class="c1"># There are a variety of top level keys</span>
+<span class="c1"># You can view game rounds and events in &#39;gameRounds&#39;]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;matchID&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;clientName&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;mapName&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;tickRate&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;playbackTicks&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;playbackFramesCount&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;parsedToFrameIdx&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;parserParameters&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;serverVars&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;matchPhases&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;matchmakingRanks&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;playerConnections&quot;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span><span class="s2">&quot;gameRounds&quot;</span><span class="p">]</span> <span class="c1"># From this value, you can extract player events via: data[&#39;gameRounds&#39;][i][&#39;kills&#39;], etc.</span>
+
+<span class="c1"># You can also parse the data into dataframes using</span>
+<span class="n">data_df</span> <span class="o">=</span> <span class="n">demo_parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">return_type</span><span class="o">=</span><span class="s2">&quot;df&quot;</span><span class="p">)</span>
+
+<span class="c1"># The parser also writes a JSON file of the output named demo_id.json</span>
+</pre></div>
+</div>
+<section id="using-awpy">
+<h2>Using awpy<a class="headerlink" href="#using-awpy" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt><a class="reference internal" href="installation.html"><span class="doc">Installation</span></a></dt><dd><p>How to install <cite>awpy</cite>.</p>
+</dd>
+<dt><a class="reference internal" href="examples.html"><span class="doc">Example Notebooks</span></a></dt><dd><p>Examples code and Jupyter notebooks to help get you started.</p>
+</dd>
+<dt><a class="reference internal" href="projects.html"><span class="doc">Projects</span></a></dt><dd><p>Projects that use <cite>awpy</cite>.</p>
+</dd>
+<dt><a class="reference internal" href="faq.html"><span class="doc">Frequently Asked Questions (FAQs)</span></a></dt><dd><p>Need help? Check the FAQs first.</p>
+</dd>
+<dt><a class="reference internal" href="license.html"><span class="doc">License and Acknowledgments</span></a></dt><dd><p>License and acknowledgments.</p>
+</dd>
+</dl>
+</section>
+<section id="awpy-modules">
+<h2>awpy Modules<a class="headerlink" href="#awpy-modules" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt><a class="reference internal" href="analytics.html"><span class="doc">Analytics</span></a></dt><dd><p>Analytics module.</p>
+</dd>
+<dt><a class="reference internal" href="data.html"><span class="doc">Data</span></a></dt><dd><p>Data module.</p>
+</dd>
+<dt><a class="reference internal" href="parser.html"><span class="doc">Parser</span></a></dt><dd><p>Parsing module.</p>
+</dd>
+<dt><a class="reference internal" href="visualization.html"><span class="doc">Visualization</span></a></dt><dd><p>Visualization module.</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Peter Xenopoulos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
