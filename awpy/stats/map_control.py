@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import TypeAlias
+from collections import defaultdict
 
 # Type to represent tile id for navigation tiles.
 TileId: TypeAlias = int
@@ -40,6 +41,8 @@ class FrameMapControlTileValues:
     ct_values: TeamMapControlTileValues
 
 ### Core Functions
+# TODO
+
 def get_frame_map_control_tile_values(map_name: str, frame: Frame) -> FrameMapControlTileValues:
     """Get FrameMapControlTileValues object for a given frame."""
     # Get player positions for all alive players for each side
@@ -50,6 +53,7 @@ def get_frame_map_control_tile_values(map_name: str, frame: Frame) -> FrameMapCo
     # Return FrameMapControlTileValues object with above data
     return NotImplementedError("")
 
+# TODO
 def get_map_control_frame_metric(map_name: str, frame: Frame) -> MapControlFrameMetric:
     """Get MapControlFrameMetric for given frame."""
     # Get FrameMapControlTileValues objects for tiles
@@ -61,6 +65,7 @@ def get_map_control_frame_metric(map_name: str, frame: Frame) -> MapControlFrame
     # Return MapControlFrameMetric
     return NotImplementedError("")
 
+# TODO
 def get_round_map_control_frame_metrics(map_name: str, _round: Round) -> list[MapControlFrameMetric]:
     """Get MapControlFrameMetric objects for each frame in a given round."""
     # Initialize an empty list
@@ -74,6 +79,7 @@ def get_round_map_control_frame_metrics(map_name: str, _round: Round) -> list[Ma
     return NotImplementedError("")
 
 ### Helper Functions
+# TODO
 def _positions_to_map_control_values(player_positions: list[tuple[float]], map_name: str) -> TeamMapControlTileValues:
     """Given list of player positions return TeamMapControlTileValues object."""
     # Convert each passed in player position into NavArea area_id
@@ -84,27 +90,86 @@ def _positions_to_map_control_values(player_positions: list[tuple[float]], map_n
     # Return TeamMapControlTileValues object with above data
     return NotImplementedError("")
 
+def combine_two_TeamMapControlTileValues(dict1, dict2):
+    combined = {}
+
+    # Add entries from dict1
+    for key, val in dict1.items():
+        combined[key] = val.copy()
+    
+    # Merge with dict2
+    for key, val in dict2.items():
+        if key in combined:
+            combined[key].extend(val)
+        else:
+            combined[key] = val.copy()
+    return combined
+
 def _bfs(source_tiles: list[TileId], map_name: str) -> TeamMapControlTileValues:
     """Given list of TileIds return TeamMapControlTileValues object."""
     # Initialize TeamMapControlTileValues return object (defaultdict with list)
+    returnTeamMapControlTileValues = defaultdict(list)
 
-    # Iterate through each source_tile provided and perform bfs with depth 10
+    map_dataawpy.nav.Nav.from_json(path=f"../../tests/{map_name}.json")
+    map_areas = map_data['areas']
+    
+    all_tile_mc_values = dict()
+    for tile in source_tiles:
+        tile_MC_values = _bfs_helper(tile)
+        all_tile_mc_values = combine_two_TeamMapControlTileValues(all_tile_mc_values, tile_MC_values)
+        
+    return all_tile_mc_values
 
-        # Each tile gets the value (10 - steps)/10 appended to its list in TeamMapControlTileValues object when the tile is reached.
-        # This above value is an example of MapControlTileValue.
+def _bfs_helper(source_tile: TileId) -> TeamMapControlTileValues:
+    seen = set()
+    returnPlayerMapControlTileValues = defaultdict(list)
 
-    # Return TeamMapControlTileValues object
-    return NotImplementedError("")
+    tileStack = [{"tileId": source_tile, "mcValue": 1, "lengthFromSource": 0}]
 
+    while len(tileStack) > 0:
+        currTile = tileStack.pop(0)
+        currLength, nextlength = currTile["lengthFromSource"], currTile["lengthFromSource"] + 1
+        currTileId = currTile['tileId']
+
+        if currLength > 10:
+            continue
+
+        if not currTileId in seen:
+            
+        returnPlayerMapControlTileValues[currTile["tileId"]].append(currTile['mcValue'])
+        seen.add(currTile["tileId"])
+
+        currTileNeighbors = set(getNeighbors(currTile['tileId']))
+        notSeenNeighbors = currTileNeighbors - seen
+        for neighbor in notSeenNeighbors:
+            tileStack.append({"tileId": neighbor.id, "mcValue": (10 - nextlength)/10, "lengthFromSource": nextlength})
+
+    return returnPlayerMapControlTileValues
+# TODO
+def _get_polygon_area(xy: list[list[float]]):
+    if len(coordinates) == 4:
+        xy[0]p1]
+         |(x₁y₂ + x₂y₃ + x₃y₄ + x₄y₁) - (x₂y₁ + x₃y₂ + x₄y₃ + x₁y₄)|
+
+    elif len(coordinates) == 3:
+
+# TODO
 def _calculate_map_control_frame_metric(map_control_values: FrameMapControlTileValues, map_name:str) -> MapControlFrameMetric:
     """Calculate MapControlFrameMetrics for given FrameMapControlTileValues object."""
     # Get a Map Control Tile Metric for each relevant tile
-    # Call _generate_FrameMapControlTileMetrics_object()
+    frame_mc_tile_metrics = _generate_FrameMapControlTileMetrics_object()
 
     # Calculate a weighted average for the list of map control metrics where the weights is the area of the tiles
-
+    map_dataawpy.nav.Nav.from_json(path=f"../../tests/{map_name}.json")
+    map_areas = map_data['areas']
+    total_area = 0
+    weighted_metric = 0
+    for tile in frame_mc_tile_metrics.keys():
+        tile_area = _get_polygon_area(map_areas.areas[tile].points)
+        weighted_metric += tile_area * frame_mc_tile_metrics[tile]
+        total_area += tile_area
     # Return weighted average as frame map control metric
-    return NotImplementedError("")
+    return weighted_metric / total_area
 
 def _generate_FrameMapControlTileMetrics_object(map_control_values: FrameMapControlTileValues) -> FrameMapControlTileMetrics:
     """Generate FrameMapControlTileMetrics object from FrameMapControlTileValues object.
@@ -115,10 +180,13 @@ def _generate_FrameMapControlTileMetrics_object(map_control_values: FrameMapCont
     For each tile, a map control metric is calculated with the below equation:
     sum(CT_values_for_tile) / (sum(CT_values_for_tile) + sum(T_values_for_tile))
     """
-    # Initialize defaultdict(float) object
+    tile_map_control_metrics = dict()
 
-    # Iterate through all tiles and calculate map control metric with above equation
-    # Save map control metric for TileId in FrameMapControlTileMetrics object
+    all_tiles = set(map_control_values.t.keys() + map_control_values.ct.keys())
+    for tile in all_tiles:
+        ct_value = sum(map_control_values.ct.get(tile, [])
+        t_value = sum(map_control_values.t.get(tile, [])
 
-    # Return FrameMapControlTileMetrics object
-    return NotImplementedError("")
+        all_tiles[tile] = ct_value / (t_value + ct_value)
+
+    return all_tiles
