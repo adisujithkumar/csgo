@@ -25,7 +25,6 @@ def game_to_pixel_axis(map_name: str, position: float, axis: Literal["x", "y"]) 
     if axis not in ["x", "y"]:
         msg = f"'axis' has to be 'x' or 'y', not {axis}"
         raise ValueError(msg)
-    print(awpy.data.map_data.MAP_DATA.keys())
     start = awpy.data.map_data.MAP_DATA[map_name]["pos_" + axis]
     scale = awpy.data.map_data.MAP_DATA[map_name]["scale"]
 

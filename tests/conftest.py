@@ -3,10 +3,12 @@
 import json
 import os
 import pathlib
+import shutil
 
 import pytest
 import requests
 
+import awpy.data
 import awpy.demo
 
 
@@ -19,6 +21,22 @@ def setup():  # noqa: ANN201
         path = pathlib.Path(f"tests/{file_id}{test_data[file_id]['extension']}")
         if not path.exists():
             _get_test_file(url=test_data[file_id]["url"], path=path)
+
+
+@pytest.fixture(scope="session", autouse=True)
+def setup_nav_data():  # noqa: ANN201
+    """Sets up nav data for map control tests by copying de_dust2.json to NAVS_DIR."""
+    source_path = pathlib.Path("tests/de_dust2.json")
+    if not source_path.exists():
+        return
+
+    # Ensure the NAVS_DIR exists
+    awpy.data.NAVS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Copy de_dust2.json to NAVS_DIR if it doesn't exist
+    dest_path = awpy.data.NAVS_DIR / "de_dust2.json"
+    if not dest_path.exists():
+        shutil.copy(source_path, dest_path)
 
 
 @pytest.fixture(scope="session", autouse=True)

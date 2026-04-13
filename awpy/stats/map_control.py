@@ -4,6 +4,39 @@ from collections import defaultdict
 
 import polars as pl
 import awpy
+import awpy.data
+import awpy.nav
+
+# Module-level nav mesh cache to avoid repeated disk I/O.
+_nav_cache: dict[str, awpy.nav.Nav] = {}
+
+
+def _get_nav(map_name: str) -> awpy.nav.Nav:
+    """Get Nav object for map, using module-level cache.
+
+    Args:
+        map_name: Name of the map (e.g. "de_dust2").
+
+    Returns:
+        Parsed Nav object.
+
+    Raises:
+        FileNotFoundError: If the navigation JSON file does not exist.
+    """
+    if map_name not in _nav_cache:
+        nav_file_path = awpy.data.NAVS_DIR / f"{map_name}.json"
+        if not nav_file_path.exists():
+            msg = f"Navigation file not found: {nav_file_path}"
+            raise FileNotFoundError(msg)
+        _nav_cache[map_name] = awpy.nav.Nav.from_json(path=nav_file_path)
+    return _nav_cache[map_name]
+
+
+def clear_nav_cache() -> None:
+    """Clear the nav mesh cache. Useful for testing or freeing memory."""
+    _nav_cache.clear()
+
+
 # Type to represent tile id for navigation tiles.
 TileId: TypeAlias = int
 
@@ -45,9 +78,23 @@ class FrameMapControlTileValues:
 ### Core Functions
 def get_tick_map_control_tile_values(map_name: str, tick: pl.dataframe.frame.DataFrame) -> FrameMapControlTileValues:
     """Get FrameMapControlTileValues object for a given frame."""
+    # Validate inputs
+    if not map_name:
+        msg = "map_name cannot be empty"
+        raise ValueError(msg)
+    if tick.is_empty():
+        msg = "tick DataFrame cannot be empty"
+        raise ValueError(msg)
+
     # Get player positions for all alive players for each side
-    t_alive_players = tick.filter(((pl.col("health") + pl.col("armor")) > 0) & (pl.col("side") == "t"))
-    ct_alive_players = tick.filter(((pl.col("health") + pl.col("armor")) > 0) & (pl.col("side") == "ct"))
+    # Note: Some demo data doesn't have 'armor' column, so we check if it exists
+    if "armor" in tick.columns:
+        t_alive_players = tick.filter(((pl.col("health") + pl.col("armor")) > 0) & (pl.col("side") == "t"))
+        ct_alive_players = tick.filter(((pl.col("health") + pl.col("armor")) > 0) & (pl.col("side") == "ct"))
+    else:
+        # Fallback: use only health for alive check
+        t_alive_players = tick.filter((pl.col("health") > 0) & (pl.col("side") == "t"))
+        ct_alive_players = tick.filter((pl.col("health") > 0) & (pl.col("side") == "ct"))
 
     xyz_tuples_t = list(zip(t_alive_players['X'], t_alive_players['Y'], t_alive_players['Z']))
     xyz_tuples_ct = list(zip(ct_alive_players['X'], ct_alive_players['Y'], ct_alive_players['Z']))
@@ -57,7 +104,7 @@ def get_tick_map_control_tile_values(map_name: str, tick: pl.dataframe.frame.Dat
     tick_mc_tile_values_ct = _positions_to_map_control_values(map_name, xyz_tuples_ct)
 
     # Return FrameMapControlTileValues object with above data
-    return {"t_values": tick_mc_tile_values_t, "ct_values": tick_mc_tile_values_ct}
+    return FrameMapControlTileValues(t_values=tick_mc_tile_values_t, ct_values=tick_mc_tile_values_ct)
 
 def get_map_control_tick_metric(map_name: str, tick: pl.dataframe.frame.DataFrame) -> MapControlFrameMetric:
     """Get MapControlFrameMetric for given frame."""
@@ -88,18 +135,18 @@ def get_round_map_control_frame_metrics(map_name: str, _round: pl.dataframe.fram
 ### Helper Functions
 def _positions_to_map_control_values(map_name: str, player_positions: list[tuple[float]]) -> TeamMapControlTileValues:
     """Given list of player positions return TeamMapControlTileValues object."""
+    # Handle empty player positions
+    if not player_positions:
+        return defaultdict(list)
+
+    # Load nav data (cached)
+    map_data = _get_nav(map_name)
+
     # Convert each passed in player position into NavArea area_id
-    map_data = awpy.nav.Nav.from_json(path=f"/mnt/d/projects/fps/awpy/csgo/tests/{map_name}.json")
-    #print(f"_positions_to_map_control_values called with {map_name} and {player_positions}")
     player_tiles = [find_closest_area(i, map_data) for i in player_positions]
 
-    #print(f"Calculated player tiles are {player_tiles}")
-
     # Get map control values for each player's current tile
-    #returnTeamMapControlTileValues = defaultdict(list)
-    #for player_tile in player_tiles:
     team_MC_values = _bfs(player_tiles, map_name)
-       #returnTeamMapControlTileValues = combine_two_TeamMapControlTileValues(returnTeamMapControlTileValues, player_MC_values)
 
     # Return TeamMapControlTileValues object with above data
     return team_MC_values
@@ -122,12 +169,10 @@ def combine_two_TeamMapControlTileValues(dict1, dict2):
 def _bfs(source_tiles: list[TileId], map_name: str) -> TeamMapControlTileValues:
     """Given list of TileIds return TeamMapControlTileValues object."""
     # Initialize TeamMapControlTileValues return object (defaultdict with list)
-    #print(f"_bfs called with {source_tiles}")
     returnTeamMapControlTileValues = defaultdict(list)
 
-    map_data = awpy.nav.Nav.from_json(path=f"../../tests/{map_name}.json")
+    map_data = _get_nav(map_name)
     map_areas = map_data.areas
-    #print(f"Map areas found for {map_name}. There are {len(map_areas)} areas on the map!")
 
     for tile in source_tiles:
         tile_MC_values = _bfs_helper(tile, map_areas)
@@ -136,15 +181,12 @@ def _bfs(source_tiles: list[TileId], map_name: str) -> TeamMapControlTileValues:
     return returnTeamMapControlTileValues
 
 def _bfs_helper(source_tile: TileId, area_info: dict) -> TeamMapControlTileValues:
-
-    #print(f"_bfs_helper called with {source_tile}")
     seen = set()
     returnPlayerMapControlTileValues = defaultdict(list)
 
     tileStack = [{"tileId": source_tile, "mcValue": 1, "lengthFromSource": 0}]
 
     while len(tileStack) > 0:
-        #print(f"Length of stack is {len(tileStack)} and the top element is {tileStack[0]}")
         currTile = tileStack.pop(0)
         currLength, nextlength = currTile["lengthFromSource"], currTile["lengthFromSource"] + 1
         currTileId = currTile['tileId']
@@ -157,7 +199,6 @@ def _bfs_helper(source_tile: TileId, area_info: dict) -> TeamMapControlTileValue
 
         currTileNeighbors = set(area_info[currTileId].connections)
         notSeenNeighbors = currTileNeighbors - seen
-        #print(f"{len(notSeenNeighbors)} neighbors have been added to the stack")
         for neighbor in notSeenNeighbors:
             tileStack.append({"tileId": neighbor, "mcValue": (10 - nextlength)/10, "lengthFromSource": nextlength})
 
@@ -193,8 +234,18 @@ def _calculate_map_control_frame_metric(map_control_values: FrameMapControlTileV
     # Get a Map Control Tile Metric for each relevant tile
     frame_mc_tile_metrics = _generate_FrameMapControlTileMetrics_object(map_control_values)
 
+    # Handle edge case: no tiles have values (e.g., all players dead)
+    if not frame_mc_tile_metrics:
+        has_t = bool(map_control_values.t_values)
+        has_ct = bool(map_control_values.ct_values)
+        if has_ct and not has_t:
+            return 1.0  # Only CT alive → full CT control
+        if has_t and not has_ct:
+            return 0.0  # Only T alive → full T control
+        return 0.5  # Both dead or both empty → neutral
+
     # Calculate a weighted average for the list of map control metrics where the weights is the area of the tiles
-    map_data = awpy.nav.Nav.from_json(path=f"../../tests/{map_name}.json")
+    map_data = _get_nav(map_name)
     map_areas = map_data.areas
     total_area = 0
     weighted_metric = 0
@@ -216,15 +267,16 @@ def _generate_FrameMapControlTileMetrics_object(map_control_values: FrameMapCont
     """
     tile_map_control_metrics = dict()
 
-    all_tiles = set(list(map_control_values['t_values'].keys()) + list(map_control_values['ct_values'].keys()))
-    #print(map_control_values)
+    all_tiles = set(list(map_control_values.t_values.keys()) + list(map_control_values.ct_values.keys()))
     for tile in all_tiles:
-        #print(tile, ct_value, t_value)
-        ct_value = sum(map_control_values['ct_values'].get(tile, []))
-        t_value = sum(map_control_values['t_values'].get(tile, []))
-        #print(tile, ct_value, t_value)
+        ct_value = sum(map_control_values.ct_values.get(tile, []))
+        t_value = sum(map_control_values.t_values.get(tile, []))
 
-        tile_map_control_metrics[tile] = ct_value / (t_value + ct_value)
+        total = t_value + ct_value
+        if total == 0:
+            continue
+
+        tile_map_control_metrics[tile] = ct_value / total
 
     return tile_map_control_metrics
 
