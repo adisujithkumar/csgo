@@ -56,6 +56,9 @@ from tqdm import tqdm
 # Constants
 # ---------------------------------------------------------------------------
 
+# Bump this when the tick schema changes so we can distinguish runs in parsed_demos.
+SCHEMA_VERSION = "v2"  # v2 = 29-col ticks (adds weapon_name, pitch, is_walking, duck_amount, spotted)
+
 TICK_SAMPLE_INTERVAL = 16  # Sample every 16th tick (4 per second at 64-tick)
 KNOWN_BAD_DEMOS = frozenset(
     {
@@ -79,7 +82,39 @@ KNOWN_MAPS: tuple[str, ...] = (
     "de_cobblestone",
 )
 
-# Columns we always want from demo.ticks after parse()
+# Extra player props to request from demoparser2 beyond the hardcoded minimum.
+# Note: "armor_value" is requested but demoparser2 returns it as "armor".
+# World-state props (is_bomb_planted, which_bomb_zone, game_time) are broadcast
+# to every player row at the same tick — that's fine for our schema.
+EXTRA_PLAYER_PROPS = [
+    # Economy
+    "armor_value",           # returned as column "armor"
+    "current_equip_value",
+    "has_defuser",
+    "has_helmet",
+    # Active weapon — essential for conical BFS weapon-class routing
+    # Returns human-readable name e.g. "AK-47", "AWP", "M4A1-S", "Glock-18"
+    "weapon_name",
+    # Movement
+    "velocity_X",
+    "velocity_Y",
+    "velocity_Z",
+    "yaw",
+    "pitch",               # vertical aim angle (-90 to +90)
+    # Player state
+    "flash_duration",
+    "zoom_lvl",
+    "is_walking",          # bool: silent-walk key held
+    "duck_amount",         # float 0-1: crouch depth
+    "spotted",             # bool: at least one enemy has LOS on this player
+    # World state (same value for all players at each tick)
+    "is_bomb_planted",
+    "which_bomb_zone",
+    "game_time",
+]
+
+# Columns we keep from demo.ticks after parse().
+# "armor" is the actual column name demoparser2 uses (despite requesting "armor_value").
 TICK_KEEP_COLUMNS = [
     "tick",
     "steamid",
@@ -90,7 +125,30 @@ TICK_KEEP_COLUMNS = [
     "Y",
     "Z",
     "health",
+    "armor",
     "place",
+    # Economy
+    "current_equip_value",
+    "has_defuser",
+    "has_helmet",
+    # Active weapon
+    "weapon_name",
+    # Movement
+    "velocity_X",
+    "velocity_Y",
+    "velocity_Z",
+    "yaw",
+    "pitch",
+    # Player state
+    "flash_duration",
+    "zoom_lvl",
+    "is_walking",
+    "duck_amount",
+    "spotted",
+    # World state
+    "is_bomb_planted",
+    "which_bomb_zone",
+    "game_time",
 ]
 
 # Per-match parquet tables (one file per match_id per table).
@@ -103,6 +161,9 @@ PER_MATCH_TABLES: tuple[str, ...] = (
     "infernos",
     "grenades",
     "shots",
+    "player_economy",
+    "flashes",
+    "he_grenades",
 )
 
 # ---------------------------------------------------------------------------
@@ -129,7 +190,9 @@ class PipelineConfig:
     skip_grenades: bool = False
     skip_damages: bool = False
     skip_shots: bool = False
+    skip_economy: bool = False
     map_filter: frozenset[str] = field(default_factory=frozenset)
+    delete_source: bool = False  # Delete RAR after successful parse (saves disk)
 
     @property
     def min_events(self) -> list[str]:
@@ -143,6 +206,8 @@ class PipelineConfig:
           - bomb_dropped, bomb_planted, bomb_defused, bomb_exploded
           - player_death (required for kills table)
           - smokegrenade_{detonate,expired}, inferno_{startburn,expire}
+        flashbang_detonate and hegrenade_detonate are always included:
+          they're cheap and used for the flashes / he_grenades tables.
         """
         events = [
             "round_freeze_end",
@@ -160,7 +225,7 @@ class PipelineConfig:
             "smokegrenade_expired",
             "inferno_startburn",
             "inferno_expire",
-            # Always include flashbang/hegrenade detonate as they're cheap.
+            # Always parse flash/HE — cheap events, needed for utility tables.
             "flashbang_detonate",
             "hegrenade_detonate",
         ]
@@ -288,6 +353,186 @@ def _available_columns(df: pl.DataFrame, wanted: list[str]) -> list[str]:
     return [c for c in wanted if c in existing]
 
 
+# ---------------------------------------------------------------------------
+# Economy / utility event parsers
+# ---------------------------------------------------------------------------
+
+
+def _assign_round_num(df: pl.DataFrame, rounds_df: pl.DataFrame) -> pl.DataFrame:
+    """Add a round_num column to an event DataFrame by tick-range lookup.
+
+    Uses an asof-join (backward): for each event tick, finds the round whose
+    start tick is the largest that is still <= the event tick, then discards
+    rows where the tick exceeds that round's official_end.
+    """
+    if df.is_empty() or rounds_df.is_empty():
+        return df
+
+    rounds_slim = (
+        rounds_df.select(["round_num", "start", "official_end"])
+        .sort("start")
+        .rename({"start": "tick"})
+    )
+
+    merged = df.sort("tick").join_asof(rounds_slim, on="tick", strategy="backward")
+    # Drop ticks that fall after round's official end (e.g. warmup spill-over).
+    if "official_end" in merged.columns:
+        merged = merged.filter(
+            pl.col("official_end").is_null() | (pl.col("tick") <= pl.col("official_end"))
+        ).drop("official_end")
+
+    return merged
+
+
+def parse_player_economy(
+    ticks_raw: pl.DataFrame,
+    rounds_df: pl.DataFrame,
+) -> pl.DataFrame:
+    """Extract per-player economy snapshot at round-start (freeze_end tick).
+
+    For each round, takes the first in-play tick at or after freeze_end and
+    records each player's equipment value, armor, utility flags, and a derived
+    buy_type classification.  Also adds team-level aggregate equip value.
+
+    Returns one row per player per round.
+    """
+    if ticks_raw.is_empty() or rounds_df.is_empty():
+        return pl.DataFrame()
+
+    economy_cols_wanted = [
+        "tick", "round_num", "steamid", "name", "side",
+        "current_equip_value", "armor", "has_defuser", "has_helmet",
+    ]
+    available = [c for c in economy_cols_wanted if c in ticks_raw.columns]
+    if "current_equip_value" not in available:
+        return pl.DataFrame()
+
+    snapshots: list[pl.DataFrame] = []
+    for row in rounds_df.iter_rows(named=True):
+        round_num = row["round_num"]
+        freeze_end = row.get("freeze_end")
+        if freeze_end is None:
+            continue
+
+        round_ticks = ticks_raw.filter(
+            (pl.col("round_num") == round_num) & (pl.col("tick") >= freeze_end)
+        )
+        if round_ticks.is_empty():
+            continue
+
+        # First tick at or after freeze_end; alive players only.
+        first_tick = round_ticks["tick"].min()
+        snapshot = round_ticks.filter(
+            (pl.col("tick") == first_tick) & (pl.col("health") > 0)
+        ).select([c for c in available if c in round_ticks.columns])
+
+        snapshots.append(snapshot)
+
+    if not snapshots:
+        return pl.DataFrame()
+
+    economy_df = pl.concat(snapshots)
+
+    # Buy-type classification (standard competitive thresholds in CS2 dollars).
+    if "current_equip_value" in economy_df.columns:
+        economy_df = economy_df.with_columns(
+            pl.when(pl.col("current_equip_value") >= 4000).then(pl.lit("full_buy"))
+            .when(pl.col("current_equip_value") >= 2000).then(pl.lit("half_buy"))
+            .when(pl.col("current_equip_value") >= 500).then(pl.lit("eco"))
+            .otherwise(pl.lit("save"))
+            .alias("buy_type")
+        )
+
+        # Team-level aggregate (sum of equip values per side per round).
+        team_equip = (
+            economy_df
+            .group_by(["round_num", "side"])
+            .agg(pl.col("current_equip_value").sum().alias("team_equip_value"))
+        )
+        economy_df = economy_df.join(team_equip, on=["round_num", "side"], how="left")
+
+    # Drop the tick column — it's an implementation detail, not useful downstream.
+    if "tick" in economy_df.columns:
+        economy_df = economy_df.drop("tick")
+
+    return economy_df
+
+
+def _parse_utility_event(
+    events: dict[str, pl.DataFrame],
+    event_key: str,
+    rounds_df: pl.DataFrame,
+    keep_cols: list[str],
+) -> pl.DataFrame:
+    """Generic parser for grenade-detonation events (flash / HE).
+
+    Selects a cleaned subset of columns, adds round_num via tick-range join,
+    and renames the thrower columns for a consistent schema.
+
+    Event column layout (from demoparser2):
+      x, y, z          — detonation world position
+      tick             — game tick
+      user_steamid     — thrower Steam ID
+      user_name        — thrower name
+      user_side        — thrower side (ct/t)
+      user_X/Y/Z       — thrower world position at throw
+    """
+    ev_df = events.get(event_key)
+    if ev_df is None or ev_df.is_empty():
+        return pl.DataFrame()
+
+    # Standardise column names for the detonation position.
+    rename_map: dict[str, str] = {}
+    for src, dst in [("x", "det_X"), ("y", "det_Y"), ("z", "det_Z")]:
+        if src in ev_df.columns:
+            rename_map[src] = dst
+    if rename_map:
+        ev_df = ev_df.rename(rename_map)
+
+    # Ensure all requested columns exist before selecting.
+    available_keep = [c for c in keep_cols if c in ev_df.columns]
+    ev_df = ev_df.select(available_keep)
+
+    if rounds_df.is_empty():
+        return ev_df
+
+    ev_df = _assign_round_num(ev_df, rounds_df)
+    return ev_df
+
+
+_FLASH_COLS = [
+    "tick",
+    "det_X", "det_Y", "det_Z",
+    "user_steamid", "user_name", "user_side",
+    "user_X", "user_Y", "user_Z",
+    "is_bomb_planted",
+]
+
+_HE_COLS = [
+    "tick",
+    "det_X", "det_Y", "det_Z",
+    "user_steamid", "user_name", "user_side",
+    "user_X", "user_Y", "user_Z",
+    "is_bomb_planted",
+]
+
+
+def parse_flashes(
+    events: dict[str, pl.DataFrame],
+    rounds_df: pl.DataFrame,
+) -> pl.DataFrame:
+    """Parse flashbang detonation events into a clean table."""
+    return _parse_utility_event(events, "flashbang_detonate", rounds_df, _FLASH_COLS)
+
+
+def parse_he_grenades(
+    events: dict[str, pl.DataFrame],
+    rounds_df: pl.DataFrame,
+) -> pl.DataFrame:
+    """Parse HE grenade detonation events into a clean table."""
+    return _parse_utility_event(events, "hegrenade_detonate", rounds_df, _HE_COLS)
+
+
 def extract_rar(rar_path: Path, dest_dir: Path) -> list[Path]:
     """Extract .dem files from a .rar archive into *dest_dir*.
 
@@ -407,11 +652,16 @@ def parse_demo(
 
         demo.parse_grenades = _empty_grenades  # type: ignore[method-assign]
 
-    demo.parse(events=config.min_events)
+    # Request extra player props (economy, movement, state) and world-state
+    # props (is_bomb_planted, which_bomb_zone, game_time).  World props are
+    # broadcast to every player row at the same tick.
+    demo.parse(events=config.min_events, player_props=EXTRA_PLAYER_PROPS)
 
     tables: dict[str, pl.DataFrame | dict] = {"header": demo.header}
     tables["rounds"] = demo.rounds
     tables["ticks"] = demo.ticks
+    # Expose raw events dict for downstream economy/utility parsers.
+    tables["_events"] = demo.events  # type: ignore[assignment]
 
     # Each cached-property may raise if the underlying events are absent
     # (or if we deliberately skipped the event).  We try each independently.
@@ -524,6 +774,7 @@ def transform_demo(
     raw: dict[str, pl.DataFrame | dict],
     match_id: str,
     tick_interval: int = TICK_SAMPLE_INTERVAL,
+    skip_economy: bool = False,
 ) -> dict[str, pl.DataFrame | dict]:
     """Apply all transformations to the raw parsed data.
 
@@ -538,12 +789,41 @@ def transform_demo(
     out["header"] = header
 
     # Rounds.
-    out["rounds"] = add_match_id(raw["rounds"], match_id)
+    rounds_df = raw["rounds"]
+    out["rounds"] = add_match_id(rounds_df, match_id)
 
     # Ticks: sample then normalize.
-    ticks_sampled = sample_ticks(raw["ticks"], interval=tick_interval)
+    # Keep the raw (unsampled) ticks for economy extraction before sampling.
+    ticks_raw = raw["ticks"]
+    ticks_sampled = sample_ticks(ticks_raw, interval=tick_interval)
     ticks_normalized = normalize_ticks(ticks_sampled)
     out["ticks"] = add_match_id(ticks_normalized, match_id)
+
+    # Economy: per-player snapshot at freeze_end tick (uses raw unsampled ticks).
+    if not skip_economy:
+        try:
+            economy_df = parse_player_economy(ticks_raw, rounds_df)
+            out["player_economy"] = add_match_id(economy_df, match_id)
+        except Exception as exc:
+            log.debug("parse_player_economy failed for %s: %s", match_id, exc)
+            out["player_economy"] = pl.DataFrame()
+
+        # Flash and HE grenade events.
+        events: dict[str, pl.DataFrame] = raw.get("_events", {})  # type: ignore[arg-type]
+        try:
+            out["flashes"] = add_match_id(parse_flashes(events, rounds_df), match_id)
+        except Exception as exc:
+            log.debug("parse_flashes failed for %s: %s", match_id, exc)
+            out["flashes"] = pl.DataFrame()
+        try:
+            out["he_grenades"] = add_match_id(parse_he_grenades(events, rounds_df), match_id)
+        except Exception as exc:
+            log.debug("parse_he_grenades failed for %s: %s", match_id, exc)
+            out["he_grenades"] = pl.DataFrame()
+    else:
+        out["player_economy"] = pl.DataFrame()
+        out["flashes"] = pl.DataFrame()
+        out["he_grenades"] = pl.DataFrame()
 
     # Other event tables: just add match_id.
     for table_name in ("kills", "damages", "bomb", "smokes", "infernos", "grenades", "shots"):
@@ -608,6 +888,7 @@ def write_parquet(
         ticks_df.write_parquet(ticks_dir / f"{match_id}.parquet")
 
     # --- Per-match event tables ---
+    economy_tables = {"player_economy", "flashes", "he_grenades"}
     for table_name in PER_MATCH_TABLES:
         # Honour skip flags -- don't even write empty files.
         if table_name == "grenades" and config.skip_grenades:
@@ -615,6 +896,8 @@ def write_parquet(
         if table_name == "damages" and config.skip_damages:
             continue
         if table_name == "shots" and config.skip_shots:
+            continue
+        if table_name in economy_tables and config.skip_economy:
             continue
 
         df = transformed.get(table_name, pl.DataFrame())
@@ -679,6 +962,66 @@ def _align_and_concat(a: pl.DataFrame, b: pl.DataFrame) -> pl.DataFrame:
 # ---------------------------------------------------------------------------
 
 
+def _ensure_parsed_demos_table(con: duckdb.DuckDBPyConnection) -> None:
+    """Create parsed_demos table if it doesn't exist.
+
+    This is a real table (not a view) used to track which demos have been
+    processed, what schema version was used, and key quality metrics.
+    Persists across ETL runs so interrupted batches can be resumed safely.
+    """
+    con.execute("""
+        CREATE TABLE IF NOT EXISTS parsed_demos (
+            match_id        VARCHAR PRIMARY KEY,
+            source_file     VARCHAR,
+            map_name        VARCHAR,
+            schema_version  VARCHAR,
+            n_ticks_sampled INTEGER,
+            n_rounds        INTEGER,
+            elapsed_secs    FLOAT,
+            parsed_at       TIMESTAMP DEFAULT NOW()
+        )
+    """)
+
+
+def upsert_parsed_demo(
+    db_path: Path,
+    match_id: str,
+    source_file: str,
+    map_name: str,
+    n_ticks_sampled: int,
+    n_rounds: int,
+    elapsed_secs: float,
+) -> None:
+    """Record or update a successfully-parsed demo in parsed_demos.
+
+    Called from worker processes — opens its own short-lived connection and
+    retries on DuckDB file-lock contention (up to 5 attempts, ~7 s total).
+    Uses INSERT OR REPLACE so re-running the ETL just refreshes the row.
+    """
+    for attempt in range(5):
+        try:
+            con = duckdb.connect(str(db_path))
+            _ensure_parsed_demos_table(con)
+            con.execute(
+                """
+                INSERT OR REPLACE INTO parsed_demos
+                    (match_id, source_file, map_name, schema_version,
+                     n_ticks_sampled, n_rounds, elapsed_secs, parsed_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, NOW())
+                """,
+                [match_id, source_file, map_name, SCHEMA_VERSION,
+                 n_ticks_sampled, n_rounds, elapsed_secs],
+            )
+            con.close()
+            return
+        except Exception as exc:
+            if "lock" in str(exc).lower() and attempt < 4:
+                time.sleep(0.5 * (2 ** attempt))  # 0.5, 1, 2, 4 s back-off
+                continue
+            log.warning("parsed_demos upsert failed for %s: %s", match_id, exc)
+            return
+
+
 def register_duckdb(output_dir: Path) -> None:
     """Create / update a DuckDB database with views over the Parquet files.
 
@@ -687,6 +1030,7 @@ def register_duckdb(output_dir: Path) -> None:
     """
     db_path = output_dir / "cs2_analytics.duckdb"
     con = duckdb.connect(str(db_path))
+    _ensure_parsed_demos_table(con)
 
     try:
         # Shared matches table (single file).
@@ -751,6 +1095,13 @@ def _create_summary_view(con: duckdb.DuckDBPyConnection) -> None:
         joins.append(
             "LEFT JOIN (SELECT match_id, COUNT(*) AS n_ticks FROM ticks GROUP BY match_id) t "
             "ON m.match_id = t.match_id"
+        )
+
+    if "flashes" in existing_views:
+        parts.append("fl.n_flashes")
+        joins.append(
+            "LEFT JOIN (SELECT match_id, COUNT(*) AS n_flashes FROM flashes GROUP BY match_id) fl "
+            "ON m.match_id = fl.match_id"
         )
 
     sql = f"{', '.join(parts)} FROM matches m {' '.join(joins)}"
@@ -1103,6 +1454,15 @@ def _process_one_rar(
     )
     # Attach via dynamic attribute for the parent to unpack.
     carrier._child_results = child_results  # type: ignore[attr-defined]
+
+    # Delete the RAR after successful parse to reclaim disk space.
+    if config.delete_source and not any_fail:
+        try:
+            rar_path.unlink()
+            log.info("  [deleted] %s", rar_path.name)
+        except OSError as exc:
+            log.warning("  [delete failed] %s: %s", rar_path.name, exc)
+
     return carrier
 
 
@@ -1174,7 +1534,7 @@ def _process_one_dem(
 
         # --- Transform ---
         log.info("  Transforming (match_id=%s) ...", mid)
-        transformed = transform_demo(raw, mid, config.tick_interval)
+        transformed = transform_demo(raw, mid, config.tick_interval, config.skip_economy)
 
         ticks_df = transformed.get("ticks", pl.DataFrame())
         result.n_ticks_sampled = (
@@ -1206,6 +1566,18 @@ def _process_one_dem(
 
         result.success = True
         result.status = "ok"
+
+        # Record in parsed_demos tracking table.
+        db_path = output_dir / "cs2_analytics.duckdb"
+        upsert_parsed_demo(
+            db_path=db_path,
+            match_id=mid,
+            source_file=source_file,
+            map_name=result.map_name or "",
+            n_ticks_sampled=result.n_ticks_sampled or 0,
+            n_rounds=result.n_rounds or 0,
+            elapsed_secs=time.perf_counter() - t0,
+        )
 
     except Exception as exc:
         result.error = f"{type(exc).__name__}: {exc}"
@@ -1386,9 +1758,19 @@ def main(argv: list[str] | None = None) -> int:
         help="Do not parse/store shots (weapon_fire events)",
     )
     parser.add_argument(
+        "--skip-economy",
+        action="store_true",
+        help="Do not parse/store player_economy, flashes, or he_grenades tables",
+    )
+    parser.add_argument(
         "--minimal",
         action="store_true",
-        help="Shorthand for --skip-grenades --skip-damages --skip-shots",
+        help="Shorthand for --skip-grenades --skip-damages --skip-shots --skip-economy",
+    )
+    parser.add_argument(
+        "--delete-source",
+        action="store_true",
+        help="Delete each RAR file after all its demos are successfully parsed (frees disk)",
     )
     parser.add_argument(
         "--validate",
@@ -1421,6 +1803,7 @@ def main(argv: list[str] | None = None) -> int:
         args.skip_grenades = True
         args.skip_damages = True
         args.skip_shots = True
+        args.skip_economy = True
 
     # Parse & canonicalize the map filter.
     map_filter: frozenset[str] = frozenset()
@@ -1438,7 +1821,9 @@ def main(argv: list[str] | None = None) -> int:
         skip_grenades=args.skip_grenades,
         skip_damages=args.skip_damages,
         skip_shots=args.skip_shots,
+        skip_economy=args.skip_economy,
         map_filter=map_filter,
+        delete_source=args.delete_source,
     )
 
     input_files = resolve_input_files(args.input)
@@ -1464,10 +1849,11 @@ def main(argv: list[str] | None = None) -> int:
         args.tick_rate,
     )
     log.info(
-        "Config: skip_grenades=%s skip_damages=%s skip_shots=%s map_filter=%s max_demos=%s",
+        "Config: skip_grenades=%s skip_damages=%s skip_shots=%s skip_economy=%s map_filter=%s max_demos=%s",
         config.skip_grenades,
         config.skip_damages,
         config.skip_shots,
+        config.skip_economy,
         sorted(map_filter) if map_filter else "-",
         args.max_demos,
     )
