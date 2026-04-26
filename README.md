@@ -15,6 +15,8 @@
 - 🎞️ Visualize Counter-Strike data, including animated round gifs and heatmaps
 - :speaker: Active [Discord](https://discord.gg/W34XjsSs2H) community
 
+> **Map control extension on this branch.** This branch (`map-control-awpy2`) ports the legacy CSGO map-control analytic to CS2 / awpy v2 (Polars + `demoparser2`), adds a conical BFS variant with weapon-class cones and Z-floor handling, an ETL + DuckDB analytics layer, and a preliminary research log on win-probability modelling. See [`docs/map_control/`](docs/map_control/) for the README, analysis log, roadmap, and research vision.
+
 ## Installation
 
 To install Awpy, you can run

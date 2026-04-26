@@ -1,0 +1,10440 @@
+{
+  "1452": {
+    "place": "CTSpawn",
+    "votes": 794,
+    "total_votes": 794,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 794
+    }
+  },
+  "1450": {
+    "place": "CTSpawn",
+    "votes": 1599,
+    "total_votes": 1599,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 1599
+    }
+  },
+  "1458": {
+    "place": "CTSpawn",
+    "votes": 794,
+    "total_votes": 794,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 794
+    }
+  },
+  "331": {
+    "place": "TSpawn",
+    "votes": 588,
+    "total_votes": 588,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 588
+    }
+  },
+  "534": {
+    "place": "TSpawn",
+    "votes": 443,
+    "total_votes": 443,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 443
+    }
+  },
+  "309": {
+    "place": "TSpawn",
+    "votes": 535,
+    "total_votes": 535,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 535
+    }
+  },
+  "460": {
+    "place": "TSpawn",
+    "votes": 497,
+    "total_votes": 497,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 497
+    }
+  },
+  "372": {
+    "place": "TSpawn",
+    "votes": 726,
+    "total_votes": 726,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 726
+    }
+  },
+  "1362": {
+    "place": "CTSpawn",
+    "votes": 842,
+    "total_votes": 842,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 842
+    }
+  },
+  "1457": {
+    "place": "CTSpawn",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 5
+    }
+  },
+  "328": {
+    "place": "TSpawn",
+    "votes": 514,
+    "total_votes": 514,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 514
+    }
+  },
+  "461": {
+    "place": "TSpawn",
+    "votes": 474,
+    "total_votes": 474,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 474
+    }
+  },
+  "351": {
+    "place": "TSpawn",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 13
+    }
+  },
+  "1343": {
+    "place": "CTSpawn",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 19
+    }
+  },
+  "1387": {
+    "place": "CTSpawn",
+    "votes": 21,
+    "total_votes": 30,
+    "confidence": 0.7,
+    "all_votes": {
+      "CTSpawn": 21,
+      "UnderA": 9
+    }
+  },
+  "1253": {
+    "place": "CTSpawn",
+    "votes": 73,
+    "total_votes": 73,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 73
+    }
+  },
+  "222": {
+    "place": "TSpawn",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 12
+    }
+  },
+  "459": {
+    "place": "TSpawn",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 9
+    }
+  },
+  "1392": {
+    "place": "CTSpawn",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 16
+    }
+  },
+  "188": {
+    "place": "TSpawn",
+    "votes": 31,
+    "total_votes": 31,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 31
+    }
+  },
+  "1236": {
+    "place": "CTSpawn",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 22
+    }
+  },
+  "1322": {
+    "place": "UnderA",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 21
+    }
+  },
+  "1237": {
+    "place": "CTSpawn",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 14
+    }
+  },
+  "1391": {
+    "place": "UnderA",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 17
+    }
+  },
+  "218": {
+    "place": "TSpawn",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 8
+    }
+  },
+  "202": {
+    "place": "TSpawn",
+    "votes": 168,
+    "total_votes": 172,
+    "confidence": 0.9767441860465116,
+    "all_votes": {
+      "TSpawn": 168,
+      "TopofMid": 4
+    }
+  },
+  "1329": {
+    "place": "CTSpawn",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 7
+    }
+  },
+  "1194": {
+    "place": "MidDoors",
+    "votes": 62,
+    "total_votes": 62,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 62
+    }
+  },
+  "1389": {
+    "place": "UnderA",
+    "votes": 41,
+    "total_votes": 41,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 41
+    }
+  },
+  "1394": {
+    "place": "MidDoors",
+    "votes": 25,
+    "total_votes": 25,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 25
+    }
+  },
+  "62": {
+    "place": "OutsideLong",
+    "votes": 34,
+    "total_votes": 38,
+    "confidence": 0.8947368421052632,
+    "all_votes": {
+      "OutsideLong": 34,
+      "TSpawn": 4
+    }
+  },
+  "1595": {
+    "place": "UnderA",
+    "votes": 39,
+    "total_votes": 39,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 39
+    }
+  },
+  "71": {
+    "place": "OutsideLong",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 15
+    }
+  },
+  "330": {
+    "place": "TSpawn",
+    "votes": 20,
+    "total_votes": 20,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 20
+    }
+  },
+  "187": {
+    "place": "TopofMid",
+    "votes": 12,
+    "total_votes": 15,
+    "confidence": 0.8,
+    "all_votes": {
+      "TopofMid": 12,
+      "TSpawn": 3
+    }
+  },
+  "1345": {
+    "place": "MidDoors",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 15
+    }
+  },
+  "1310": {
+    "place": "MidDoors",
+    "votes": 65,
+    "total_votes": 65,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 65
+    }
+  },
+  "1441": {
+    "place": "UnderA",
+    "votes": 77,
+    "total_votes": 150,
+    "confidence": 0.5133333333333333,
+    "all_votes": {
+      "UnderA": 77,
+      "LongA": 73
+    }
+  },
+  "39": {
+    "place": "OutsideLong",
+    "votes": 59,
+    "total_votes": 59,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 59
+    }
+  },
+  "1546": {
+    "place": "UnderA",
+    "votes": 45,
+    "total_votes": 47,
+    "confidence": 0.9574468085106383,
+    "all_votes": {
+      "UnderA": 45,
+      "ExtendedA": 2
+    }
+  },
+  "27": {
+    "place": "OutsideLong",
+    "votes": 25,
+    "total_votes": 25,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 25
+    }
+  },
+  "1435": {
+    "place": "MidDoors",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 8
+    }
+  },
+  "1371": {
+    "place": "MidDoors",
+    "votes": 23,
+    "total_votes": 32,
+    "confidence": 0.71875,
+    "all_votes": {
+      "MidDoors": 23,
+      "BDoors": 9
+    }
+  },
+  "1299": {
+    "place": "LongA",
+    "votes": 48,
+    "total_votes": 48,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 48
+    }
+  },
+  "1153": {
+    "place": "MidDoors",
+    "votes": 67,
+    "total_votes": 67,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 67
+    }
+  },
+  "29": {
+    "place": "OutsideLong",
+    "votes": 27,
+    "total_votes": 27,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 27
+    }
+  },
+  "109": {
+    "place": "TopofMid",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 11
+    }
+  },
+  "1288": {
+    "place": "ExtendedA",
+    "votes": 28,
+    "total_votes": 50,
+    "confidence": 0.56,
+    "all_votes": {
+      "UnderA": 22,
+      "ExtendedA": 28
+    }
+  },
+  "16": {
+    "place": "OutsideLong",
+    "votes": 59,
+    "total_votes": 59,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 59
+    }
+  },
+  "1579": {
+    "place": "BDoors",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 22
+    }
+  },
+  "1172": {
+    "place": "LongA",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 16
+    }
+  },
+  "52": {
+    "place": "OutsideLong",
+    "votes": 40,
+    "total_votes": 40,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 40
+    }
+  },
+  "105": {
+    "place": "OutsideLong",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 21
+    }
+  },
+  "1487": {
+    "place": "BDoors",
+    "votes": 22,
+    "total_votes": 38,
+    "confidence": 0.5789473684210527,
+    "all_votes": {
+      "MidDoors": 16,
+      "BDoors": 22
+    }
+  },
+  "1647": {
+    "place": "BombsiteB",
+    "votes": 10,
+    "total_votes": 14,
+    "confidence": 0.7142857142857143,
+    "all_votes": {
+      "BombsiteB": 10,
+      "BDoors": 4
+    }
+  },
+  "1051": {
+    "place": "LongA",
+    "votes": 28,
+    "total_votes": 28,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 28
+    }
+  },
+  "1393": {
+    "place": "MidDoors",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 14
+    }
+  },
+  "177": {
+    "place": "LongDoors",
+    "votes": 5,
+    "total_votes": 9,
+    "confidence": 0.5555555555555556,
+    "all_votes": {
+      "LongDoors": 5,
+      "OutsideLong": 4
+    }
+  },
+  "1015": {
+    "place": "ShortStairs",
+    "votes": 58,
+    "total_votes": 58,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 58
+    }
+  },
+  "271": {
+    "place": "LongDoors",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 7
+    }
+  },
+  "1583": {
+    "place": "BDoors",
+    "votes": 14,
+    "total_votes": 15,
+    "confidence": 0.9333333333333333,
+    "all_votes": {
+      "BDoors": 14,
+      "MidDoors": 1
+    }
+  },
+  "1624": {
+    "place": "BombsiteB",
+    "votes": 61,
+    "total_votes": 61,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 61
+    }
+  },
+  "927": {
+    "place": "LongA",
+    "votes": 34,
+    "total_votes": 34,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 34
+    }
+  },
+  "1456": {
+    "place": "MidDoors",
+    "votes": 23,
+    "total_votes": 23,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 23
+    }
+  },
+  "221": {
+    "place": "LongDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 5
+    }
+  },
+  "780": {
+    "place": "ShortStairs",
+    "votes": 83,
+    "total_votes": 83,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 83
+    }
+  },
+  "305": {
+    "place": "LongDoors",
+    "votes": 34,
+    "total_votes": 34,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 34
+    }
+  },
+  "270": {
+    "place": "LongDoors",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 7
+    }
+  },
+  "1932": {
+    "place": "BDoors",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 7
+    }
+  },
+  "1925": {
+    "place": "BombsiteB",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 10
+    }
+  },
+  "1513": {
+    "place": "MidDoors",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 13
+    }
+  },
+  "133": {
+    "place": "OutsideLong",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 14
+    }
+  },
+  "594": {
+    "place": "Catwalk",
+    "votes": 61,
+    "total_votes": 61,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 61
+    }
+  },
+  "398": {
+    "place": "LongDoors",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 18
+    }
+  },
+  "307": {
+    "place": "LongDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 5
+    }
+  },
+  "1996": {
+    "place": "BombsiteB",
+    "votes": 29,
+    "total_votes": 50,
+    "confidence": 0.58,
+    "all_votes": {
+      "Hole": 21,
+      "BombsiteB": 29
+    }
+  },
+  "1993": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 6
+    }
+  },
+  "1664": {
+    "place": "MidDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 6
+    }
+  },
+  "740": {
+    "place": "Catwalk",
+    "votes": 24,
+    "total_votes": 24,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 24
+    }
+  },
+  "361": {
+    "place": "LongDoors",
+    "votes": 34,
+    "total_votes": 34,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 34
+    }
+  },
+  "335": {
+    "place": "LongDoors",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 13
+    }
+  },
+  "2147": {
+    "place": "BombsiteB",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 16
+    }
+  },
+  "1634": {
+    "place": "BombsiteB",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 18
+    }
+  },
+  "752": {
+    "place": "Catwalk",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 11
+    }
+  },
+  "444": {
+    "place": "LongDoors",
+    "votes": 26,
+    "total_votes": 26,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 26
+    }
+  },
+  "390": {
+    "place": "LongDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 6
+    }
+  },
+  "2197": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1415": {
+    "place": "UnderA",
+    "votes": 40,
+    "total_votes": 40,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 40
+    }
+  },
+  "443": {
+    "place": "LongDoors",
+    "votes": 34,
+    "total_votes": 34,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 34
+    }
+  },
+  "741": {
+    "place": "Catwalk",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 11
+    }
+  },
+  "441": {
+    "place": "LongDoors",
+    "votes": 64,
+    "total_votes": 64,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 64
+    }
+  },
+  "2205": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1741": {
+    "place": "BombsiteB",
+    "votes": 42,
+    "total_votes": 42,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 42
+    }
+  },
+  "1372": {
+    "place": "UnderA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 5
+    }
+  },
+  "1258": {
+    "place": "CTSpawn",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 5
+    }
+  },
+  "56": {
+    "place": "OutsideLong",
+    "votes": 24,
+    "total_votes": 24,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 24
+    }
+  },
+  "2215": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1526": {
+    "place": "UpperTunnel",
+    "votes": 43,
+    "total_votes": 43,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 43
+    }
+  },
+  "1267": {
+    "place": "CTSpawn",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 17
+    }
+  },
+  "347": {
+    "place": "LongDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 4
+    }
+  },
+  "2217": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "1518": {
+    "place": "UpperTunnel",
+    "votes": 72,
+    "total_votes": 72,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 72
+    }
+  },
+  "1388": {
+    "place": "CTSpawn",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 10
+    }
+  },
+  "512": {
+    "place": "LongDoors",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 8
+    }
+  },
+  "592": {
+    "place": "Catwalk",
+    "votes": 50,
+    "total_votes": 50,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 50
+    }
+  },
+  "2214": {
+    "place": "BombsiteB",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 22
+    }
+  },
+  "1315": {
+    "place": "UnderA",
+    "votes": 48,
+    "total_votes": 50,
+    "confidence": 0.96,
+    "all_votes": {
+      "UnderA": 48,
+      "CTSpawn": 2
+    }
+  },
+  "590": {
+    "place": "Catwalk",
+    "votes": 42,
+    "total_votes": 42,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 42
+    }
+  },
+  "256": {
+    "place": "LongDoors",
+    "votes": 25,
+    "total_votes": 25,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 25
+    }
+  },
+  "1598": {
+    "place": "UnderA",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 21
+    }
+  },
+  "489": {
+    "place": "LongDoors",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 17
+    }
+  },
+  "220": {
+    "place": "LongDoors",
+    "votes": 51,
+    "total_votes": 51,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 51
+    }
+  },
+  "721": {
+    "place": "LongDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 3
+    }
+  },
+  "580": {
+    "place": "LongDoors",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 11
+    }
+  },
+  "743": {
+    "place": "Catwalk",
+    "votes": 24,
+    "total_votes": 24,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 24
+    }
+  },
+  "797": {
+    "place": "LongDoors",
+    "votes": 35,
+    "total_votes": 36,
+    "confidence": 0.9722222222222222,
+    "all_votes": {
+      "LongDoors": 35,
+      "LongA": 1
+    }
+  },
+  "1551": {
+    "place": "UnderA",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 14
+    }
+  },
+  "698": {
+    "place": "LongDoors",
+    "votes": 29,
+    "total_votes": 29,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 29
+    }
+  },
+  "507": {
+    "place": "LongDoors",
+    "votes": 68,
+    "total_votes": 68,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 68
+    }
+  },
+  "357": {
+    "place": "LongDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 6
+    }
+  },
+  "708": {
+    "place": "LongDoors",
+    "votes": 14,
+    "total_votes": 17,
+    "confidence": 0.8235294117647058,
+    "all_votes": {
+      "LongDoors": 14,
+      "LongA": 3
+    }
+  },
+  "587": {
+    "place": "Catwalk",
+    "votes": 70,
+    "total_votes": 70,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 70
+    }
+  },
+  "500": {
+    "place": "LongDoors",
+    "votes": 24,
+    "total_votes": 24,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 24
+    }
+  },
+  "435": {
+    "place": "LongDoors",
+    "votes": 20,
+    "total_votes": 20,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 20
+    }
+  },
+  "2176": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1525": {
+    "place": "UpperTunnel",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 10
+    }
+  },
+  "628": {
+    "place": "LongDoors",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 13
+    }
+  },
+  "487": {
+    "place": "LongDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 5
+    }
+  },
+  "2135": {
+    "place": "BombsiteB",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 7
+    }
+  },
+  "1496": {
+    "place": "UpperTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 3
+    }
+  },
+  "707": {
+    "place": "LongDoors",
+    "votes": 26,
+    "total_votes": 42,
+    "confidence": 0.6190476190476191,
+    "all_votes": {
+      "LongA": 16,
+      "LongDoors": 26
+    }
+  },
+  "2016": {
+    "place": "BombsiteB",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 13
+    }
+  },
+  "1384": {
+    "place": "UpperTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 8
+    }
+  },
+  "925": {
+    "place": "LongA",
+    "votes": 26,
+    "total_votes": 28,
+    "confidence": 0.9285714285714286,
+    "all_votes": {
+      "LongA": 26,
+      "LongDoors": 2
+    }
+  },
+  "1997": {
+    "place": "BombsiteB",
+    "votes": 44,
+    "total_votes": 46,
+    "confidence": 0.9565217391304348,
+    "all_votes": {
+      "BombsiteB": 44,
+      "Hole": 2
+    }
+  },
+  "1301": {
+    "place": "UpperTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 3
+    }
+  },
+  "1419": {
+    "place": "UnderA",
+    "votes": 33,
+    "total_votes": 33,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 33
+    }
+  },
+  "604": {
+    "place": "Catwalk",
+    "votes": 31,
+    "total_votes": 35,
+    "confidence": 0.8857142857142857,
+    "all_votes": {
+      "Catwalk": 31,
+      "ShortStairs": 4
+    }
+  },
+  "1963": {
+    "place": "BDoors",
+    "votes": 6,
+    "total_votes": 10,
+    "confidence": 0.6,
+    "all_votes": {
+      "Hole": 4,
+      "BDoors": 6
+    }
+  },
+  "1252": {
+    "place": "UpperTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 8
+    }
+  },
+  "1549": {
+    "place": "UnderA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 4
+    }
+  },
+  "1147": {
+    "place": "UpperTunnel",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 6
+    }
+  },
+  "1295": {
+    "place": "CTSpawn",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 12
+    }
+  },
+  "1062": {
+    "place": "LongA",
+    "votes": 55,
+    "total_votes": 55,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 55
+    }
+  },
+  "964": {
+    "place": "ShortStairs",
+    "votes": 29,
+    "total_votes": 29,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 29
+    }
+  },
+  "1584": {
+    "place": "MidDoors",
+    "votes": 11,
+    "total_votes": 16,
+    "confidence": 0.6875,
+    "all_votes": {
+      "BDoors": 5,
+      "MidDoors": 11
+    }
+  },
+  "1021": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1629": {
+    "place": "ExtendedA",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 13
+    }
+  },
+  "1240": {
+    "place": "CTSpawn",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 22
+    }
+  },
+  "1166": {
+    "place": "LongA",
+    "votes": 24,
+    "total_votes": 24,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 24
+    }
+  },
+  "1134": {
+    "place": "ExtendedA",
+    "votes": 28,
+    "total_votes": 37,
+    "confidence": 0.7567567567567568,
+    "all_votes": {
+      "ShortStairs": 9,
+      "ExtendedA": 28
+    }
+  },
+  "949": {
+    "place": "LongA",
+    "votes": 53,
+    "total_votes": 53,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 53
+    }
+  },
+  "874": {
+    "place": "UpperTunnel",
+    "votes": 36,
+    "total_votes": 36,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 36
+    }
+  },
+  "1715": {
+    "place": "BombsiteA",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 9
+    }
+  },
+  "1224": {
+    "place": "CTSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 3
+    }
+  },
+  "1113": {
+    "place": "LongA",
+    "votes": 24,
+    "total_votes": 24,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 24
+    }
+  },
+  "1049": {
+    "place": "ShortStairs",
+    "votes": 26,
+    "total_votes": 37,
+    "confidence": 0.7027027027027027,
+    "all_votes": {
+      "ShortStairs": 26,
+      "ExtendedA": 11
+    }
+  },
+  "991": {
+    "place": "LongA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 4
+    }
+  },
+  "812": {
+    "place": "TunnelStairs",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 10
+    }
+  },
+  "1734": {
+    "place": "BombsiteA",
+    "votes": 38,
+    "total_votes": 38,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 38
+    }
+  },
+  "988": {
+    "place": "LongA",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 12
+    }
+  },
+  "1076": {
+    "place": "MidDoors",
+    "votes": 83,
+    "total_votes": 83,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 83
+    }
+  },
+  "771": {
+    "place": "TunnelStairs",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 21
+    }
+  },
+  "1063": {
+    "place": "LongA",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 18
+    }
+  },
+  "875": {
+    "place": "MidDoors",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 12
+    }
+  },
+  "871": {
+    "place": "LowerTunnel",
+    "votes": 20,
+    "total_votes": 20,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 20
+    }
+  },
+  "1223": {
+    "place": "CTSpawn",
+    "votes": 33,
+    "total_votes": 33,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 33
+    }
+  },
+  "1176": {
+    "place": "LongA",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 12
+    }
+  },
+  "647": {
+    "place": "Middle",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 14
+    }
+  },
+  "858": {
+    "place": "LowerTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 5
+    }
+  },
+  "626": {
+    "place": "Middle",
+    "votes": 131,
+    "total_votes": 136,
+    "confidence": 0.9632352941176471,
+    "all_votes": {
+      "Middle": 131,
+      "Catwalk": 4,
+      "MidDoors": 1
+    }
+  },
+  "758": {
+    "place": "LowerTunnel",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 11
+    }
+  },
+  "833": {
+    "place": "LowerTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 4
+    }
+  },
+  "1716": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1430": {
+    "place": "LongA",
+    "votes": 32,
+    "total_votes": 32,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 32
+    }
+  },
+  "1135": {
+    "place": "ExtendedA",
+    "votes": 45,
+    "total_votes": 45,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 45
+    }
+  },
+  "839": {
+    "place": "LowerTunnel",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 15
+    }
+  },
+  "1697": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1338": {
+    "place": "LongA",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 16
+    }
+  },
+  "838": {
+    "place": "LowerTunnel",
+    "votes": 13,
+    "total_votes": 23,
+    "confidence": 0.5652173913043478,
+    "all_votes": {
+      "LowerTunnel": 13,
+      "TunnelStairs": 10
+    }
+  },
+  "1754": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1520": {
+    "place": "LongA",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 18
+    }
+  },
+  "1272": {
+    "place": "LongA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 3
+    }
+  },
+  "770": {
+    "place": "TunnelStairs",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 11
+    }
+  },
+  "1838": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1298": {
+    "place": "LongA",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 22
+    }
+  },
+  "1336": {
+    "place": "LongA",
+    "votes": 32,
+    "total_votes": 32,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 32
+    }
+  },
+  "1238": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "834": {
+    "place": "LowerTunnel",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 10
+    }
+  },
+  "1292": {
+    "place": "ExtendedA",
+    "votes": 99,
+    "total_votes": 99,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 99
+    }
+  },
+  "712": {
+    "place": "LowerTunnel",
+    "votes": 35,
+    "total_votes": 35,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 35
+    }
+  },
+  "1708": {
+    "place": "BombsiteA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 3
+    }
+  },
+  "1262": {
+    "place": "CTSpawn",
+    "votes": 11,
+    "total_votes": 12,
+    "confidence": 0.9166666666666666,
+    "all_votes": {
+      "CTSpawn": 11,
+      "UnderA": 1
+    }
+  },
+  "1324": {
+    "place": "LongA",
+    "votes": 33,
+    "total_votes": 33,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 33
+    }
+  },
+  "648": {
+    "place": "Middle",
+    "votes": 13,
+    "total_votes": 20,
+    "confidence": 0.65,
+    "all_votes": {
+      "Middle": 13,
+      "MidDoors": 7
+    }
+  },
+  "1773": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 7,
+    "confidence": 0.7142857142857143,
+    "all_votes": {
+      "LongA": 5,
+      "ARamp": 2
+    }
+  },
+  "1681": {
+    "place": "LongA",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 6
+    }
+  },
+  "1611": {
+    "place": "UnderA",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 18
+    }
+  },
+  "1405": {
+    "place": "LongA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 4
+    }
+  },
+  "1861": {
+    "place": "ARamp",
+    "votes": 68,
+    "total_votes": 68,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 68
+    }
+  },
+  "1826": {
+    "place": "ARamp",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 11
+    }
+  },
+  "649": {
+    "place": "Middle",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 15
+    }
+  },
+  "1680": {
+    "place": "LongA",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 11
+    }
+  },
+  "1596": {
+    "place": "LongA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 4
+    }
+  },
+  "1910": {
+    "place": "ARamp",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 11
+    }
+  },
+  "1835": {
+    "place": "ARamp",
+    "votes": 23,
+    "total_votes": 23,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 23
+    }
+  },
+  "1746": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 5
+    }
+  },
+  "1864": {
+    "place": "ARamp",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 6
+    }
+  },
+  "1133": {
+    "place": "ShortStairs",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 4
+    }
+  },
+  "488": {
+    "place": "Catwalk",
+    "votes": 7,
+    "total_votes": 10,
+    "confidence": 0.7,
+    "all_votes": {
+      "Middle": 3,
+      "Catwalk": 7
+    }
+  },
+  "1788": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1758": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 5
+    }
+  },
+  "1897": {
+    "place": "ARamp",
+    "votes": 137,
+    "total_votes": 137,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 137
+    }
+  },
+  "1761": {
+    "place": "BombsiteA",
+    "votes": 7,
+    "total_votes": 9,
+    "confidence": 0.7777777777777778,
+    "all_votes": {
+      "ARamp": 2,
+      "BombsiteA": 7
+    }
+  },
+  "1869": {
+    "place": "ExtendedA",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 7
+    }
+  },
+  "1859": {
+    "place": "LongA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 3
+    }
+  },
+  "1763": {
+    "place": "ARamp",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 6
+    }
+  },
+  "1289": {
+    "place": "ExtendedA",
+    "votes": 49,
+    "total_votes": 51,
+    "confidence": 0.9607843137254902,
+    "all_votes": {
+      "ExtendedA": 49,
+      "UnderA": 2
+    }
+  },
+  "1886": {
+    "place": "ExtendedA",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 14
+    }
+  },
+  "1862": {
+    "place": "LongA",
+    "votes": 3,
+    "total_votes": 6,
+    "confidence": 0.5,
+    "all_votes": {
+      "LongA": 3,
+      "ARamp": 3
+    }
+  },
+  "1912": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1787": {
+    "place": "BombsiteA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 3
+    }
+  },
+  "1894": {
+    "place": "ARamp",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 11
+    }
+  },
+  "1930": {
+    "place": "ARamp",
+    "votes": 11,
+    "total_votes": 12,
+    "confidence": 0.9166666666666666,
+    "all_votes": {
+      "ARamp": 11,
+      "BombsiteA": 1
+    }
+  },
+  "1841": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1792": {
+    "place": "BombsiteA",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 12
+    }
+  },
+  "1981": {
+    "place": "ARamp",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 7
+    }
+  },
+  "1911": {
+    "place": "ARamp",
+    "votes": 9,
+    "total_votes": 10,
+    "confidence": 0.9,
+    "all_votes": {
+      "BombsiteA": 1,
+      "ARamp": 9
+    }
+  },
+  "1572": {
+    "place": "ExtendedA",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 10
+    }
+  },
+  "1920": {
+    "place": "BombsiteA",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 15
+    }
+  },
+  "1852": {
+    "place": "BombsiteA",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 16
+    }
+  },
+  "1630": {
+    "place": "ExtendedA",
+    "votes": 8,
+    "total_votes": 12,
+    "confidence": 0.6666666666666666,
+    "all_votes": {
+      "ExtendedA": 8,
+      "UnderA": 2,
+      "BombsiteA": 2
+    }
+  },
+  "1621": {
+    "place": "ExtendedA",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 12
+    }
+  },
+  "1870": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1736": {
+    "place": "ExtendedA",
+    "votes": 26,
+    "total_votes": 31,
+    "confidence": 0.8387096774193549,
+    "all_votes": {
+      "ExtendedA": 26,
+      "BombsiteA": 5
+    }
+  },
+  "1908": {
+    "place": "BombsiteA",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 19
+    }
+  },
+  "1891": {
+    "place": "BombsiteA",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 14
+    }
+  },
+  "1957": {
+    "place": "BombsiteA",
+    "votes": 14,
+    "total_votes": 15,
+    "confidence": 0.9333333333333333,
+    "all_votes": {
+      "BombsiteA": 14,
+      "ARamp": 1
+    }
+  },
+  "457": {
+    "place": "TSpawn",
+    "votes": 145,
+    "total_votes": 145,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 145
+    }
+  },
+  "1453": {
+    "place": "CTSpawn",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 5
+    }
+  },
+  "518": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "532": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "249": {
+    "place": "TSpawn",
+    "votes": 17,
+    "total_votes": 30,
+    "confidence": 0.5666666666666667,
+    "all_votes": {
+      "TopofMid": 13,
+      "TSpawn": 17
+    }
+  },
+  "1183": {
+    "place": "CTSpawn",
+    "votes": 27,
+    "total_votes": 27,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 27
+    }
+  },
+  "1504": {
+    "place": "UnderA",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 13
+    }
+  },
+  "432": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "473": {
+    "place": "TSpawn",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 12
+    }
+  },
+  "1355": {
+    "place": "UnderA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 4
+    }
+  },
+  "144": {
+    "place": "TopofMid",
+    "votes": 46,
+    "total_votes": 46,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 46
+    }
+  },
+  "73": {
+    "place": "OutsideLong",
+    "votes": 10,
+    "total_votes": 12,
+    "confidence": 0.8333333333333334,
+    "all_votes": {
+      "OutsideLong": 10,
+      "TopofMid": 2
+    }
+  },
+  "1195": {
+    "place": "MidDoors",
+    "votes": 20,
+    "total_votes": 27,
+    "confidence": 0.7407407407407407,
+    "all_votes": {
+      "MidDoors": 20,
+      "CTSpawn": 7
+    }
+  },
+  "1347": {
+    "place": "UnderA",
+    "votes": 28,
+    "total_votes": 28,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 28
+    }
+  },
+  "423": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "619": {
+    "place": "TSpawn",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 8
+    }
+  },
+  "1308": {
+    "place": "MidDoors",
+    "votes": 33,
+    "total_votes": 33,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 33
+    }
+  },
+  "1603": {
+    "place": "UnderA",
+    "votes": 43,
+    "total_votes": 43,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 43
+    }
+  },
+  "667": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "664": {
+    "place": "OutsideTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 4
+    }
+  },
+  "19": {
+    "place": "OutsideLong",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 7
+    }
+  },
+  "146": {
+    "place": "TopofMid",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 18
+    }
+  },
+  "1340": {
+    "place": "MidDoors",
+    "votes": 31,
+    "total_votes": 33,
+    "confidence": 0.9393939393939394,
+    "all_votes": {
+      "MidDoors": 31,
+      "BDoors": 2
+    }
+  },
+  "823": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "574": {
+    "place": "OutsideTunnel",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 10
+    }
+  },
+  "10": {
+    "place": "OutsideLong",
+    "votes": 43,
+    "total_votes": 43,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 43
+    }
+  },
+  "150": {
+    "place": "TopofMid",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 4
+    }
+  },
+  "1173": {
+    "place": "LongA",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 18
+    }
+  },
+  "1420": {
+    "place": "UnderA",
+    "votes": 30,
+    "total_votes": 30,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 30
+    }
+  },
+  "736": {
+    "place": "OutsideTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 3
+    }
+  },
+  "689": {
+    "place": "OutsideTunnel",
+    "votes": 31,
+    "total_votes": 31,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 31
+    }
+  },
+  "101": {
+    "place": "TopofMid",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 11
+    }
+  },
+  "44": {
+    "place": "TopofMid",
+    "votes": 94,
+    "total_votes": 100,
+    "confidence": 0.94,
+    "all_votes": {
+      "TopofMid": 94,
+      "OutsideLong": 6
+    }
+  },
+  "1411": {
+    "place": "BDoors",
+    "votes": 22,
+    "total_votes": 30,
+    "confidence": 0.7333333333333333,
+    "all_votes": {
+      "MidDoors": 8,
+      "BDoors": 22
+    }
+  },
+  "1694": {
+    "place": "BDoors",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 14
+    }
+  },
+  "646": {
+    "place": "OutsideTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 4
+    }
+  },
+  "962": {
+    "place": "UpperTunnel",
+    "votes": 23,
+    "total_votes": 34,
+    "confidence": 0.6764705882352942,
+    "all_votes": {
+      "OutsideTunnel": 11,
+      "UpperTunnel": 23
+    }
+  },
+  "1163": {
+    "place": "LongA",
+    "votes": 180,
+    "total_votes": 180,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 180
+    }
+  },
+  "203": {
+    "place": "TSpawn",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 5
+    }
+  },
+  "47": {
+    "place": "TopofMid",
+    "votes": 43,
+    "total_votes": 43,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 43
+    }
+  },
+  "848": {
+    "place": "OutsideTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 8
+    }
+  },
+  "971": {
+    "place": "UpperTunnel",
+    "votes": 93,
+    "total_votes": 94,
+    "confidence": 0.9893617021276596,
+    "all_votes": {
+      "UpperTunnel": 93,
+      "OutsideTunnel": 1
+    }
+  },
+  "192": {
+    "place": "TopofMid",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 12
+    }
+  },
+  "267": {
+    "place": "TopofMid",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 12
+    }
+  },
+  "1641": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "2046": {
+    "place": "BombsiteB",
+    "votes": 13,
+    "total_votes": 14,
+    "confidence": 0.9285714285714286,
+    "all_votes": {
+      "Hole": 1,
+      "BombsiteB": 13
+    }
+  },
+  "990": {
+    "place": "LongA",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 12
+    }
+  },
+  "947": {
+    "place": "OutsideTunnel",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 10
+    }
+  },
+  "1216": {
+    "place": "UpperTunnel",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 6
+    }
+  },
+  "316": {
+    "place": "Middle",
+    "votes": 19,
+    "total_votes": 23,
+    "confidence": 0.8260869565217391,
+    "all_votes": {
+      "Middle": 19,
+      "Catwalk": 4
+    }
+  },
+  "171": {
+    "place": "TopofMid",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 12
+    }
+  },
+  "1602": {
+    "place": "LongA",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 9
+    }
+  },
+  "1287": {
+    "place": "UpperTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 8
+    }
+  },
+  "399": {
+    "place": "Middle",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 19
+    }
+  },
+  "102": {
+    "place": "TopofMid",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 13
+    }
+  },
+  "1776": {
+    "place": "BombsiteB",
+    "votes": 30,
+    "total_votes": 30,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 30
+    }
+  },
+  "2156": {
+    "place": "BombsiteB",
+    "votes": 39,
+    "total_votes": 39,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 39
+    }
+  },
+  "1824": {
+    "place": "ARamp",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 7
+    }
+  },
+  "1422": {
+    "place": "UpperTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 8
+    }
+  },
+  "998": {
+    "place": "LongA",
+    "votes": 34,
+    "total_votes": 34,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 34
+    }
+  },
+  "213": {
+    "place": "TSpawn",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 14
+    }
+  },
+  "556": {
+    "place": "Middle",
+    "votes": 45,
+    "total_votes": 45,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 45
+    }
+  },
+  "2045": {
+    "place": "BombsiteB",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 8
+    }
+  },
+  "2096": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "157": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "753": {
+    "place": "Middle",
+    "votes": 6,
+    "total_votes": 7,
+    "confidence": 0.8571428571428571,
+    "all_votes": {
+      "Middle": 6,
+      "MidDoors": 1
+    }
+  },
+  "2012": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "1902": {
+    "place": "ARamp",
+    "votes": 23,
+    "total_votes": 23,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 23
+    }
+  },
+  "1089": {
+    "place": "UpperTunnel",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 10
+    }
+  },
+  "1270": {
+    "place": "UpperTunnel",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 9
+    }
+  },
+  "862": {
+    "place": "MidDoors",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 10
+    }
+  },
+  "1969": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1039": {
+    "place": "UpperTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 7
+    }
+  },
+  "1328": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "26": {
+    "place": "OutsideLong",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 22
+    }
+  },
+  "908": {
+    "place": "MidDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 3
+    }
+  },
+  "1813": {
+    "place": "BombsiteB",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 10
+    }
+  },
+  "2058": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 6
+    }
+  },
+  "1275": {
+    "place": "UpperTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 3
+    }
+  },
+  "8": {
+    "place": "OutsideLong",
+    "votes": 29,
+    "total_votes": 29,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 29
+    }
+  },
+  "977": {
+    "place": "MidDoors",
+    "votes": 92,
+    "total_votes": 92,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 92
+    }
+  },
+  "496": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "1635": {
+    "place": "BombsiteB",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 22
+    }
+  },
+  "2013": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1600": {
+    "place": "UnderA",
+    "votes": 7,
+    "total_votes": 8,
+    "confidence": 0.875,
+    "all_votes": {
+      "UnderA": 7,
+      "LongA": 1
+    }
+  },
+  "31": {
+    "place": "OutsideLong",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 15
+    }
+  },
+  "524": {
+    "place": "TSpawn",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 21
+    }
+  },
+  "1639": {
+    "place": "BombsiteB",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 16
+    }
+  },
+  "1421": {
+    "place": "UnderA",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 6
+    }
+  },
+  "554": {
+    "place": "TSpawn",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 8
+    }
+  },
+  "1640": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "2033": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1054": {
+    "place": "UpperTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 8
+    }
+  },
+  "58": {
+    "place": "TopofMid",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 17
+    }
+  },
+  "676": {
+    "place": "OutsideTunnel",
+    "votes": 11,
+    "total_votes": 17,
+    "confidence": 0.6470588235294118,
+    "all_votes": {
+      "OutsideTunnel": 11,
+      "TSpawn": 6
+    }
+  },
+  "1187": {
+    "place": "UpperTunnel",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 12
+    }
+  },
+  "1439": {
+    "place": "UnderA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 3
+    }
+  },
+  "691": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "2070": {
+    "place": "BombsiteB",
+    "votes": 51,
+    "total_votes": 51,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 51
+    }
+  },
+  "1132": {
+    "place": "UpperTunnel",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 6
+    }
+  },
+  "165": {
+    "place": "Catwalk",
+    "votes": 39,
+    "total_votes": 48,
+    "confidence": 0.8125,
+    "all_votes": {
+      "TopofMid": 9,
+      "Catwalk": 39
+    }
+  },
+  "2082": {
+    "place": "BombsiteB",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 7
+    }
+  },
+  "1200": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1554": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2142": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "804": {
+    "place": "LongA",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 14
+    }
+  },
+  "1249": {
+    "place": "UpperTunnel",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 12
+    }
+  },
+  "1505": {
+    "place": "CTSpawn",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 11
+    }
+  },
+  "1555": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2115": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "731": {
+    "place": "LongA",
+    "votes": 23,
+    "total_votes": 24,
+    "confidence": 0.9583333333333334,
+    "all_votes": {
+      "LongA": 23,
+      "Pit": 1
+    }
+  },
+  "339": {
+    "place": "Middle",
+    "votes": 30,
+    "total_votes": 30,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 30
+    }
+  },
+  "1464": {
+    "place": "BombsiteB",
+    "votes": 27,
+    "total_votes": 27,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 27
+    }
+  },
+  "1064": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "2062": {
+    "place": "BombsiteB",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 10
+    }
+  },
+  "687": {
+    "place": "Pit",
+    "votes": 30,
+    "total_votes": 30,
+    "confidence": 1.0,
+    "all_votes": {
+      "Pit": 30
+    }
+  },
+  "1045": {
+    "place": "UpperTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 5
+    }
+  },
+  "394": {
+    "place": "Middle",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 5
+    }
+  },
+  "1381": {
+    "place": "CTSpawn",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 4
+    }
+  },
+  "516": {
+    "place": "Middle",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 8
+    }
+  },
+  "670": {
+    "place": "Pit",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "Pit": 3
+    }
+  },
+  "912": {
+    "place": "UpperTunnel",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 19
+    }
+  },
+  "697": {
+    "place": "Middle",
+    "votes": 10,
+    "total_votes": 20,
+    "confidence": 0.5,
+    "all_votes": {
+      "Middle": 10,
+      "LowerTunnel": 10
+    }
+  },
+  "2028": {
+    "place": "Hole",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 6
+    }
+  },
+  "747": {
+    "place": "Pit",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "Pit": 10
+    }
+  },
+  "744": {
+    "place": "OutsideTunnel",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 18
+    }
+  },
+  "1382": {
+    "place": "CTSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 2
+    }
+  },
+  "1141": {
+    "place": "UpperTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 5
+    }
+  },
+  "2011": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "845": {
+    "place": "OutsideTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 3
+    }
+  },
+  "817": {
+    "place": "LowerTunnel",
+    "votes": 28,
+    "total_votes": 28,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 28
+    }
+  },
+  "1467": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "1950": {
+    "place": "BombsiteB",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 12
+    }
+  },
+  "1243": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "1485": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1619": {
+    "place": "BombsiteB",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 16
+    }
+  },
+  "746": {
+    "place": "Pit",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Pit": 1
+    }
+  },
+  "1351": {
+    "place": "CTSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 1
+    }
+  },
+  "1498": {
+    "place": "BombsiteB",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 8
+    }
+  },
+  "1625": {
+    "place": "BombsiteB",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 8
+    }
+  },
+  "1184": {
+    "place": "CTSpawn",
+    "votes": 23,
+    "total_votes": 23,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 23
+    }
+  },
+  "785": {
+    "place": "TunnelStairs",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 14
+    }
+  },
+  "1666": {
+    "place": "BombsiteB",
+    "votes": 43,
+    "total_votes": 43,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 43
+    }
+  },
+  "795": {
+    "place": "TunnelStairs",
+    "votes": 49,
+    "total_votes": 49,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 49
+    }
+  },
+  "1074": {
+    "place": "UpperTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 5
+    }
+  },
+  "938": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "1073": {
+    "place": "UpperTunnel",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 13
+    }
+  },
+  "1131": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "1297": {
+    "place": "UnderA",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 21
+    }
+  },
+  "1977": {
+    "place": "BombsiteB",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 8
+    }
+  },
+  "2038": {
+    "place": "BombsiteB",
+    "votes": 65,
+    "total_votes": 65,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 65
+    }
+  },
+  "1321": {
+    "place": "UnderA",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 22
+    }
+  },
+  "1020": {
+    "place": "UpperTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 5
+    }
+  },
+  "1088": {
+    "place": "UpperTunnel",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 9
+    }
+  },
+  "598": {
+    "place": "Pit",
+    "votes": 55,
+    "total_votes": 56,
+    "confidence": 0.9821428571428571,
+    "all_votes": {
+      "Pit": 55,
+      "LongDoors": 1
+    }
+  },
+  "1276": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "1390": {
+    "place": "UnderA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 3
+    }
+  },
+  "1936": {
+    "place": "BombsiteA",
+    "votes": 51,
+    "total_votes": 51,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 51
+    }
+  },
+  "1192": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "1231": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "1983": {
+    "place": "BombsiteA",
+    "votes": 45,
+    "total_votes": 45,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 45
+    }
+  },
+  "1985": {
+    "place": "BombsiteA",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 15
+    }
+  },
+  "1377": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "1148": {
+    "place": "UpperTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 3
+    }
+  },
+  "1256": {
+    "place": "UpperTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 7
+    }
+  },
+  "2077": {
+    "place": "BombsiteA",
+    "votes": 160,
+    "total_votes": 160,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 160
+    }
+  },
+  "1375": {
+    "place": "UpperTunnel",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 11
+    }
+  },
+  "1756": {
+    "place": "ARamp",
+    "votes": 91,
+    "total_votes": 108,
+    "confidence": 0.8425925925925926,
+    "all_votes": {
+      "ARamp": 91,
+      "LongA": 17
+    }
+  },
+  "1254": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1285": {
+    "place": "UpperTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 8
+    }
+  },
+  "1832": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "1503": {
+    "place": "UpperTunnel",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 12
+    }
+  },
+  "1346": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "2146": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1522": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1944": {
+    "place": "ARamp",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 19
+    }
+  },
+  "1612": {
+    "place": "UpperTunnel",
+    "votes": 9,
+    "total_votes": 11,
+    "confidence": 0.8181818181818182,
+    "all_votes": {
+      "UpperTunnel": 9,
+      "BombsiteB": 2
+    }
+  },
+  "2161": {
+    "place": "BombsiteB",
+    "votes": 34,
+    "total_votes": 34,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 34
+    }
+  },
+  "1914": {
+    "place": "BombsiteA",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 10
+    }
+  },
+  "1856": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "2008": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 6
+    }
+  },
+  "1290": {
+    "place": "UnderA",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 6
+    }
+  },
+  "2180": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "2118": {
+    "place": "BombsiteB",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 14
+    }
+  },
+  "1512": {
+    "place": "MidDoors",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 13
+    }
+  },
+  "1263": {
+    "place": "CTSpawn",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 15
+    }
+  },
+  "1828": {
+    "place": "BDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 4
+    }
+  },
+  "1319": {
+    "place": "MidDoors",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 11
+    }
+  },
+  "1259": {
+    "place": "CTSpawn",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 10
+    }
+  },
+  "1994": {
+    "place": "Hole",
+    "votes": 8,
+    "total_votes": 13,
+    "confidence": 0.6153846153846154,
+    "all_votes": {
+      "BDoors": 5,
+      "Hole": 8
+    }
+  },
+  "1409": {
+    "place": "BDoors",
+    "votes": 3,
+    "total_votes": 5,
+    "confidence": 0.6,
+    "all_votes": {
+      "MidDoors": 2,
+      "BDoors": 3
+    }
+  },
+  "2027": {
+    "place": "Hole",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 2
+    }
+  },
+  "1552": {
+    "place": "BDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 5
+    }
+  },
+  "1260": {
+    "place": "CTSpawn",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 10
+    }
+  },
+  "1689": {
+    "place": "BDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 2
+    }
+  },
+  "982": {
+    "place": "MidDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 3
+    }
+  },
+  "2015": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "1699": {
+    "place": "BDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 6
+    }
+  },
+  "980": {
+    "place": "MidDoors",
+    "votes": 100,
+    "total_votes": 100,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 100
+    }
+  },
+  "2052": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1690": {
+    "place": "BDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 4
+    }
+  },
+  "2006": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1543": {
+    "place": "BDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 5
+    }
+  },
+  "1989": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1334": {
+    "place": "BDoors",
+    "votes": 11,
+    "total_votes": 12,
+    "confidence": 0.9166666666666666,
+    "all_votes": {
+      "BDoors": 11,
+      "MidDoors": 1
+    }
+  },
+  "843": {
+    "place": "MidDoors",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 13
+    }
+  },
+  "1725": {
+    "place": "BombsiteB",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 9
+    }
+  },
+  "1444": {
+    "place": "CTSpawn",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 18
+    }
+  },
+  "1264": {
+    "place": "CTSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 2
+    }
+  },
+  "585": {
+    "place": "TSpawn",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 5
+    }
+  },
+  "445": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "112": {
+    "place": "TopofMid",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 10
+    }
+  },
+  "1282": {
+    "place": "CTSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 1
+    }
+  },
+  "446": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "127": {
+    "place": "TopofMid",
+    "votes": 113,
+    "total_votes": 113,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 113
+    }
+  },
+  "645": {
+    "place": "OutsideTunnel",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 18
+    }
+  },
+  "18": {
+    "place": "OutsideLong",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 10
+    }
+  },
+  "451": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "118": {
+    "place": "TopofMid",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 7
+    }
+  },
+  "25": {
+    "place": "OutsideLong",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 9
+    }
+  },
+  "485": {
+    "place": "TSpawn",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 5
+    }
+  },
+  "1164": {
+    "place": "LongA",
+    "votes": 32,
+    "total_votes": 32,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 32
+    }
+  },
+  "50": {
+    "place": "OutsideLong",
+    "votes": 21,
+    "total_votes": 35,
+    "confidence": 0.6,
+    "all_votes": {
+      "OutsideLong": 21,
+      "TopofMid": 14
+    }
+  },
+  "1582": {
+    "place": "BDoors",
+    "votes": 15,
+    "total_votes": 18,
+    "confidence": 0.8333333333333334,
+    "all_votes": {
+      "BDoors": 15,
+      "MidDoors": 3
+    }
+  },
+  "384": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "2000": {
+    "place": "Hole",
+    "votes": 20,
+    "total_votes": 20,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 20
+    }
+  },
+  "886": {
+    "place": "MidDoors",
+    "votes": 28,
+    "total_votes": 28,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 28
+    }
+  },
+  "909": {
+    "place": "UpperTunnel",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 14
+    }
+  },
+  "198": {
+    "place": "LongDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 6
+    }
+  },
+  "724": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 7,
+    "confidence": 0.7142857142857143,
+    "all_votes": {
+      "Pit": 2,
+      "LongA": 5
+    }
+  },
+  "778": {
+    "place": "TunnelStairs",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 22
+    }
+  },
+  "215": {
+    "place": "LongDoors",
+    "votes": 37,
+    "total_votes": 37,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 37
+    }
+  },
+  "2136": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "784": {
+    "place": "TunnelStairs",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 8
+    }
+  },
+  "738": {
+    "place": "LongDoors",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 7
+    }
+  },
+  "792": {
+    "place": "MidDoors",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 12
+    }
+  },
+  "725": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "897": {
+    "place": "LowerTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 8
+    }
+  },
+  "34": {
+    "place": "OutsideLong",
+    "votes": 26,
+    "total_votes": 34,
+    "confidence": 0.7647058823529411,
+    "all_votes": {
+      "OutsideLong": 26,
+      "TopofMid": 8
+    }
+  },
+  "966": {
+    "place": "LowerTunnel",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 6
+    }
+  },
+  "48": {
+    "place": "TopofMid",
+    "votes": 56,
+    "total_votes": 56,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 56
+    }
+  },
+  "201": {
+    "place": "LongDoors",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 18
+    }
+  },
+  "1078": {
+    "place": "MidDoors",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 17
+    }
+  },
+  "885": {
+    "place": "LowerTunnel",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 16
+    }
+  },
+  "1181": {
+    "place": "ExtendedA",
+    "votes": 56,
+    "total_votes": 65,
+    "confidence": 0.8615384615384616,
+    "all_votes": {
+      "ExtendedA": 56,
+      "ShortStairs": 9
+    }
+  },
+  "2063": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 6
+    }
+  },
+  "783": {
+    "place": "TunnelStairs",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 8
+    }
+  },
+  "872": {
+    "place": "ShortStairs",
+    "votes": 28,
+    "total_votes": 28,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 28
+    }
+  },
+  "269": {
+    "place": "LongDoors",
+    "votes": 27,
+    "total_votes": 27,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 27
+    }
+  },
+  "2002": {
+    "place": "BombsiteB",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 19
+    }
+  },
+  "578": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "796": {
+    "place": "TunnelStairs",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 14
+    }
+  },
+  "756": {
+    "place": "ShortStairs",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 10
+    }
+  },
+  "254": {
+    "place": "LongDoors",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 14
+    }
+  },
+  "1320": {
+    "place": "MidDoors",
+    "votes": 20,
+    "total_votes": 21,
+    "confidence": 0.9523809523809523,
+    "all_votes": {
+      "MidDoors": 20,
+      "BDoors": 1
+    }
+  },
+  "813": {
+    "place": "TunnelStairs",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 8
+    }
+  },
+  "621": {
+    "place": "ShortStairs",
+    "votes": 47,
+    "total_votes": 47,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 47
+    }
+  },
+  "299": {
+    "place": "LongDoors",
+    "votes": 49,
+    "total_votes": 49,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 49
+    }
+  },
+  "311": {
+    "place": "LongDoors",
+    "votes": 33,
+    "total_votes": 33,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 33
+    }
+  },
+  "1431": {
+    "place": "BDoors",
+    "votes": 12,
+    "total_votes": 20,
+    "confidence": 0.6,
+    "all_votes": {
+      "MidDoors": 8,
+      "BDoors": 12
+    }
+  },
+  "43": {
+    "place": "OutsideLong",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 15
+    }
+  },
+  "837": {
+    "place": "TunnelStairs",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 12
+    }
+  },
+  "126": {
+    "place": "OutsideLong",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 6
+    }
+  },
+  "1682": {
+    "place": "LongA",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 6
+    }
+  },
+  "85": {
+    "place": "TopofMid",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 12
+    }
+  },
+  "224": {
+    "place": "OutsideLong",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 7
+    }
+  },
+  "844": {
+    "place": "LowerTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 1
+    }
+  },
+  "84": {
+    "place": "TopofMid",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 6
+    }
+  },
+  "820": {
+    "place": "LowerTunnel",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 16
+    }
+  },
+  "170": {
+    "place": "TopofMid",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 9
+    }
+  },
+  "1831": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 6
+    }
+  },
+  "169": {
+    "place": "TopofMid",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 16
+    }
+  },
+  "1926": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "916": {
+    "place": "LowerTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 4
+    }
+  },
+  "261": {
+    "place": "TopofMid",
+    "votes": 15,
+    "total_votes": 17,
+    "confidence": 0.8823529411764706,
+    "all_votes": {
+      "TopofMid": 15,
+      "Middle": 2
+    }
+  },
+  "134": {
+    "place": "OutsideLong",
+    "votes": 42,
+    "total_votes": 42,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 42
+    }
+  },
+  "790": {
+    "place": "LowerTunnel",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 17
+    }
+  },
+  "2051": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "793": {
+    "place": "LowerTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 7
+    }
+  },
+  "315": {
+    "place": "Catwalk",
+    "votes": 47,
+    "total_votes": 55,
+    "confidence": 0.8545454545454545,
+    "all_votes": {
+      "Middle": 8,
+      "Catwalk": 47
+    }
+  },
+  "714": {
+    "place": "LowerTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 7
+    }
+  },
+  "896": {
+    "place": "ShortStairs",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 15
+    }
+  },
+  "1892": {
+    "place": "BombsiteB",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 15
+    }
+  },
+  "711": {
+    "place": "LowerTunnel",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 10
+    }
+  },
+  "319": {
+    "place": "Catwalk",
+    "votes": 82,
+    "total_votes": 86,
+    "confidence": 0.9534883720930233,
+    "all_votes": {
+      "Catwalk": 82,
+      "Middle": 4
+    }
+  },
+  "684": {
+    "place": "LowerTunnel",
+    "votes": 33,
+    "total_votes": 33,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 33
+    }
+  },
+  "301": {
+    "place": "Catwalk",
+    "votes": 77,
+    "total_votes": 80,
+    "confidence": 0.9625,
+    "all_votes": {
+      "Catwalk": 77,
+      "Middle": 3
+    }
+  },
+  "789": {
+    "place": "LowerTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 4
+    }
+  },
+  "946": {
+    "place": "ShortStairs",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 8
+    }
+  },
+  "2093": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "650": {
+    "place": "Middle",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 4
+    }
+  },
+  "1245": {
+    "place": "ExtendedA",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 10
+    }
+  },
+  "577": {
+    "place": "Middle",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 9
+    }
+  },
+  "1774": {
+    "place": "ARamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 2
+    }
+  },
+  "1517": {
+    "place": "UnderA",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 10
+    }
+  },
+  "555": {
+    "place": "Catwalk",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 18
+    }
+  },
+  "121": {
+    "place": "OutsideLong",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 10
+    }
+  },
+  "2160": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "557": {
+    "place": "Catwalk",
+    "votes": 49,
+    "total_votes": 50,
+    "confidence": 0.98,
+    "all_votes": {
+      "Catwalk": 49,
+      "Middle": 1
+    }
+  },
+  "584": {
+    "place": "Catwalk",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 14
+    }
+  },
+  "1980": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1658": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "308": {
+    "place": "LongDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 4
+    }
+  },
+  "607": {
+    "place": "ShortStairs",
+    "votes": 31,
+    "total_votes": 41,
+    "confidence": 0.7560975609756098,
+    "all_votes": {
+      "ShortStairs": 31,
+      "Catwalk": 10
+    }
+  },
+  "1649": {
+    "place": "BDoors",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 9
+    }
+  },
+  "622": {
+    "place": "ShortStairs",
+    "votes": 26,
+    "total_votes": 26,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 26
+    }
+  },
+  "386": {
+    "place": "LongDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 6
+    }
+  },
+  "341": {
+    "place": "LongDoors",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 7
+    }
+  },
+  "51": {
+    "place": "OutsideLong",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 3
+    }
+  },
+  "1569": {
+    "place": "BDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 2
+    }
+  },
+  "963": {
+    "place": "ShortStairs",
+    "votes": 23,
+    "total_votes": 23,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 23
+    }
+  },
+  "502": {
+    "place": "LongDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 3
+    }
+  },
+  "863": {
+    "place": "ShortStairs",
+    "votes": 83,
+    "total_votes": 83,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 83
+    }
+  },
+  "540": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "1495": {
+    "place": "BombsiteB",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 19
+    }
+  },
+  "1280": {
+    "place": "CTSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 3
+    }
+  },
+  "1573": {
+    "place": "BDoors",
+    "votes": 20,
+    "total_votes": 20,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 20
+    }
+  },
+  "1115": {
+    "place": "ExtendedA",
+    "votes": 20,
+    "total_votes": 20,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 20
+    }
+  },
+  "467": {
+    "place": "LongDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 1
+    }
+  },
+  "1069": {
+    "place": "LongA",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 11
+    }
+  },
+  "510": {
+    "place": "LongDoors",
+    "votes": 24,
+    "total_votes": 24,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 24
+    }
+  },
+  "1567": {
+    "place": "UnderA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 2
+    }
+  },
+  "1428": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 5
+    }
+  },
+  "706": {
+    "place": "LongDoors",
+    "votes": 6,
+    "total_votes": 7,
+    "confidence": 0.8571428571428571,
+    "all_votes": {
+      "LongDoors": 6,
+      "LongA": 1
+    }
+  },
+  "1448": {
+    "place": "LongA",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 7
+    }
+  },
+  "732": {
+    "place": "LongA",
+    "votes": 8,
+    "total_votes": 10,
+    "confidence": 0.8,
+    "all_votes": {
+      "Pit": 2,
+      "LongA": 8
+    }
+  },
+  "1235": {
+    "place": "CTSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 3
+    }
+  },
+  "1915": {
+    "place": "BombsiteA",
+    "votes": 32,
+    "total_votes": 32,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 32
+    }
+  },
+  "1471": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 5
+    }
+  },
+  "1745": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "866": {
+    "place": "LongA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 3
+    }
+  },
+  "1560": {
+    "place": "UnderA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 2
+    }
+  },
+  "1827": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "1024": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "1789": {
+    "place": "ExtendedA",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 15
+    }
+  },
+  "1067": {
+    "place": "LongA",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 14
+    }
+  },
+  "1749": {
+    "place": "ExtendedA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 4
+    }
+  },
+  "1713": {
+    "place": "LongA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 4
+    }
+  },
+  "1768": {
+    "place": "ExtendedA",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 14
+    }
+  },
+  "1684": {
+    "place": "LongA",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 9
+    }
+  },
+  "1847": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "1803": {
+    "place": "ExtendedA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 4
+    }
+  },
+  "1721": {
+    "place": "ExtendedA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 5
+    }
+  },
+  "1620": {
+    "place": "ExtendedA",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 11
+    }
+  },
+  "1722": {
+    "place": "ExtendedA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 3
+    }
+  },
+  "1571": {
+    "place": "ExtendedA",
+    "votes": 14,
+    "total_votes": 16,
+    "confidence": 0.875,
+    "all_votes": {
+      "UnderA": 2,
+      "ExtendedA": 14
+    }
+  },
+  "338": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "1257": {
+    "place": "CTSpawn",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 12
+    }
+  },
+  "531": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "119": {
+    "place": "TopofMid",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 5
+    }
+  },
+  "613": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "1570": {
+    "place": "BDoors",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 7
+    }
+  },
+  "683": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1648": {
+    "place": "BDoors",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 8
+    }
+  },
+  "164": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "1599": {
+    "place": "MidDoors",
+    "votes": 30,
+    "total_votes": 30,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 30
+    }
+  },
+  "787": {
+    "place": "TunnelStairs",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 2
+    }
+  },
+  "2001": {
+    "place": "Hole",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 8
+    }
+  },
+  "2092": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 6
+    }
+  },
+  "765": {
+    "place": "ShortStairs",
+    "votes": 45,
+    "total_votes": 45,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 45
+    }
+  },
+  "952": {
+    "place": "UpperTunnel",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 9
+    }
+  },
+  "2060": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1506": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "881": {
+    "place": "UpperTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 8
+    }
+  },
+  "2041": {
+    "place": "BombsiteB",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 8
+    }
+  },
+  "1633": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2190": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "1714": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "494": {
+    "place": "LongDoors",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 9
+    }
+  },
+  "2209": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "2218": {
+    "place": "BombsiteB",
+    "votes": 33,
+    "total_votes": 33,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 33
+    }
+  },
+  "766": {
+    "place": "TunnelStairs",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 13
+    }
+  },
+  "189": {
+    "place": "TopofMid",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 5
+    }
+  },
+  "1868": {
+    "place": "BombsiteB",
+    "votes": 60,
+    "total_votes": 60,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 60
+    }
+  },
+  "864": {
+    "place": "UpperTunnel",
+    "votes": 9,
+    "total_votes": 13,
+    "confidence": 0.6923076923076923,
+    "all_votes": {
+      "UpperTunnel": 9,
+      "TunnelStairs": 4
+    }
+  },
+  "1918": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "879": {
+    "place": "TunnelStairs",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "TunnelStairs": 1,
+      "UpperTunnel": 1
+    }
+  },
+  "2194": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "28": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "42": {
+    "place": "OutsideLong",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 6
+    }
+  },
+  "1046": {
+    "place": "UpperTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 7
+    }
+  },
+  "24": {
+    "place": "OutsideLong",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 16
+    }
+  },
+  "9": {
+    "place": "OutsideLong",
+    "votes": 68,
+    "total_votes": 68,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 68
+    }
+  },
+  "3": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "53": {
+    "place": "OutsideLong",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 5
+    }
+  },
+  "463": {
+    "place": "LongDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 3
+    }
+  },
+  "54": {
+    "place": "OutsideLong",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 9
+    }
+  },
+  "468": {
+    "place": "LongDoors",
+    "votes": 18,
+    "total_votes": 18,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 18
+    }
+  },
+  "814": {
+    "place": "TunnelStairs",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 1
+    }
+  },
+  "2025": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "11": {
+    "place": "OutsideLong",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 21
+    }
+  },
+  "786": {
+    "place": "TunnelStairs",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 11
+    }
+  },
+  "894": {
+    "place": "LowerTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 7
+    }
+  },
+  "895": {
+    "place": "LowerTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 2
+    }
+  },
+  "63": {
+    "place": "TopofMid",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 10
+    }
+  },
+  "86": {
+    "place": "TopofMid",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 7
+    }
+  },
+  "2200": {
+    "place": "BombsiteB",
+    "votes": 29,
+    "total_votes": 29,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 29
+    }
+  },
+  "82": {
+    "place": "TopofMid",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 15
+    }
+  },
+  "195": {
+    "place": "TopofMid",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 21
+    }
+  },
+  "840": {
+    "place": "LowerTunnel",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 8
+    }
+  },
+  "285": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "312": {
+    "place": "Middle",
+    "votes": 4,
+    "total_votes": 5,
+    "confidence": 0.8,
+    "all_votes": {
+      "TopofMid": 1,
+      "Middle": 4
+    }
+  },
+  "297": {
+    "place": "TopofMid",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 5
+    }
+  },
+  "701": {
+    "place": "LowerTunnel",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 21
+    }
+  },
+  "292": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "180": {
+    "place": "TopofMid",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 7
+    }
+  },
+  "694": {
+    "place": "LongDoors",
+    "votes": 103,
+    "total_votes": 103,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 103
+    }
+  },
+  "748": {
+    "place": "MidDoors",
+    "votes": 6,
+    "total_votes": 9,
+    "confidence": 0.6666666666666666,
+    "all_votes": {
+      "Middle": 3,
+      "MidDoors": 6
+    }
+  },
+  "300": {
+    "place": "Catwalk",
+    "votes": 2,
+    "total_votes": 4,
+    "confidence": 0.5,
+    "all_votes": {
+      "Catwalk": 2,
+      "TopofMid": 2
+    }
+  },
+  "576": {
+    "place": "Middle",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 16
+    }
+  },
+  "2036": {
+    "place": "Hole",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 5
+    }
+  },
+  "890": {
+    "place": "MidDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 6
+    }
+  },
+  "934": {
+    "place": "MidDoors",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 9
+    }
+  },
+  "608": {
+    "place": "Catwalk",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 1
+    }
+  },
+  "627": {
+    "place": "ShortStairs",
+    "votes": 27,
+    "total_votes": 27,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 27
+    }
+  },
+  "759": {
+    "place": "MidDoors",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 11
+    }
+  },
+  "634": {
+    "place": "Middle",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 10
+    }
+  },
+  "734": {
+    "place": "Catwalk",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 12
+    }
+  },
+  "722": {
+    "place": "ShortStairs",
+    "votes": 27,
+    "total_votes": 27,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 27
+    }
+  },
+  "891": {
+    "place": "ShortStairs",
+    "votes": 34,
+    "total_votes": 34,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 34
+    }
+  },
+  "1016": {
+    "place": "ShortStairs",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 10
+    }
+  },
+  "2212": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "2199": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1898": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1038": {
+    "place": "ShortStairs",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 5
+    }
+  },
+  "1919": {
+    "place": "BDoors",
+    "votes": 26,
+    "total_votes": 26,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 26
+    }
+  },
+  "945": {
+    "place": "ShortStairs",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 4
+    }
+  },
+  "1408": {
+    "place": "BDoors",
+    "votes": 17,
+    "total_votes": 22,
+    "confidence": 0.7727272727272727,
+    "all_votes": {
+      "BDoors": 17,
+      "MidDoors": 5
+    }
+  },
+  "1247": {
+    "place": "ExtendedA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 5
+    }
+  },
+  "1032": {
+    "place": "ShortStairs",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 5
+    }
+  },
+  "1360": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "1031": {
+    "place": "ShortStairs",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 3
+    }
+  },
+  "1628": {
+    "place": "ExtendedA",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 8
+    }
+  },
+  "1702": {
+    "place": "ExtendedA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 4
+    }
+  },
+  "1965": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1921": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "806": {
+    "place": "LowerTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 7
+    }
+  },
+  "403": {
+    "place": "LongDoors",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 14
+    }
+  },
+  "739": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "1913": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1686": {
+    "place": "ExtendedA",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 19
+    }
+  },
+  "1782": {
+    "place": "BombsiteA",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 9
+    }
+  },
+  "1196": {
+    "place": "MidDoors",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 8
+    }
+  },
+  "1811": {
+    "place": "ExtendedA",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 8
+    }
+  },
+  "1593": {
+    "place": "MidDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 6
+    }
+  },
+  "788": {
+    "place": "ShortStairs",
+    "votes": 23,
+    "total_votes": 23,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 23
+    }
+  },
+  "2005": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1191": {
+    "place": "CTSpawn",
+    "votes": 13,
+    "total_votes": 20,
+    "confidence": 0.65,
+    "all_votes": {
+      "CTSpawn": 13,
+      "MidDoors": 7
+    }
+  },
+  "1770": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "1783": {
+    "place": "BombsiteA",
+    "votes": 26,
+    "total_votes": 26,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 26
+    }
+  },
+  "1674": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "400": {
+    "place": "Middle",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 11
+    }
+  },
+  "1364": {
+    "place": "CTSpawn",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 4
+    }
+  },
+  "1617": {
+    "place": "ExtendedA",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 6
+    }
+  },
+  "306": {
+    "place": "LongDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 1
+    }
+  },
+  "1735": {
+    "place": "BombsiteA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 3
+    }
+  },
+  "1723": {
+    "place": "ExtendedA",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 7
+    }
+  },
+  "883": {
+    "place": "ShortStairs",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 4
+    }
+  },
+  "888": {
+    "place": "MidDoors",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 9
+    }
+  },
+  "1104": {
+    "place": "ShortStairs",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 4
+    }
+  },
+  "438": {
+    "place": "Middle",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 6
+    }
+  },
+  "393": {
+    "place": "Middle",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 11
+    }
+  },
+  "336": {
+    "place": "Middle",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 13
+    }
+  },
+  "2009": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1615": {
+    "place": "ExtendedA",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 10
+    }
+  },
+  "317": {
+    "place": "Catwalk",
+    "votes": 8,
+    "total_votes": 9,
+    "confidence": 0.8888888888888888,
+    "all_votes": {
+      "Catwalk": 8,
+      "Middle": 1
+    }
+  },
+  "901": {
+    "place": "ShortStairs",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 1
+    }
+  },
+  "822": {
+    "place": "ShortStairs",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 6
+    }
+  },
+  "1490": {
+    "place": "UnderA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 5
+    }
+  },
+  "94": {
+    "place": "TopofMid",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 5
+    }
+  },
+  "887": {
+    "place": "MidDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 4
+    }
+  },
+  "979": {
+    "place": "MidDoors",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 13
+    }
+  },
+  "1090": {
+    "place": "MidDoors",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 14
+    }
+  },
+  "65": {
+    "place": "TopofMid",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 9
+    }
+  },
+  "66": {
+    "place": "TopofMid",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 6
+    }
+  },
+  "1436": {
+    "place": "CTSpawn",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 12
+    }
+  },
+  "560": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "1234": {
+    "place": "CTSpawn",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 9
+    }
+  },
+  "553": {
+    "place": "TSpawn",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 9
+    }
+  },
+  "535": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "140": {
+    "place": "TopofMid",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 12
+    }
+  },
+  "677": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "352": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "382": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "360": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "290": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "159": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "1923": {
+    "place": "BDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 2
+    }
+  },
+  "1053": {
+    "place": "UpperTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 5
+    }
+  },
+  "1486": {
+    "place": "BombsiteB",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 7
+    }
+  },
+  "2007": {
+    "place": "Hole",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 3
+    }
+  },
+  "1483": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 6
+    }
+  },
+  "1605": {
+    "place": "UnderA",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 11
+    }
+  },
+  "125": {
+    "place": "OutsideLong",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 9
+    }
+  },
+  "40": {
+    "place": "OutsideLong",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 8
+    }
+  },
+  "1150": {
+    "place": "UpperTunnel",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 12
+    }
+  },
+  "1673": {
+    "place": "ExtendedA",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 8
+    }
+  },
+  "91": {
+    "place": "OutsideLong",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 2
+    }
+  },
+  "76": {
+    "place": "TopofMid",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 1
+    }
+  },
+  "1143": {
+    "place": "UpperTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 3
+    }
+  },
+  "1720": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 3,
+    "confidence": 0.6666666666666666,
+    "all_votes": {
+      "ExtendedA": 1,
+      "BombsiteA": 2
+    }
+  },
+  "87": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "1676": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "181": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "902": {
+    "place": "LowerTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 3
+    }
+  },
+  "293": {
+    "place": "TopofMid",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 7
+    }
+  },
+  "278": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "279": {
+    "place": "TopofMid",
+    "votes": 21,
+    "total_votes": 21,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 21
+    }
+  },
+  "1155": {
+    "place": "UpperTunnel",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 9
+    }
+  },
+  "321": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "1215": {
+    "place": "UpperTunnel",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 9
+    }
+  },
+  "1962": {
+    "place": "Hole",
+    "votes": 3,
+    "total_votes": 6,
+    "confidence": 0.5,
+    "all_votes": {
+      "Hole": 3,
+      "BDoors": 3
+    }
+  },
+  "1211": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "1561": {
+    "place": "BDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 5
+    }
+  },
+  "1855": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1850": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "803": {
+    "place": "LowerTunnel",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 7
+    }
+  },
+  "1380": {
+    "place": "UpperTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 5
+    }
+  },
+  "600": {
+    "place": "Catwalk",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 3
+    }
+  },
+  "1751": {
+    "place": "BombsiteB",
+    "votes": 6,
+    "total_votes": 7,
+    "confidence": 0.8571428571428571,
+    "all_votes": {
+      "UpperTunnel": 1,
+      "BombsiteB": 6
+    }
+  },
+  "1492": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "2091": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1451": {
+    "place": "CTSpawn",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 14
+    }
+  },
+  "970": {
+    "place": "MidDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 3
+    }
+  },
+  "950": {
+    "place": "MidDoors",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 17
+    }
+  },
+  "199": {
+    "place": "LongDoors",
+    "votes": 25,
+    "total_votes": 25,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 25
+    }
+  },
+  "911": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "791": {
+    "place": "LongDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 1
+    }
+  },
+  "369": {
+    "place": "LongDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 6
+    }
+  },
+  "1531": {
+    "place": "UnderA",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 6
+    }
+  },
+  "1305": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "905": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "849": {
+    "place": "OutsideTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 5
+    }
+  },
+  "1447": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 5
+    }
+  },
+  "751": {
+    "place": "OutsideTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 3
+    }
+  },
+  "749": {
+    "place": "OutsideTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 4
+    }
+  },
+  "1587": {
+    "place": "LongA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 4
+    }
+  },
+  "1775": {
+    "place": "ARamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 2
+    }
+  },
+  "1951": {
+    "place": "ARamp",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 4
+    }
+  },
+  "1158": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1718": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "1157": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1193": {
+    "place": "TRamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TRamp": 1
+    }
+  },
+  "1017": {
+    "place": "TRamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TRamp": 1
+    }
+  },
+  "1796": {
+    "place": "ARamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 1
+    }
+  },
+  "1521": {
+    "place": "LongA",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 11
+    }
+  },
+  "1688": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1154": {
+    "place": "MidDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 6
+    }
+  },
+  "128": {
+    "place": "TopofMid",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 4
+    }
+  },
+  "1337": {
+    "place": "LongA",
+    "votes": 11,
+    "total_votes": 11,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 11
+    }
+  },
+  "156": {
+    "place": "TopofMid",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "TopofMid": 1,
+      "OutsideLong": 1
+    }
+  },
+  "1086": {
+    "place": "UpperTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 5
+    }
+  },
+  "22": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "2018": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "BombsiteA": 1,
+      "ARamp": 1
+    }
+  },
+  "1987": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1946": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1948": {
+    "place": "BombsiteA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 3
+    }
+  },
+  "1941": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1952": {
+    "place": "BombsiteA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 4
+    }
+  },
+  "1953": {
+    "place": "BombsiteA",
+    "votes": 44,
+    "total_votes": 44,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 44
+    }
+  },
+  "1332": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "MidDoors": 1,
+      "BDoors": 1
+    }
+  },
+  "111": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "57": {
+    "place": "OutsideLong",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 3
+    }
+  },
+  "233": {
+    "place": "OutsideLong",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 3
+    }
+  },
+  "200": {
+    "place": "LongDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 1
+    }
+  },
+  "225": {
+    "place": "OutsideLong",
+    "votes": 36,
+    "total_votes": 36,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 36
+    }
+  },
+  "1644": {
+    "place": "CTSpawn",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 14
+    }
+  },
+  "1940": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1732": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "268": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "131": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "2068": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "2081": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "2174": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "1178": {
+    "place": "LongA",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 8
+    }
+  },
+  "729": {
+    "place": "LongA",
+    "votes": 6,
+    "total_votes": 7,
+    "confidence": 0.8571428571428571,
+    "all_votes": {
+      "LongA": 6,
+      "LongDoors": 1
+    }
+  },
+  "2029": {
+    "place": "Hole",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 2
+    }
+  },
+  "1808": {
+    "place": "BDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 3
+    }
+  },
+  "1586": {
+    "place": "MidDoors",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 14
+    }
+  },
+  "1669": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "1376": {
+    "place": "UnderA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 2
+    }
+  },
+  "755": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "907": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "61": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "250": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "1302": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1325": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "761": {
+    "place": "ShortStairs",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 14
+    }
+  },
+  "1500": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "951": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "1303": {
+    "place": "UpperTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 3
+    }
+  },
+  "33": {
+    "place": "OutsideLong",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 2
+    }
+  },
+  "68": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "74": {
+    "place": "TopofMid",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 5
+    }
+  },
+  "376": {
+    "place": "LongDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 1
+    }
+  },
+  "993": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "166": {
+    "place": "TopofMid",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 4
+    }
+  },
+  "884": {
+    "place": "TunnelStairs",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TunnelStairs": 3
+    }
+  },
+  "1396": {
+    "place": "UnderA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 1
+    }
+  },
+  "1998": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1002": {
+    "place": "LowerTunnel",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 10
+    }
+  },
+  "733": {
+    "place": "Catwalk",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 6
+    }
+  },
+  "651": {
+    "place": "Middle",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 4
+    }
+  },
+  "631": {
+    "place": "Middle",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 7
+    }
+  },
+  "723": {
+    "place": "ShortStairs",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 8
+    }
+  },
+  "1271": {
+    "place": "LongA",
+    "votes": 41,
+    "total_votes": 41,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 41
+    }
+  },
+  "440": {
+    "place": "LongDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 5
+    }
+  },
+  "821": {
+    "place": "ShortStairs",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 3
+    }
+  },
+  "1934": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "BombsiteA": 1,
+      "ARamp": 1
+    }
+  },
+  "1890": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "1668": {
+    "place": "BDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 4
+    }
+  },
+  "1769": {
+    "place": "ExtendedA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 5
+    }
+  },
+  "1916": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1728": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "1652": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "BombsiteA": 1,
+      "UnderA": 1
+    }
+  },
+  "1650": {
+    "place": "UnderA",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "UnderA": 1,
+      "LongA": 1
+    }
+  },
+  "447": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "1443": {
+    "place": "MidDoors",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 6
+    }
+  },
+  "464": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "214": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "14": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "6": {
+    "place": "OutsideLong",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 8
+    }
+  },
+  "176": {
+    "place": "OutsideLong",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 6
+    }
+  },
+  "248": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "245": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "196": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "499": {
+    "place": "LongDoors",
+    "votes": 7,
+    "total_votes": 7,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 7
+    }
+  },
+  "281": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "175": {
+    "place": "OutsideLong",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 2
+    }
+  },
+  "564": {
+    "place": "LongDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 3
+    }
+  },
+  "726": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "1365": {
+    "place": "UpperTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 4
+    }
+  },
+  "1358": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "799": {
+    "place": "LongA",
+    "votes": 38,
+    "total_votes": 38,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 38
+    }
+  },
+  "865": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 3,
+    "confidence": 0.6666666666666666,
+    "all_votes": {
+      "Side": 1,
+      "LongA": 2
+    }
+  },
+  "1026": {
+    "place": "Side",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Side": 1
+    }
+  },
+  "182": {
+    "place": "TopofMid",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 8
+    }
+  },
+  "1010": {
+    "place": "Side",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "Side": 3
+    }
+  },
+  "882": {
+    "place": "LongA",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 16
+    }
+  },
+  "919": {
+    "place": "Side",
+    "votes": 23,
+    "total_votes": 24,
+    "confidence": 0.9583333333333334,
+    "all_votes": {
+      "Side": 23,
+      "Pit": 1
+    }
+  },
+  "958": {
+    "place": "LongA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 3
+    }
+  },
+  "975": {
+    "place": "Side",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "Side": 14
+    }
+  },
+  "1008": {
+    "place": "Side",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Side": 1
+    }
+  },
+  "696": {
+    "place": "Middle",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 5
+    }
+  },
+  "832": {
+    "place": "Side",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Side": 1
+    }
+  },
+  "1105": {
+    "place": "LongA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 5
+    }
+  },
+  "322": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "262": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "525": {
+    "place": "TSpawn",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 4
+    }
+  },
+  "700": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "829": {
+    "place": "OutsideTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 3
+    }
+  },
+  "942": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1397": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "943": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1403": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "978": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1590": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "511": {
+    "place": "LongDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 1
+    }
+  },
+  "1591": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "1547": {
+    "place": "UpperTunnel",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 19
+    }
+  },
+  "2169": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2170": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2186": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2202": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "380": {
+    "place": "LongDoors",
+    "votes": 28,
+    "total_votes": 28,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 28
+    }
+  },
+  "563": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 3,
+    "confidence": 0.6666666666666666,
+    "all_votes": {
+      "LongDoors": 2,
+      "Pit": 1
+    }
+  },
+  "1508": {
+    "place": "BDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 5
+    }
+  },
+  "1534": {
+    "place": "UpperTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 1
+    }
+  },
+  "383": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "762": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "1545": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "23": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "142": {
+    "place": "TopofMid",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 4
+    }
+  },
+  "2196": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2150": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "141": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "1991": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "2098": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "2158": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2157": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1300": {
+    "place": "UnderA",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 6
+    }
+  },
+  "1865": {
+    "place": "BDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 4
+    }
+  },
+  "1530": {
+    "place": "UnderA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 1
+    }
+  },
+  "1636": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "1706": {
+    "place": "MidDoors",
+    "votes": 8,
+    "total_votes": 8,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 8
+    }
+  },
+  "1535": {
+    "place": "BDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 3
+    }
+  },
+  "1804": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1446": {
+    "place": "MidDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 4
+    }
+  },
+  "1790": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1917": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "957": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "1248": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "973": {
+    "place": "Side",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Side": 1
+    }
+  },
+  "1096": {
+    "place": "ShortStairs",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 2
+    }
+  },
+  "1675": {
+    "place": "ExtendedA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 5
+    }
+  },
+  "462": {
+    "place": "LongDoors",
+    "votes": 17,
+    "total_votes": 17,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 17
+    }
+  },
+  "981": {
+    "place": "MidDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 4
+    }
+  },
+  "64": {
+    "place": "OutsideLong",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 2
+    }
+  },
+  "216": {
+    "place": "LongDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 3
+    }
+  },
+  "381": {
+    "place": "LongDoors",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 9
+    }
+  },
+  "710": {
+    "place": "LowerTunnel",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "LowerTunnel": 6
+    }
+  },
+  "1427": {
+    "place": "CTSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 1
+    }
+  },
+  "313": {
+    "place": "TSpawn",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 6
+    }
+  },
+  "699": {
+    "place": "OutsideTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 3
+    }
+  },
+  "132": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "1656": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1607": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1663": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "2010": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1473": {
+    "place": "BDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 3
+    }
+  },
+  "190": {
+    "place": "TopofMid",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 1
+    }
+  },
+  "1359": {
+    "place": "BDoors",
+    "votes": 3,
+    "total_votes": 5,
+    "confidence": 0.6,
+    "all_votes": {
+      "BDoors": 3,
+      "MidDoors": 2
+    }
+  },
+  "243": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "287": {
+    "place": "OutsideLong",
+    "votes": 60,
+    "total_votes": 60,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 60
+    }
+  },
+  "286": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "242": {
+    "place": "OutsideLong",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 12
+    }
+  },
+  "260": {
+    "place": "TopofMid",
+    "votes": 9,
+    "total_votes": 9,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 9
+    }
+  },
+  "851": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "149": {
+    "place": "OutsideLong",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 5
+    }
+  },
+  "75": {
+    "place": "TopofMid",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 1
+    }
+  },
+  "515": {
+    "place": "Middle",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 5
+    }
+  },
+  "1402": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "1469": {
+    "place": "BDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 3
+    }
+  },
+  "1657": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1806": {
+    "place": "ARamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 1
+    }
+  },
+  "1700": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "2053": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "1893": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1307": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "2168": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1544": {
+    "place": "LongA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 4
+    }
+  },
+  "809": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "530": {
+    "place": "Middle",
+    "votes": 6,
+    "total_votes": 6,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 6
+    }
+  },
+  "519": {
+    "place": "Middle",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 2
+    }
+  },
+  "437": {
+    "place": "Middle",
+    "votes": 22,
+    "total_votes": 22,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 22
+    }
+  },
+  "1597": {
+    "place": "LongA",
+    "votes": 12,
+    "total_votes": 12,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 12
+    }
+  },
+  "401": {
+    "place": "Middle",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 5
+    }
+  },
+  "406": {
+    "place": "Middle",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 4
+    }
+  },
+  "1222": {
+    "place": "CTSpawn",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 4
+    }
+  },
+  "1815": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "1709": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "348": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "842": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1093": {
+    "place": "MidDoors",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 13
+    }
+  },
+  "2021": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1018": {
+    "place": "TRamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TRamp": 2
+    }
+  },
+  "1029": {
+    "place": "TRamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TRamp": 1
+    }
+  },
+  "1114": {
+    "place": "TRamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TRamp": 1
+    }
+  },
+  "819": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "151": {
+    "place": "TopofMid",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 5
+    }
+  },
+  "674": {
+    "place": "TSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 2
+    }
+  },
+  "264": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "235": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "329": {
+    "place": "Middle",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 2
+    }
+  },
+  "1660": {
+    "place": "BombsiteA",
+    "votes": 11,
+    "total_votes": 14,
+    "confidence": 0.7857142857142857,
+    "all_votes": {
+      "BombsiteA": 11,
+      "ExtendedA": 2,
+      "UnderA": 1
+    }
+  },
+  "2192": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1960": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "728": {
+    "place": "ShortStairs",
+    "votes": 25,
+    "total_votes": 25,
+    "confidence": 1.0,
+    "all_votes": {
+      "ShortStairs": 25
+    }
+  },
+  "310": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "1588": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1780": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "940": {
+    "place": "MidDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 3
+    }
+  },
+  "1717": {
+    "place": "BombsiteA",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 5
+    }
+  },
+  "228": {
+    "place": "OutsideLong",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 3
+    }
+  },
+  "208": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "928": {
+    "place": "MidDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 3
+    }
+  },
+  "7": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "742": {
+    "place": "Catwalk",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Catwalk": 1
+    }
+  },
+  "21": {
+    "place": "OutsideLong",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 4
+    }
+  },
+  "4": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "124": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "2": {
+    "place": "OutsideLong",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 2
+    }
+  },
+  "1626": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "342": {
+    "place": "Middle",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 1
+    }
+  },
+  "1627": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1662": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1857": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1843": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1978": {
+    "place": "BombsiteB",
+    "votes": 41,
+    "total_votes": 41,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 41
+    }
+  },
+  "1691": {
+    "place": "CTSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 2
+    }
+  },
+  "345": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "1670": {
+    "place": "CTSpawn",
+    "votes": 16,
+    "total_votes": 16,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 16
+    }
+  },
+  "130": {
+    "place": "TopofMid",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 3
+    }
+  },
+  "1710": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "1693": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 4,
+    "confidence": 0.5,
+    "all_votes": {
+      "UnderA": 1,
+      "ARamp": 1,
+      "BombsiteA": 2
+    }
+  },
+  "154": {
+    "place": "TopofMid",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 1
+    }
+  },
+  "1990": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "197": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "186": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "2039": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1474": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "1677": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "826": {
+    "place": "MidDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 3
+    }
+  },
+  "1712": {
+    "place": "ExtendedA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 1
+    }
+  },
+  "930": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "1947": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "2126": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1966": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "2127": {
+    "place": "BombsiteA",
+    "votes": 49,
+    "total_votes": 49,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 49
+    }
+  },
+  "1986": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "2088": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "2130": {
+    "place": "ARamp",
+    "votes": 8,
+    "total_votes": 12,
+    "confidence": 0.6666666666666666,
+    "all_votes": {
+      "BombsiteA": 4,
+      "ARamp": 8
+    }
+  },
+  "1933": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1795": {
+    "place": "ARamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 1
+    }
+  },
+  "1881": {
+    "place": "BombsiteA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 3
+    }
+  },
+  "2134": {
+    "place": "ARamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 1
+    }
+  },
+  "2072": {
+    "place": "ARamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 2
+    }
+  },
+  "1755": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "2073": {
+    "place": "ARamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 2
+    }
+  },
+  "2017": {
+    "place": "ARamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 1
+    }
+  },
+  "639": {
+    "place": "OutsideTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 3
+    }
+  },
+  "1511": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "1479": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1845": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "184": {
+    "place": "TSpawn",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 3
+    }
+  },
+  "1939": {
+    "place": "BDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 4
+    }
+  },
+  "2020": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "2078": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "1821": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1041": {
+    "place": "OutsideTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 5
+    }
+  },
+  "1777": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1519": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "620": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "1475": {
+    "place": "BDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 2
+    }
+  },
+  "2037": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "835": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "1455": {
+    "place": "BDoors",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 3
+    }
+  },
+  "824": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "2035": {
+    "place": "BombsiteB",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 15
+    }
+  },
+  "2004": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2003": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1491": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "1683": {
+    "place": "BombsiteB",
+    "votes": 15,
+    "total_votes": 15,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 15
+    }
+  },
+  "764": {
+    "place": "OutsideTunnel",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 5
+    }
+  },
+  "1033": {
+    "place": "OutsideTunnel",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 3
+    }
+  },
+  "1566": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1036": {
+    "place": "OutsideTunnel",
+    "votes": 13,
+    "total_votes": 13,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 13
+    }
+  },
+  "1212": {
+    "place": "UpperTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "UpperTunnel": 2
+    }
+  },
+  "661": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "558": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1221": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1059": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1344": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "583": {
+    "place": "Pit",
+    "votes": 14,
+    "total_votes": 14,
+    "confidence": 1.0,
+    "all_votes": {
+      "Pit": 14
+    }
+  },
+  "104": {
+    "place": "OutsideLong",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 2
+    }
+  },
+  "573": {
+    "place": "Pit",
+    "votes": 25,
+    "total_votes": 25,
+    "confidence": 1.0,
+    "all_votes": {
+      "Pit": 25
+    }
+  },
+  "906": {
+    "place": "OutsideTunnel",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 2
+    }
+  },
+  "1047": {
+    "place": "OutsideTunnel",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 4
+    }
+  },
+  "259": {
+    "place": "TopofMid",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 1
+    }
+  },
+  "206": {
+    "place": "TSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TSpawn": 1
+    }
+  },
+  "1034": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "994": {
+    "place": "OutsideTunnel",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideTunnel": 1
+    }
+  },
+  "1030": {
+    "place": "TRamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TRamp": 1
+    }
+  },
+  "745": {
+    "place": "TRamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "TRamp": 1
+    }
+  },
+  "72": {
+    "place": "TopofMid",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "TopofMid": 2
+    }
+  },
+  "2148": {
+    "place": "ARamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 2
+    }
+  },
+  "122": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "2040": {
+    "place": "ARamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 1
+    }
+  },
+  "596": {
+    "place": "Pit",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Pit": 1
+    }
+  },
+  "137": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "1767": {
+    "place": "ExtendedA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ExtendedA": 2
+    }
+  },
+  "1671": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "1614": {
+    "place": "CTSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 2
+    }
+  },
+  "1696": {
+    "place": "CTSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 1
+    }
+  },
+  "2034": {
+    "place": "BombsiteA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 2
+    }
+  },
+  "2023": {
+    "place": "ARamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 2
+    }
+  },
+  "1645": {
+    "place": "CTSpawn",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 1
+    }
+  },
+  "1797": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1692": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1655": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1316": {
+    "place": "CTSpawn",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "CTSpawn": 2
+    }
+  },
+  "1638": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1757": {
+    "place": "LongA",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 2
+    }
+  },
+  "1527": {
+    "place": "UnderA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 1
+    }
+  },
+  "387": {
+    "place": "Middle",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "Middle": 1
+    }
+  },
+  "782": {
+    "place": "MidDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 2
+    }
+  },
+  "2226": {
+    "place": "BombsiteB",
+    "votes": 10,
+    "total_votes": 10,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 10
+    }
+  },
+  "1516": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2228": {
+    "place": "BombsiteB",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 2
+    }
+  },
+  "1425": {
+    "place": "BombsiteB",
+    "votes": 19,
+    "total_votes": 19,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 19
+    }
+  },
+  "2231": {
+    "place": "BombsiteB",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 5
+    }
+  },
+  "1730": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 2,
+    "confidence": 0.5,
+    "all_votes": {
+      "MidDoors": 1,
+      "BDoors": 1
+    }
+  },
+  "1822": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "2222": {
+    "place": "BombsiteB",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 4
+    }
+  },
+  "2079": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "60": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "20": {
+    "place": "OutsideLong",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 2
+    }
+  },
+  "959": {
+    "place": "LongA",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 4
+    }
+  },
+  "960": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "343": {
+    "place": "LongDoors",
+    "votes": 27,
+    "total_votes": 27,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 27
+    }
+  },
+  "344": {
+    "place": "LongDoors",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 2
+    }
+  },
+  "1703": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "207": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "2044": {
+    "place": "BombsiteB",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 3
+    }
+  },
+  "209": {
+    "place": "OutsideLong",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "OutsideLong": 1
+    }
+  },
+  "1098": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "1124": {
+    "place": "LongA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongA": 1
+    }
+  },
+  "368": {
+    "place": "LongDoors",
+    "votes": 50,
+    "total_votes": 50,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 50
+    }
+  },
+  "1814": {
+    "place": "ARamp",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 1
+    }
+  },
+  "378": {
+    "place": "LongDoors",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 4
+    }
+  },
+  "2042": {
+    "place": "ARamp",
+    "votes": 2,
+    "total_votes": 2,
+    "confidence": 1.0,
+    "all_votes": {
+      "ARamp": 2
+    }
+  },
+  "2066": {
+    "place": "BombsiteA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 1
+    }
+  },
+  "1903": {
+    "place": "BombsiteA",
+    "votes": 3,
+    "total_votes": 3,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteA": 3
+    }
+  },
+  "1992": {
+    "place": "BDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BDoors": 1
+    }
+  },
+  "346": {
+    "place": "LongDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 1
+    }
+  },
+  "1481": {
+    "place": "BombsiteB",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "BombsiteB": 1
+    }
+  },
+  "1541": {
+    "place": "UnderA",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "UnderA": 1
+    }
+  },
+  "2232": {
+    "place": "LongDoors",
+    "votes": 5,
+    "total_votes": 5,
+    "confidence": 1.0,
+    "all_votes": {
+      "LongDoors": 5
+    }
+  },
+  "760": {
+    "place": "MidDoors",
+    "votes": 1,
+    "total_votes": 1,
+    "confidence": 1.0,
+    "all_votes": {
+      "MidDoors": 1
+    }
+  },
+  "2022": {
+    "place": "Hole",
+    "votes": 4,
+    "total_votes": 4,
+    "confidence": 1.0,
+    "all_votes": {
+      "Hole": 4
+    }
+  }
+}

@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map Control Research — Ideas & Plans</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; background: #1a1a2e; color: #e0e0e0; line-height: 1.5; display: flex; min-height: 100vh; }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    width: 220px;
+    min-width: 220px;
+    background: #151528;
+    border-right: 1px solid #333;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 14px 0;
+    z-index: 20;
+    scrollbar-width: thin;
+    scrollbar-color: #3a3a6a #151528;
+  }
+  .sidebar h2 {
+    font-size: 0.95rem;
+    padding: 6px 14px;
+    margin: 0;
+    border-bottom: none;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-group { margin: 10px 0 4px; }
+  .sidebar-group-header {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 6px 14px 4px;
+    color: #888;
+    border-left: 3px solid transparent;
+    margin-bottom: 2px;
+  }
+  .sidebar-group-header.group-overview  { border-left-color: #e0e0e0; color: #ccc; }
+  .sidebar-group-header.group-infra     { border-left-color: #4a9fd5; color: #6ab8ee; }
+  .sidebar-group-header.group-method    { border-left-color: #4a9; color: #6dc; }
+  .sidebar-group-header.group-models    { border-left-color: #a67fd5; color: #c9a8f0; }
+  .sidebar-group-header.group-data      { border-left-color: #d5924a; color: #f0b870; }
+
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px 5px 22px;
+    font-size: 0.78rem;
+    color: #aaa;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+    border-left: 3px solid transparent;
+  }
+  .sidebar-item:hover { background: #1e1e3a; color: #e0e0e0; }
+  .sidebar-item.active { background: #222248; color: #fff; border-left-color: #4a6fa5; }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+  .badge-done       { background: #1a3a1a; color: #6d6; border: 1px solid #3a5a3a; }
+  .badge-inprogress { background: #3a3a1a; color: #dd6; border: 1px solid #5a5a2a; }
+  .badge-research   { background: #1a2a3a; color: #6af; border: 1px solid #2a4a6a; }
+
+  /* ── Main content ── */
+  .main {
+    flex: 1;
+    padding: 20px 28px 60px;
+    max-width: 960px;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+  .main > h1 {
+    text-align: center;
+    padding: 10px 0 18px;
+    color: #fff;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+  }
+
+  /* Group headings in content */
+  .group-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 0 6px;
+    margin: 30px 0 8px;
+    border-left: 4px solid transparent;
+    padding-left: 12px;
+  }
+  .group-heading:first-of-type { margin-top: 0; }
+  .group-heading.group-overview  { border-left-color: #e0e0e0; color: #ccc; }
+  .group-heading.group-infra     { border-left-color: #4a9fd5; color: #6ab8ee; }
+  .group-heading.group-method    { border-left-color: #4a9; color: #6dc; }
+  .group-heading.group-models    { border-left-color: #a67fd5; color: #c9a8f0; }
+  .group-heading.group-data      { border-left-color: #d5924a; color: #f0b870; }
+
+  /* Accordion sections */
+  details {
+    background: #1e1e36;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    margin: 6px 0;
+    transition: border-color 0.2s;
+  }
+  details[open] { border-color: #3a3a6a; }
+
+  details summary {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ccd;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+  details summary:hover { background: #252548; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before {
+    content: "\25B6";
+    font-size: 0.65rem;
+    color: #666;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  details[open] > summary::before { transform: rotate(90deg); }
+  details summary .badge { margin-left: auto; }
+
+  .section-content { padding: 4px 16px 16px; }
+
+  /* ── Content styles (same as original) ── */
+  h2 { color: #aac; margin: 18px 0 10px; font-size: 1.15rem; border-bottom: 1px solid #333; padding-bottom: 4px; }
+  h3 { color: #8ab; margin: 14px 0 6px; font-size: 0.95rem; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: 0.82rem; }
+  th { background: #1e1e3a; padding: 6px 8px; text-align: left; color: #aac; }
+  td { padding: 5px 8px; border-bottom: 1px solid #2a2a4a; vertical-align: top; }
+  tr:hover td { background: #252548; }
+  code { background: #2a2a4a; padding: 1px 5px; border-radius: 3px; font-size: 0.82rem; color: #8cf; }
+  pre { background: #1e1e3a; padding: 10px; border-radius: 6px; overflow-x: auto; font-size: 0.78rem; margin: 8px 0; color: #cde; }
+  .rec { color: #8f8; font-weight: bold; }
+  .warn { color: #ee8; }
+  .note { color: #8cf; font-size: 0.82rem; }
+  .card { background: #222244; border-radius: 8px; padding: 14px; margin: 10px 0; border: 1px solid #333; }
+  p { margin: 6px 0; font-size: 0.85rem; }
+  ul, ol { margin: 6px 0 10px 20px; font-size: 0.85rem; }
+  li { margin: 3px 0; }
+  a { color: #8cf; }
+
+  /* Scrollbar for sidebar */
+  .sidebar::-webkit-scrollbar { width: 6px; }
+  .sidebar::-webkit-scrollbar-track { background: #151528; }
+  .sidebar::-webkit-scrollbar-thumb { background: #3a3a6a; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ════════════════ SIDEBAR ════════════════ -->
+<nav class="sidebar" id="sidebar">
+  <h2>Research</h2>
+
+  <!-- OVERVIEW -->
+  <div class="sidebar-group">
+    <div class="sidebar-group-header group-overview">Overview</div>
+    <a class="sidebar-item" data-target="sec-roadmap">Roadmap <span class="badge badge-inprogress">In Progress</span></a>
+    <a class="sidebar-item" data-target="sec-execution">Execution Plans <span class="badge badge-inprogress">In Progress</span></a>
+    <a class="sidebar-item" data-target="sec-mvp">MVPs &amp; Validation <span class="badge badge-research">Research</span></a>
+  </div>
+
+  <!-- INFRASTRUCTURE -->
+  <div class="sidebar-group">
+    <div class="sidebar-group-header group-infra">Infrastructure</div>
+    <a class="sidebar-item" data-target="sec-database">Database Schema <span class="badge badge-done">Done</span></a>
+    <a class="sidebar-item" data-target="sec-scraping">HLTV Scraping <span class="badge badge-inprogress">In Progress</span></a>
+    <a class="sidebar-item" data-target="sec-saferun">Safe Scraping <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-orchestration">Agent Orchestration <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-healing">Self-Healing <span class="badge badge-research">Research</span></a>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="sidebar-group">
+    <div class="sidebar-group-header group-method">Methodology</div>
+    <a class="sidebar-item" data-target="sec-utility">Utility (Smokes) <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-flags">Feature Flags <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-weapon-range">Weapon from Data <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-multichannel">Multi-Channel <span class="badge badge-research">Research</span></a>
+  </div>
+
+  <!-- MODELS -->
+  <div class="sidebar-group">
+    <div class="sidebar-group-header group-models">Models</div>
+    <a class="sidebar-item" data-target="sec-winprob">Win Prob + SHAP <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-igl">IGL Model <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-gnn">GNN &amp; Attention <span class="badge badge-research">Research</span></a>
+    <a class="sidebar-item" data-target="sec-fogofwar">Fog of War <span class="badge badge-research">Research</span></a>
+  </div>
+
+  <!-- DATA -->
+  <div class="sidebar-group">
+    <div class="sidebar-group-header group-data">Data</div>
+    <a class="sidebar-item" data-target="sec-data">Demo Data Inventory <span class="badge badge-done">Done</span></a>
+    <a class="sidebar-item" data-target="sec-places">Place Mapping <span class="badge badge-done">Done</span></a>
+    <a class="sidebar-item" data-target="sec-mindemos">Min Demos + Ideas <span class="badge badge-research">Research</span></a>
+  </div>
+</nav>
+
+<!-- ════════════════ MAIN CONTENT ════════════════ -->
+<div class="main" id="main">
+<h1>Map Control Research — Ideas &amp; Plans</h1>
+
+<!-- ═══════ GROUP 1: OVERVIEW ═══════ -->
+<div class="group-heading group-overview">Overview</div>
+
+<!-- Roadmap -->
+<details open id="sec-roadmap">
+<summary>Roadmap <span class="badge badge-inprogress">In Progress</span></summary>
+<div class="section-content">
+<h2>Master Roadmap: All Workstreams</h2>
+
+<h3>Phase 0: DONE</h3>
+<table>
+<tr><th>Task</th><th>Status</th><th>Notes</th></tr>
+<tr><td>Multi-map validation (all 9 competitive maps)</td><td class="rec">DONE</td><td>55 tests passing, boundary checks perfect</td></tr>
+<tr><td>VisibilityChecker validation</td><td class="rec">DONE</td><td>10/10 tests, works correctly, 0.2-0.4ms/check</td></tr>
+<tr><td>ZeroDivisionError bug fix</td><td class="rec">DONE</td><td>All-dead returns 0.0/0.5/1.0 correctly</td></tr>
+<tr><td>Tile-to-place mapping (dust2, 100%)</td><td class="rec">DONE</td><td>10 demos, 24 regions, 96.3% cross-demo accuracy</td></tr>
+<tr><td>ETL pipeline script</td><td class="rec">DONE</td><td><code>scripts/etl_pipeline.py</code> — 925 lines, validated on 10 demos (5 .dem + 5 .rar)</td></tr>
+<tr><td>DuckDB + Parquet setup</td><td class="rec">DONE</td><td>duckdb 1.5.1 installed, schema validated, ~0.6 MB/demo</td></tr>
+<tr><td>Real demo analysis</td><td class="rec">DONE</td><td>Aurora vs Heroic (dust2), Spirit vs NiP — zero errors, tactically correct metrics</td></tr>
+<tr><td>Visualization review page</td><td class="rec">DONE</td><td><code>docs/examples/map_control_validation/index.html</code></td></tr>
+</table>
+
+<h3>Phase 1: Foundation (Week 1-2)</h3>
+<table>
+<tr><th>Task</th><th>Effort</th><th>Impact</th><th>Dependency</th></tr>
+<tr><td class="rec">Fix Nav loading (cache, pass through)</td><td>0.5 day</td><td>4x speedup</td><td>None</td></tr>
+<tr><td>Smoke BFS blocking + visualization</td><td>1 day</td><td>High</td><td>Nav fix</td></tr>
+<tr><td>Molotov area denial</td><td>1 day</td><td>High</td><td>Nav fix</td></tr>
+<tr><td>Flash player weight</td><td>0.5 day</td><td>Medium</td><td>Nav fix</td></tr>
+<tr><td>Kill distance analysis (weapon ranges)</td><td>0.5 day</td><td>Medium</td><td>Parsed demos</td></tr>
+<tr><td>MapControlConfig feature flags</td><td>1 day</td><td>High</td><td>None</td></tr>
+</table>
+
+<h3>Phase 2: Data at Scale (Week 2-3)</h3>
+<table>
+<tr><th>Task</th><th>Effort</th><th>Impact</th></tr>
+<tr><td>Run ETL on all 158 BO1 RARs</td><td>~4 hrs batch</td><td>Unlocks all ML work</td></tr>
+<tr><td>Build tile-to-place mapping for all maps</td><td>1 day</td><td>Hierarchical regions for all competitive maps</td></tr>
+<tr><td>Weapon depth from kill distances (Approach 1+3)</td><td>1 day</td><td>Data-driven BFS depths</td></tr>
+<tr><td>Self-improving place mapping system</td><td>2 days</td><td>Incremental learning, anomaly detection</td></tr>
+</table>
+
+<h3>Phase 3: Win Probability (Week 3-4)</h3>
+<table>
+<tr><th>Task</th><th>Effort</th><th>Impact</th></tr>
+<tr><td>Feature extraction (93-dim vectors from all demos)</td><td>2 days</td><td>ML infrastructure</td></tr>
+<tr><td>Baseline XGBoost (paper features only)</td><td>1 day</td><td>AUC ~0.78</td></tr>
+<tr><td>+Map Control features + ablation</td><td>2 days</td><td>Feature importance answer</td></tr>
+<tr><td>SHAP analysis + partial dependence</td><td>1 day</td><td>Publication-quality results</td></tr>
+</table>
+
+<h3>Phase 4: Advanced Models (Week 5-8)</h3>
+<table>
+<tr><th>Task</th><th>Effort</th><th>Impact</th></tr>
+<tr><td>Sightline-aware BFS (Zoned Awareness)</td><td>1-2 days</td><td>High</td></tr>
+<tr><td>Weapon-specific BFS depth (from Phase 2 data)</td><td>1 day</td><td>Medium</td></tr>
+<tr><td>Win Prob LSTM (temporal)</td><td>3 days</td><td>AUC ~0.83</td></tr>
+<tr><td>Strategy clustering + prediction</td><td>3 days</td><td>IGL foundation</td></tr>
+<tr><td>Bayesian depth optimization (Optuna)</td><td>2 days</td><td>Gold-standard depths</td></tr>
+</table>
+
+<h3>Phase 5: Polish &amp; Publish (Week 9+)</h3>
+<table>
+<tr><th>Task</th><th>Effort</th></tr>
+<tr><td>Pre-computed visibility cache per map</td><td>2-3 days</td></tr>
+<tr><td>Distance-based weapon decay (replaces hop-count)</td><td>2 days</td></tr>
+<tr><td>Documentation + tutorial notebooks</td><td>2 days</td></tr>
+<tr><td>PR to upstream awpy</td><td>1 day</td></tr>
+</table>
+</div>
+</details>
+
+<!-- Execution Plans -->
+<details id="sec-execution">
+<summary>Execution Plans <span class="badge badge-inprogress">In Progress</span></summary>
+<div class="section-content">
+<h2>Phase 1+2 Parallel Execution — Detailed Plans</h2>
+
+<h3>Phase 1 Dependency Graph</h3>
+<pre>
+Wave 1 (parallel):  Nav Cache + MapControlConfig    [~30 min each]
+Wave 2 (sequential): Smoke BFS Blocking              [~45 min]
+Wave 3 (parallel):  Molotov Denial + Flash Weight    [~40 min each]
+Wave 4:             Kill Distance Analysis            [~60 min]
+
+Total wall-clock with parallelization: ~2-3 hours
+</pre>
+
+<h3>Phase 1 Tasks — Incremental Steps</h3>
+<table>
+<tr><th>Task</th><th>Step 1 (PoC)</th><th>Step 2 (Extend)</th><th>Step 3 (Complete)</th><th>Validation Gate</th></tr>
+<tr><td><b>Nav Cache</b></td><td>Add <code>_nav_cache</code> dict + <code>_get_nav()</code> helper</td><td>Add <code>nav: Nav | None</code> param to all public functions</td><td>Apply to plot/map_control.py</td><td>55 tests pass + benchmark: 3-tick round &lt;1s (was &gt;3s)</td></tr>
+<tr><td><b>MapControlConfig</b></td><td>Define dataclass with <code>bfs_depth=10</code></td><td>Thread as <code>config=None</code> through 3 public functions</td><td>Export from <code>awpy.stats</code></td><td>55 tests pass + <code>bfs_depth=5</code> gives fewer tiles than 10</td></tr>
+<tr><td><b>Smoke BFS</b></td><td><code>_get_smoke_blocked_tiles()</code> returns correct tiles</td><td>Add <code>blocked_tiles</code> param to <code>_bfs_helper</code></td><td>Wire through public API + visualization</td><td>BFS does NOT cross smoke position</td></tr>
+<tr><td><b>Molotov Denial</b></td><td><code>_get_molotov_tiles()</code> with thrower side</td><td>Add <code>team</code> param to <code>_bfs_helper</code></td><td>Wire through with <code>infernos</code> DataFrame</td><td>T molotov blocks CT BFS, not T BFS</td></tr>
+<tr><td><b>Flash Weight</b></td><td>Add <code>source_weight</code> param to <code>_bfs_helper</code></td><td>Read <code>flash_duration</code> from tick data</td><td>Handle missing column gracefully</td><td>Flashed player (weight=0.1) has lower influence</td></tr>
+<tr><td><b>Kill Distance</b></td><td><code>get_weapon_effective_ranges()</code> from kill data</td><td><code>_weapon_to_bfs_depth()</code> mapping</td><td>Thread per-player depth into BFS</td><td>AWP p75 &gt; AK p75 &gt; MAC-10 p75</td></tr>
+</table>
+
+<h3>Phase 2 Timeline</h3>
+<table>
+<tr><th>Day</th><th>Activity</th><th>Duration</th><th>Depends On</th></tr>
+<tr><td>Day 1 AM</td><td class="rec">ETL PoC: 10 RARs across 8 maps</td><td>~7 min</td><td>Nothing</td></tr>
+<tr><td>Day 1 AM</td><td>Pre-scale fix: per-match parquet files (eliminate O(n^2) append)</td><td>~1 hr</td><td>ETL PoC</td></tr>
+<tr><td>Day 1 AM</td><td>Kill distance PoC: verify columns, compute ranges from 10 demos</td><td>~10 min</td><td>ETL PoC</td></tr>
+<tr><td>Day 1 PM</td><td class="warn">ETL Full Batch: 906 RARs (~2,174 demos) — runs ~8 hours unattended</td><td>~8 hrs</td><td>Pre-scale fix</td></tr>
+<tr><td>Day 1 PM</td><td>Place mapping PoC: dust2 from PoC data</td><td>~5 min</td><td>ETL PoC</td></tr>
+<tr><td>Day 2 AM</td><td>ETL completes, run validation</td><td>~30 min</td><td>ETL Full</td></tr>
+<tr><td>Day 2 AM</td><td>Place mapping: all 8 maps from full data</td><td>~2-4 hrs</td><td>ETL Full</td></tr>
+<tr><td>Day 2 AM</td><td>Kill distances: full corpus weapon depth table</td><td>~5 min</td><td>ETL Full</td></tr>
+<tr><td>Day 2 PM</td><td>Self-improving system: anomaly detection + gap fill</td><td>~2 hrs</td><td>Place mapping</td></tr>
+<tr><td>Day 3</td><td>Integration testing + visualization</td><td>~3 hrs</td><td>All Phase 2</td></tr>
+</table>
+
+<h3 class="warn">Critical Pre-Scale Fix</h3>
+<p>The ETL's <code>_append_parquet</code> is O(n^2) — it reads+rewrites shared parquet files on every demo. For 2,174 demos this wastes ~2.5 hours. <b>Fix before full batch:</b> write one parquet per match (like ticks already does), use DuckDB glob views to union them.</p>
+
+<h3>Phase 2 Resource Estimates</h3>
+<table>
+<tr><th>Resource</th><th>ETL Full</th><th>Place Mapping</th><th>Kill Distance</th></tr>
+<tr><td>Output size</td><td>~1.3 GB parquet</td><td>~1.6 MB JSON (8 maps)</td><td>~5 KB JSON</td></tr>
+<tr><td>Peak memory</td><td>~3 GB</td><td>~500 MB</td><td>~200 MB</td></tr>
+<tr><td>Wall clock</td><td>~8 hours</td><td>~2-4 hours</td><td>~5 min</td></tr>
+<tr><td>Disk (temp)</td><td>~1.2 GB peak (RAR extraction)</td><td>None</td><td>None</td></tr>
+</table>
+</div>
+</details>
+
+<!-- MVPs & Validation -->
+<details id="sec-mvp">
+<summary>MVPs &amp; Validation <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Minimum Viable Versions &amp; Validation Criteria</h2>
+
+<h3>Build Order (What to Actually Do First)</h3>
+<table>
+<tr><th>#</th><th>Workstream</th><th>MVP Effort</th><th>Lines</th><th>Blocked By</th><th>Validation Metric</th></tr>
+<tr><td>1</td><td>Utility (smoke/molly)</td><td>2-3 days</td><td>~120</td><td>Nothing</td><td>Smoke blocks BFS visually on dust2 mid</td></tr>
+<tr><td>2</td><td>Sightline BFS</td><td>1-2 days</td><td>~40</td><td>Nothing</td><td>Forward tiles > rear tiles by 10-30%</td></tr>
+<tr><td>3</td><td>Weapon BFS</td><td>1-2 days</td><td>~50</td><td>Nothing</td><td>AWP covers >30% more tiles than Glock</td></tr>
+<tr><td>4</td><td>Data pipeline</td><td>3-5 days</td><td>~150</td><td>Nothing</td><td>>95% demos parse, consistent schema</td></tr>
+<tr><td>5</td><td>Win probability</td><td>5-7 days</td><td>~200</td><td>#4</td><td>AUC > 0.72 on held-out matches</td></tr>
+<tr><td>6</td><td>SHAP analysis</td><td>1 day</td><td>~70</td><td>#5</td><td>alive_count in top-3 features</td></tr>
+<tr><td>7</td><td>IGL (rules-based)</td><td>3-5 days</td><td>~150</td><td>Nothing</td><td>>50% agreement with pro decisions on 20 rounds</td></tr>
+<tr><td>8</td><td>GNN/attention</td><td>2-4 weeks</td><td>~300</td><td>#4</td><td>AUC > logistic regression + 0.03</td></tr>
+</table>
+
+<h3>Key Insight: Workstreams 1-3 Are Independent</h3>
+<p>All three modify <code>_bfs_helper</code> — implement them as parameters to a single refactored function:</p>
+<pre>
+_bfs_helper(source_tile, area_info,
+            max_depth=10,           # weapon scaling
+            player_yaw=None,        # sightline
+            blocked_tiles=frozenset() # utility
+)
+</pre>
+
+<h3>Critical Path</h3>
+<p><b>Workstream 4 (data pipeline)</b> is the bottleneck for everything ML-related (#5, #6, #8). Without batch data, there's nothing to train on. Start it ASAP even while doing #1-3.</p>
+</div>
+</details>
+
+<!-- ═══════ GROUP 2: INFRASTRUCTURE ═══════ -->
+<div class="group-heading group-infra">Infrastructure</div>
+
+<!-- Database Schema -->
+<details id="sec-database">
+<summary>Database Schema <span class="badge badge-done">Done</span></summary>
+<div class="section-content">
+<h2>Database Design: Storing 900+ Parsed Demos</h2>
+<p class="rec">Recommendation: DuckDB + Parquet hybrid. ~1 GB total for 900 matches (vs 450 GB raw .dem files).</p>
+
+<h3>Why DuckDB + Parquet (Not PostgreSQL)</h3>
+<table>
+<tr><th>Factor</th><th>PostgreSQL</th><th>DuckDB + Parquet</th></tr>
+<tr><td>Setup</td><td>Server install, config</td><td class="rec"><code>pip install duckdb</code></td></tr>
+<tr><td>Storage (900 matches)</td><td>~4.5 GB</td><td class="rec">~1 GB (columnar compression)</td></tr>
+<tr><td>Query speed (analytics)</td><td>Good</td><td class="rec">Excellent (vectorized columnar)</td></tr>
+<tr><td>Polars interop</td><td>Needs psycopg2</td><td class="rec">Native: <code>.pl()</code> returns Polars DF</td></tr>
+<tr><td>Concurrent users</td><td class="rec">Excellent</td><td>Single writer</td></tr>
+<tr><td>Portability</td><td>Server-bound</td><td class="rec">Just files on disk</td></tr>
+</table>
+
+<h3>Schema (10 Tables)</h3>
+<table>
+<tr><th>Table</th><th>Key Columns</th><th>Rows (900 matches)</th><th>Size</th></tr>
+<tr><td><b>matches</b></td><td>match_id, file_path, map_name</td><td>900</td><td>~0.2 MB</td></tr>
+<tr><td><b>rounds</b></td><td>match_id, round_num, winner, reason, bomb_site</td><td>25K</td><td>~1.5 MB</td></tr>
+<tr><td><b>ticks</b> (sampled)</td><td>match_id, tick, steamid, side, x, y, z, health, armor, yaw, pitch, equip_value, flash_duration</td><td class="warn">63M</td><td class="warn">~900 MB</td></tr>
+<tr><td><b>kills</b></td><td>match_id, tick, attacker/victim steamid, side, x/y/z, weapon, headshot</td><td>22K</td><td>~3 MB</td></tr>
+<tr><td><b>damages</b></td><td>match_id, tick, attacker/victim, weapon, dmg_health</td><td>180K</td><td>~14 MB</td></tr>
+<tr><td><b>bomb_events</b></td><td>match_id, tick, event, x, y, z, bombsite</td><td>126K</td><td>~6 MB</td></tr>
+<tr><td><b>grenade_events</b></td><td>match_id, entity_id, type, start/end_tick, x, y, z</td><td>378K</td><td>~23 MB</td></tr>
+<tr><td><b>players</b></td><td>steamid, name</td><td>~5K</td><td>~0.4 MB</td></tr>
+<tr><td><b>shots</b></td><td>match_id, tick, steamid, weapon</td><td>2.5M</td><td>~100 MB</td></tr>
+<tr><td><b>tick_map_control</b></td><td>match_id, tick, algorithm, metric</td><td>Variable</td><td>Grows with experiments</td></tr>
+</table>
+
+<h3>Tick Sampling: 4 samples/sec (every 16th tick)</h3>
+<p>Store only alive players. Player positions change meaningfully at ~0.25s intervals. Kills/bomb events still have exact tick precision from event tables. This gives 63M rows vs 1.26B at full rate — 20x reduction.</p>
+
+<h3>Flexibility for Map Control Experimentation</h3>
+<p>The raw <code>ticks</code> table stores positions + health + weapon — the exact inputs to any map control algorithm. Different algorithms (BFS depth, sightline-aware, weapon-weighted) can all be computed from the same stored data without re-parsing. Pre-computed results go in <code>tick_map_control</code> with an <code>algorithm</code> column.</p>
+
+<h3>ETL Pipeline — VALIDATED</h3>
+<div class="card">
+<p class="rec">ETL pipeline built and validated on 10 demos (5 parsed .dem + 5 RAR archives). Zero failures.</p>
+<table>
+<tr><th>Metric</th><th>Measured</th></tr>
+<tr><td>Script</td><td><code>scripts/etl_pipeline.py</code> (925 lines, handles .dem + .rar)</td></tr>
+<tr><td>Parse time</td><td>~15-20 sec/demo</td></tr>
+<tr><td>Storage per demo</td><td>0.5-0.7 MB (1/16 tick sampling, alive only)</td></tr>
+<tr><td>900 demos projected</td><td>~600 MB total, ~3.7 hours (1 worker)</td></tr>
+<tr><td>DuckDB file</td><td>&lt;1 MB (views over parquet)</td></tr>
+<tr><td>Downstream queries</td><td>All 5 example queries pass</td></tr>
+</table>
+<p class="warn">Critical finding: awpy/demoparser2 produces inconsistent column types across demos (Int32 vs Float64). The ETL script handles this with <code>_align_and_concat()</code> that upcasts before concat.</p>
+</div>
+<pre>
+.rar → unrar to temp dir → awpy Demo.parse() → Polars DataFrames → .write_parquet()
+  |                                                                        |
+  v                                                                        v
+temp dir (delete after)                                     data/ticks/match_0042.parquet
+
+DuckDB reads parquet directly:
+  con.execute("SELECT * FROM 'data/ticks/match_*.parquet' WHERE match_id = 42").pl()
+</pre>
+<p class="note">Estimated throughput: 4 workers = ~4 demos/min = 900 demos in ~4 hours.</p>
+</div>
+</details>
+
+<!-- HLTV Scraping -->
+<details id="sec-scraping">
+<summary>HLTV Scraping <span class="badge badge-inprogress">In Progress</span></summary>
+<div class="section-content">
+<h2>HLTV Demo Scraping — Pipeline &amp; Scaling Options</h2>
+<p>Existing system at <code>/mnt/d/projects/fps/misc_cs/hltv-scrape/</code>. Python + Playwright, 912 RAR files downloaded, ledger-based tracking.</p>
+
+<h3>Current Pipeline</h3>
+<table>
+<tr><th>Step</th><th>Tool</th><th>Status</th></tr>
+<tr><td>1. Discover match URLs</td><td>Playwright → HLTV results pages, CSS selectors with fallbacks</td><td>Working</td></tr>
+<tr><td>2. Extract metadata</td><td>Date + competition from match detail page</td><td>Working</td></tr>
+<tr><td>3. Download demo RAR</td><td>Playwright download with multiple selector fallbacks</td><td>Working (fragile)</td></tr>
+<tr><td>4. Track in ledger</td><td>Atomic CSV append (urls_scraped_with_filename.txt)</td><td>Working</td></tr>
+<tr><td>5. Extract RAR</td><td>rarfile/unrar/7z fallback chain</td><td>Working</td></tr>
+<tr><td>6. Parse demo</td><td>awpy Demo.parse()</td><td>Working</td></tr>
+</table>
+
+<h3>Safety Measures (Existing)</h3>
+<p>Jittered delays (10-15s between pages), cookie consent automation, human-mimicry (random mouse moves + scrolls), <code>--disable-blink-features=AutomationControlled</code>, atomic ledger writes, session resumption.</p>
+
+<h3>Gaps for Scale</h3>
+<table>
+<tr><th>Gap</th><th>Risk</th><th>Solution</th></tr>
+<tr><td>No proxy rotation</td><td>IP ban after extended scraping</td><td>Rotating proxy service (Bright Data, Oxylabs)</td></tr>
+<tr><td>No exponential backoff</td><td>Hammers server on failure</td><td>3s → 6s → 12s on consecutive 429/403</td></tr>
+<tr><td>No circuit breaker</td><td>Continues scraping while banned</td><td>Stop if >10% consecutive failures</td></tr>
+<tr><td>No robots.txt check</td><td>ToS violation risk</td><td>Parse robots.txt, respect crawl-delay</td></tr>
+<tr><td>Fixed user-agent</td><td>Detection</td><td>UA rotation pool</td></tr>
+</table>
+
+<h3>Scaling Options</h3>
+<table>
+<tr><th>Option</th><th>Approach</th><th>Throughput</th><th>Cost</th></tr>
+<tr><td class="rec">A: Enhanced current</td><td>Add proxies + backoff + circuit breaker to existing Playwright</td><td>~100 demos/day</td><td>$50-100/mo proxies</td></tr>
+<tr><td>B: HLTV API (if exists)</td><td>Direct API calls instead of browser automation</td><td>~500/day</td><td>Free?</td></tr>
+<tr><td>C: Distributed</td><td>Multiple machines + proxy pool + task queue (Celery/Redis)</td><td>~1000/day</td><td>$200+/mo</td></tr>
+</table>
+
+<h3>Scraper Status: READY TO RUN</h3>
+<div class="card">
+<p class="rec">All prerequisites met. Playwright installed, browser launches, 913 URLs in ledger for dedup.</p>
+<pre>
+cd /mnt/d/projects/fps/misc_cs/hltv-scrape
+uv run python3 mvp_scrape_demos.py --max-empty-pages 1
+# Downloads new demos since Oct 2024. Ledger skips 913 already-scraped matches.
+# No dry-run mode — will download new demos it finds.
+# --headful flag shows browser for debugging.
+</pre>
+</div>
+
+<h3>Additional Data to Scrape (from same page load, zero extra requests)</h3>
+<table>
+<tr><th>#</th><th>Data</th><th>Analytics Value</th><th>Effort</th></tr>
+<tr><td>1</td><td class="rec">Map veto/ban-pick process</td><td>Team strategy, map pools, meta trends</td><td>Low</td></tr>
+<tr><td>2</td><td class="rec">Match format (BO1/BO3/BO5)</td><td>Essential context</td><td>Low</td></tr>
+<tr><td>3</td><td class="rec">Team rankings at time of match</td><td>Normalize by team strength</td><td>Low</td></tr>
+<tr><td>4</td><td>Per-map scores + half scores</td><td>Series-level analysis</td><td>Low</td></tr>
+<tr><td>5</td><td>Player IDs + lineups</td><td>Longitudinal player analysis</td><td>Low</td></tr>
+<tr><td>6</td><td>Date as unix epoch</td><td>Machine-readable timestamp</td><td>Low</td></tr>
+<tr><td>7</td><td>LAN vs Online flag</td><td>Performance confound</td><td>Low</td></tr>
+<tr><td>8</td><td class="rec">Save raw HTML</td><td>Re-parse later for anything missed</td><td>Low</td></tr>
+<tr><td>9</td><td>Player stats (kills/deaths/ADR/rating)</td><td>Per-map performance</td><td class="warn">Medium (extra page load)</td></tr>
+<tr><td>10</td><td>Round history (win types per round)</td><td>Economy indicators without demo</td><td class="warn">Medium (extra page load)</td></tr>
+</table>
+
+<h3>HTML Saving Strategy</h3>
+<p>Save raw HTML alongside demos: <code>data/html/{match_id}.html.gz</code> (~50-150 KB compressed per page, ~137 MB for 913 matches). Re-parse offline with BeautifulSoup — no browser needed.</p>
+
+<h3>Veto Data Example</h3>
+<pre>
+Selector: .veto-box .padding div
+Text pattern: "1. Team A removed Mirage" → {order:1, team:"Team A", action:"ban", map:"Mirage"}
+Standard BO3: ban, ban, pick, pick, ban, ban, leftover (7 active duty maps)
+</pre>
+
+<h3>Proposed Architecture: 3-Layer Scraping</h3>
+<pre>
+Layer 1 (Live):   scrape_match_metadata(page) → dict (while page is loaded)
+Layer 2 (Save):   save_match_html(page, match_id) + save_match_json(data)
+Layer 3 (Offline): parse_saved_html(path) → dict (BeautifulSoup, no browser)
+</pre>
+
+<h3>Integration with ETL Pipeline</h3>
+<pre>
+HLTV Scraper (download .rar + save HTML + extract metadata)
+  → Pre-flight check (valid RAR, reasonable size)
+  → Extract (unrar to temp)
+  → Parse (awpy Demo)
+  → Post-flight check (12-30 rounds, valid schema)
+  → Store (Parquet files)
+  → Clean up temp
+  → Update ledger
+</pre>
+</div>
+</details>
+
+<!-- Safe Scraping -->
+<details id="sec-saferun">
+<summary>Safe Scraping <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Safe HLTV Scraping Guide</h2>
+
+<h3>Exact Commands by Risk Level</h3>
+<table>
+<tr><th>Scenario</th><th>Command</th><th>Duration</th><th>Demos</th></tr>
+<tr><td class="rec">Skip-only test (0 downloads)</td><td><code>uv run python mvp_scrape_demos.py --headful --limit 10 --max-empty-pages 1 --start_url "https://www.hltv.org/results?stars=1&amp;offset=200"</code></td><td>~1 min</td><td>0</td></tr>
+<tr><td>Minimal test (5 new demos)</td><td><code>uv run python mvp_scrape_demos.py --headful --limit 5 --max-empty-pages 1</code></td><td>~5 min</td><td>~5</td></tr>
+<tr><td>Conservative session</td><td><code>uv run python mvp_scrape_demos.py --limit 100 --max-empty-pages 2 2>&amp;1 | tee data/scrape.log</code></td><td>~2.5 hrs</td><td>~170</td></tr>
+<tr><td class="warn">Extended (use tmux!)</td><td><code>tmux new -s hltv; uv run python mvp_scrape_demos.py --limit 100 --max-empty-pages 3</code></td><td>~8 hrs</td><td>~800</td></tr>
+</table>
+
+<h3>Rate Limiting</h3>
+<table>
+<tr><th>Level</th><th>Pre-page</th><th>Pre-download</th><th>Per match</th><th>Matches/hr</th></tr>
+<tr><td>Ultra-safe</td><td>25-35s</td><td>10-20s</td><td>~56s</td><td>~65</td></tr>
+<tr><td class="rec">Current (conservative)</td><td>10-15s</td><td>5-10s</td><td>~33s</td><td>~109</td></tr>
+<tr><td>Moderate</td><td>6-10s</td><td>3-6s</td><td>~22s</td><td>~164</td></tr>
+<tr><td class="warn">Aggressive (will trigger Cloudflare)</td><td>3-5s</td><td>2-3s</td><td>~14s</td><td>~257</td></tr>
+</table>
+
+<h3>IP Protection</h3>
+<p><b>WSL2 shares Windows host IP.</b> VPN on Windows covers WSL automatically.</p>
+<table>
+<tr><th>Option</th><th>Cost</th><th>Recommendation</th></tr>
+<tr><td class="rec">Mullvad VPN (on Windows)</td><td>5 EUR/mo</td><td>Best for scraping — no-log, WireGuard, WSL inherits</td></tr>
+<tr><td>ProtonVPN free</td><td>Free</td><td>Slow but works for testing</td></tr>
+<tr><td>Rotating residential proxy</td><td>$8-15/GB</td><td>Overkill — VPN is simpler and cheaper</td></tr>
+</table>
+
+<h3>1-Week Scraping Schedule</h3>
+<table>
+<tr><th>Day</th><th>Activity</th><th>Yield</th><th>Disk needed</th></tr>
+<tr><td>Day 1 (Tue)</td><td>Skip-only test + 5-demo test</td><td>5 demos</td><td>~3 GB</td></tr>
+<tr><td>Day 2 (Wed) 04:00 UTC</td><td>First batch</td><td>~170 demos</td><td>~115 GB</td></tr>
+<tr><td>Day 2 evening</td><td class="warn">Process RARs, free disk space</td><td>—</td><td>Free 100+ GB</td></tr>
+<tr><td>Day 3-4</td><td>Continue batches (04:00 UTC each)</td><td>~170/day</td><td>~115 GB/day</td></tr>
+<tr><td>Day 5-6</td><td class="rec">REST DAYS — let Cloudflare cool down</td><td>—</td><td>—</td></tr>
+<tr><td>Day 7</td><td>Extended batch if space allows</td><td>~300</td><td>~200 GB</td></tr>
+</table>
+<p class="warn">Disk constraint: 190 GB free = max ~281 demos before needing cleanup (avg 675 MB/RAR).</p>
+
+<h3>Monitoring</h3>
+<pre>
+# Quick status one-liner
+echo "RARs: $(ls data/*.rar | wc -l) | Ledger: $(wc -l &lt; data/urls_scraped_with_filename.txt) | Disk: $(df -h /mnt/d/ | tail -1 | awk '{print $4}')"
+
+# Watch for trouble signs
+tail -f data/scrape_*.log | grep -E 'ERROR|WARN|failed|timeout|403'
+</pre>
+</div>
+</details>
+
+<!-- Agent Orchestration -->
+<details id="sec-orchestration">
+<summary>Agent Orchestration <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Agent Orchestration System</h2>
+<p>A YAML-driven system for running multiple Claude Code agents with validation gates, parallel execution, and human checkpoints.</p>
+
+<h3>Task Spec Format</h3>
+<pre>
+task:
+  id: "nav-cache"
+  name: "Cache Nav Mesh Loading"
+  writable_files: ["awpy/stats/map_control.py", "tests/test_map_control.py"]
+  gates:
+    pre:  [{type: unit_test, command: "uv run pytest ...", expected: "passed"}]
+    post: [{type: unit_test, ...}, {type: performance, ...}]
+  prompt: "Add _nav_cache dict and _get_nav() helper..."
+  max_iterations: 5
+  stuck_threshold: 3
+  depends_on: []
+  parallel_safe_with: ["config-dataclass", "kill-distance"]
+  isolation: "shared"  # or "worktree" for file-conflict isolation
+</pre>
+
+<h3>Agent Loop Pattern</h3>
+<pre>
+while iterations &lt; max_iterations:
+  1. Run pre-validation (must pass or abort)
+  2. Invoke Claude Code CLI: claude --print --max-budget-usd 2.00
+  3. Run post-validation gates
+  4. If ALL pass → DONE
+  5. If fails → include failure context in next prompt, retry
+  6. If stuck_threshold consecutive failures → ALERT HUMAN
+</pre>
+
+<h3>Parallel Execution Schedule</h3>
+<table>
+<tr><th>Time</th><th>Running Agents</th><th>Worktree</th></tr>
+<tr><td>T0</td><td class="rec">nav-cache + config-dataclass + kill-distance</td><td>nav-cache: main, config: worktree-A, kill-dist: worktree-B</td></tr>
+<tr><td>T1</td><td>smoke-bfs + flash-weight</td><td>Both in main (sequential on same file)</td></tr>
+<tr><td>T2</td><td>molotov-bfs</td><td>Main</td></tr>
+<tr><td>T3</td><td class="warn">ETL full batch (runs ~8hrs in background)</td><td>Main</td></tr>
+<tr><td>T4</td><td>place-mapping + kill-distance-data</td><td>Parallel</td></tr>
+</table>
+
+<h3>Human Checkpoints</h3>
+<table>
+<tr><th>Checkpoint</th><th>After</th><th>Before</th><th>Type</th></tr>
+<tr><td>Phase 1 PoC</td><td>nav-cache + config + kill-distance</td><td>smoke/flash/molotov</td><td class="warn">APPROVAL REQUIRED</td></tr>
+<tr><td>ETL PoC</td><td>10-demo ETL test</td><td>Full 906-RAR batch</td><td class="warn">APPROVAL REQUIRED</td></tr>
+<tr><td>Phase 1 Complete</td><td>All utility mods</td><td>Phase 2 integration</td><td>Visual review</td></tr>
+<tr><td>Phase 2 Complete</td><td>All data tasks</td><td>ML workstreams</td><td class="warn">APPROVAL REQUIRED</td></tr>
+</table>
+
+<h3>Safety Layers</h3>
+<ul>
+<li><code>--max-budget-usd 2.00</code> per task — prevents runaway API costs</li>
+<li><code>--allowed-tools "Read,Edit,Bash(pytest:*)"</code> — agents can only edit allowed files and run tests</li>
+<li>Git worktree isolation for tasks modifying same files</li>
+<li>Test gating: no merge unless ALL existing tests pass</li>
+<li>Never auto-merge to main — always create branch/PR</li>
+</ul>
+</div>
+</details>
+
+<!-- Self-Healing -->
+<details id="sec-healing">
+<summary>Self-Healing <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Self-Healing Pipeline with Claude CLI</h2>
+<p>Use Claude Code CLI as an automated diagnostician and fixer when the pipeline breaks.</p>
+
+<h3>Ideas (Priority Order)</h3>
+<table>
+<tr><th>#</th><th>Idea</th><th>Claude Needed?</th><th>MVP Time</th><th>Value</th></tr>
+<tr><td>1</td><td class="rec">Pre/post-flight checks (file size, RAR validity, round count, schema)</td><td>No (pure Python)</td><td>3-4 hrs</td><td>High</td></tr>
+<tr><td>2</td><td>Structured JSON error logging</td><td>No</td><td>4 hrs</td><td>Foundation</td></tr>
+<tr><td>3</td><td>Health check script (new files appearing? error rate? disk space?)</td><td>No</td><td>3-4 hrs</td><td>High</td></tr>
+<tr><td>4</td><td>Git branch isolation for auto-fixes</td><td>Infrastructure</td><td>2-3 hrs</td><td>Safety</td></tr>
+<tr><td>5</td><td class="rec">Adaptive selector repair (HLTV changes HTML → Claude suggests new CSS selectors)</td><td>Yes — highest value</td><td>3-4 hrs</td><td>Critical</td></tr>
+<tr><td>6</td><td>Full pipeline monitor (tail logs → diagnose → fix on branch)</td><td>Yes</td><td>2-3 days</td><td>High</td></tr>
+<tr><td>7</td><td>Dashboard + alerting</td><td>Once (generate HTML)</td><td>1-2 days</td><td>Medium</td></tr>
+<tr><td>8</td><td>Error pattern analysis (daily feed errors to Claude for pattern detection)</td><td>Yes (Opus)</td><td>1 day</td><td>Medium</td></tr>
+</table>
+
+<h3>Adaptive Selector Repair (Idea 5 — Best Claude Integration)</h3>
+<pre>
+When 5+ consecutive selector failures:
+1. Save page HTML: page.content() → /tmp/hltv_page.html
+2. Claude diagnoses (read-only):
+   claude -p --model sonnet --permission-mode plan \
+     --allowed-tools "Read" --max-budget-usd 1.00 \
+     --output-format json --json-schema '{new_selectors, confidence}' \
+     "Analyze HTML, suggest updated CSS selectors for download button"
+3. If confidence > 0.8:
+   git worktree add fix/selectors-{timestamp}
+   Claude applies fix (edit-only, test-gated)
+4. Run test scrape against saved HTML
+5. If pass → create PR. If fail → log and alert.
+</pre>
+
+<h3>Safety Layers</h3>
+<ul>
+<li><code>--permission-mode plan</code> for diagnosis (read-only)</li>
+<li><code>--allowed-tools "Read,Edit,Bash(pytest:*)"</code> for fixes (no rm, no git push)</li>
+<li><code>--max-budget-usd</code> caps cost per invocation</li>
+<li>Git worktree isolation — main branch never touched</li>
+<li>Test gating — no PR unless tests pass</li>
+<li>Cooldown: max 1 fix attempt per hour</li>
+</ul>
+
+<h3>Estimated Cost</h3>
+<p>Diagnosis: ~$0.05/call (Sonnet). Fix attempts: ~$0.30/call. Daily pattern analysis: ~$3 (Opus). Realistic monthly: <b>$40-100</b>.</p>
+</div>
+</details>
+
+<!-- ═══════ GROUP 3: METHODOLOGY ═══════ -->
+<div class="group-heading group-method">Methodology</div>
+
+<!-- Utility Integration -->
+<details id="sec-utility">
+<summary>Utility (Smokes/Molotov/Flash) <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Utility Integration: Smokes, Molotovs, Flashes</h2>
+<p>Currently BFS propagates freely through smokes and molotovs — a player behind smoke shows as controlling the area beyond it.</p>
+
+<h3>Core Design: Pre-BFS Block + Post-BFS Override</h3>
+<ol>
+<li><b>Pre-BFS:</b> Smoked tiles and enemy-molotov tiles block BFS propagation (one-line change in <code>_bfs_helper</code>: <code>neighbors - seen - blocked_tiles</code>)</li>
+<li><b>Post-BFS:</b> Override smoked tiles → 0.5 (neutral), molotov tiles → thrower's team (0.0 or 1.0)</li>
+</ol>
+
+<h3>Smoke Integration</h3>
+<table>
+<tr><th>Aspect</th><th>Design</th></tr>
+<tr><td>Detection</td><td>Tiles whose centroid is within 144 units of smoke (x,y,z) + Z tolerance ±128</td></tr>
+<tr><td>BFS effect</td><td>BFS cannot propagate through smoked tiles (blocks both teams)</td></tr>
+<tr><td>Tile value</td><td>0.5 (neutral) — neither team controls smoked area</td></tr>
+<tr><td>Visualization</td><td>Grey overlay, higher opacity than regular tiles</td></tr>
+<tr><td>One-way smokes</td><td>Ignored in v1 (needs raycasting + geometry)</td></tr>
+<tr><td>Data source</td><td><code>demo.smokes</code>: entity_id, start_tick, end_tick, X, Y, Z</td></tr>
+</table>
+
+<h3>Molotov Integration</h3>
+<table>
+<tr><th>Aspect</th><th>Design</th></tr>
+<tr><td>Detection</td><td>Tiles within 96 units of inferno position, Z tolerance ±64</td></tr>
+<tr><td>BFS effect</td><td>Blocks enemy BFS only (T molotov blocks CT BFS, not T BFS)</td></tr>
+<tr><td>Tile value</td><td>Forced to thrower's team: T molotov → 0.0, CT molotov → 1.0</td></tr>
+<tr><td>Visualization</td><td>Orange overlay for T molotov, blue for CT molotov</td></tr>
+<tr><td>Data source</td><td><code>demo.infernos</code>: entity_id, start_tick, end_tick, X, Y, Z, thrower_steamid</td></tr>
+</table>
+
+<h3>Flash Integration</h3>
+<p>Reduce flashed player's BFS source value: <code>starting_value = max(0, 1 - flash_duration/2.0)</code></p>
+<p>Fully blind (flash_duration ≥ 2s) → zero map control. Partially blind → proportional reduction.</p>
+<p>Data: <code>flash_duration</code> column already available in tick data.</p>
+
+<h3>HE Grenades</h3>
+<p class="warn">Skip in v1. Instantaneous effect, very brief threat zone (~0.5s). Impact on map control is minimal. Revisit if needed.</p>
+
+<h3>Priority/Interaction Rules</h3>
+<p>Molotov overrides smoke (fire burns through smoke in CS2). Smoke overrides regular BFS. Two opposing molotovs on same tile → 0.5 (neutral).</p>
+
+<h3>Active Utility State Tracker</h3>
+<pre>
+@dataclass(frozen=True)
+class ActiveUtilityState:
+    smoke_blocked_tiles: frozenset[int]
+    t_molotov_tiles: frozenset[int]     # T-thrown molotovs (blocks CT BFS)
+    ct_molotov_tiles: frozenset[int]    # CT-thrown molotovs (blocks T BFS)
+
+    @property
+    def t_blocked(self) -> frozenset[int]:
+        return self.smoke_blocked_tiles | self.ct_molotov_tiles
+
+    @property
+    def ct_blocked(self) -> frozenset[int]:
+        return self.smoke_blocked_tiles | self.t_molotov_tiles
+</pre>
+
+<h3>API Change (Backward Compatible)</h3>
+<pre>
+# Current
+get_tick_map_control_tile_values(map_name, tick_df)
+
+# New (default None = current behavior)
+get_tick_map_control_tile_values(map_name, tick_df, active_utility=None)
+</pre>
+
+<h3>Build Order &amp; Estimates</h3>
+<table>
+<tr><th>#</th><th>Task</th><th>Lines</th><th>Impact</th></tr>
+<tr><td>0</td><td class="rec">Fix Nav loading — load once, pass through (prerequisite, 4x speedup)</td><td>~30</td><td>High</td></tr>
+<tr><td>1</td><td>Smoke BFS blocking + neutral override</td><td>~60</td><td>High</td></tr>
+<tr><td>2</td><td>Smoke visualization (grey tiles)</td><td>~20</td><td>Medium</td></tr>
+<tr><td>3</td><td>Molotov area denial + team-specific BFS blocking</td><td>~50</td><td>High</td></tr>
+<tr><td>4</td><td>Flash player weight reduction</td><td>~25</td><td>Medium</td></tr>
+<tr><td>5</td><td>Round-level utility state precomputation</td><td>~50</td><td>High (perf)</td></tr>
+</table>
+<p class="note">Total: ~150-220 new lines. Priorities 0-2 can ship as one PR.</p>
+
+<h3>Performance Bonus</h3>
+<p>BFS with <code>blocked_tiles</code> is actually <b>30% faster</b> than current BFS — fewer nodes to visit. The Nav JSON loading fix alone gives a <b>4x speedup</b>.</p>
+</div>
+</details>
+
+<!-- Feature Flags -->
+<details id="sec-flags">
+<summary>Feature Flags <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Feature Flag System: MapControlConfig</h2>
+<p>A dataclass controlling all map control aspects. Default = current behavior (backward compatible).</p>
+
+<pre>
+@dataclass
+class MapControlConfig:
+    # Master toggle
+    enabled: bool = True
+
+    # Algorithm flags
+    use_sightlines: bool = False          # Weight BFS by player yaw direction
+    use_weapon_weights: bool = False      # Scale BFS depth by weapon type
+    include_smokes: bool = False          # Block BFS through active smokes
+    include_infernos: bool = False        # Molotov area denial
+    include_flash: bool = False           # Reduce flashed player contribution
+
+    # Algorithm parameters
+    bfs_depth: int = 10                   # Default BFS depth
+    sightline_forward_angle: float = 90.0 # FOV cone half-angle
+    sightline_rear_multiplier: float = 0.5
+    smoke_radius: float = 144.0
+    inferno_radius: float = 96.0
+
+    # Computation flags
+    use_weighted_averaging: bool = True   # Area-weighted vs simple average
+    compute_tile_metrics: bool = True
+
+    # Visualization flags
+    show_tile_borders: bool = True
+    show_player_names: bool = False
+    include_directional_arrows: bool = True
+    visualize_colormap: bool = True       # Gradient vs binary T/CT colors
+</pre>
+
+<h3>Usage</h3>
+<pre>
+# Default (identical to current behavior)
+metrics = get_round_map_control_frame_metrics("de_dust2", round_df)
+
+# With utility + sightlines
+config = MapControlConfig(
+    use_sightlines=True,
+    include_smokes=True,
+    include_infernos=True,
+)
+metrics = get_round_map_control_frame_metrics("de_dust2", round_df, config=config)
+
+# Lightweight (no visualization overhead)
+config = MapControlConfig()
+config.use_weighted_averaging = False
+config.compute_tile_metrics = False
+</pre>
+
+<h3>Backward Compatible</h3>
+<p>All functions get <code>config: MapControlConfig | None = None</code>. Default <code>None</code> creates default config. Existing code works unchanged.</p>
+</div>
+</details>
+
+<!-- Weapon from Data -->
+<details id="sec-weapon-range">
+<summary>Weapon from Data <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Deriving Optimal Weapon BFS Depth from Data</h2>
+<p>Instead of hand-tuning BFS depth per weapon, learn it from professional match data.</p>
+
+<h3>Approaches (Recommended Order)</h3>
+<table>
+<tr><th>Approach</th><th>Method</th><th>Data Source</th><th>Complexity</th><th>Verdict</th></tr>
+<tr><td><b>1. Kill Distances</b></td><td>95th percentile of Euclidean kill distance per weapon class → convert to BFS hops via avg edge distance</td><td><code>demo.kills</code> (attacker/victim X/Y/Z, weapon)</td><td>Low</td><td class="rec">START HERE</td></tr>
+<tr><td><b>3. Damage Distances</b></td><td>Damage-weighted 95th percentile of engagement distances. Larger sample than kills.</td><td><code>demo.damages</code></td><td>Low</td><td class="rec">DO IN PARALLEL</td></tr>
+<tr><td><b>2. Damage Decay Curves</b></td><td>Replace linear BFS decay with weapon-specific exponential: <code>threat = base × range_mod^(dist/500)</code></td><td>CS2 weapon tables + damages</td><td>Medium</td><td>Best long-term architecture</td></tr>
+<tr><td><b>5. Player Behavior</b></td><td>Track avg distance-to-nearest-enemy when player is stationary with each weapon type</td><td>Tick data + velocity + weapon</td><td>High</td><td>Cross-validation signal</td></tr>
+<tr><td><b>4. Round Outcome Optimization</b></td><td>Grid/Bayesian search over depth params, maximize AUC of map control predicting round winner</td><td>Everything above + round outcomes</td><td>Very High</td><td>Gold standard — do last</td></tr>
+</table>
+
+<h3>Key Formula: Distance to BFS Depth</h3>
+<pre>
+kill_distance = sqrt((ax-vx)² + (ay-vy)² + (az-vz)²)
+avg_edge_dist = sum(edge_dist for all nav edges) / num_edges  (~100-150 units on dust2)
+bfs_depth(weapon) = round(percentile_95(kill_distances[weapon]) / avg_edge_dist)
+</pre>
+
+<h3>Implementation Note</h3>
+<p>The current <code>_bfs_helper</code> hardcodes depth=10 on line 167. All approaches require making this configurable: <code>_bfs_helper(source_tile, area_info, max_depth=10)</code>. One-line change.</p>
+
+<div class="card">
+<h3>Bayesian Optimization (Approach 4)</h3>
+<pre>
+import optuna
+
+def objective(trial):
+    config = {
+        "sniper": trial.suggest_int("sniper", 8, 25),
+        "rifle":  trial.suggest_int("rifle", 5, 18),
+        "smg":    trial.suggest_int("smg", 2, 12),
+        "pistol": trial.suggest_int("pistol", 3, 14),
+    }
+    return evaluate_auc(training_demos, config)
+
+study = optuna.create_study(direction="maximize")
+study.optimize(objective, n_trials=200)
+</pre>
+<p class="note">~200 trials with Optuna is tractable. Set search bounds from Approach 1/3 results first.</p>
+</div>
+</div>
+</details>
+
+<!-- Multi-Channel -->
+<details id="sec-multichannel">
+<summary>Multi-Channel Encoding <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Multi-Channel Spatial Game State Encoding</h2>
+<p class="rec">Core idea: Instead of one BFS-based map control layer, create multiple independent channels — one per game concept. Don't prescribe how they interact; let the model learn it.</p>
+
+<h3>Why NOT BFS for Everything</h3>
+<table>
+<tr><th>Channel</th><th>Natural Spread</th><th>Why BFS Is Wrong</th></tr>
+<tr><td>Weapon threat</td><td>Raycasting / directional cone</td><td>AWP threatens along sightlines, not graph blobs</td></tr>
+<tr><td>Health</td><td>Point value, no spread</td><td>Health is a player property, not an area property</td></tr>
+<tr><td>Smoke denial</td><td>Euclidean sphere</td><td>Smoke is physical radius, ignores nav graph</td></tr>
+<tr><td>Economy</td><td>Point value, no spread</td><td>Money doesn't spread geographically</td></tr>
+<tr><td>Flash</td><td>Euclidean radius + duration</td><td>Physical blast, not graph phenomenon</td></tr>
+<tr><td>Velocity</td><td>Directional vector</td><td>Movement is per-player, not area-based</td></tr>
+</table>
+
+<h3>The Better Design: Raw Values + Learned Interaction</h3>
+<p><b>Encoding (cheap, deterministic):</b> Place raw values at player tiles. No spread. No BFS.</p>
+<p><b>Interaction (learned):</b> Model's attention/GNN layers learn the spread pattern per channel from data.</p>
+
+<h3>Channel Encoding (~21 channels)</h3>
+<table>
+<tr><th>Channel</th><th>Value at Player Tile</th><th>Empty Tiles</th></tr>
+<tr><td>T presence</td><td>1.0</td><td>0</td></tr>
+<tr><td>CT presence</td><td>1.0</td><td>0</td></tr>
+<tr><td>T health</td><td>health/100</td><td>0</td></tr>
+<tr><td>CT health</td><td>health/100</td><td>0</td></tr>
+<tr><td>T weapon value</td><td>equip/5000</td><td>0</td></tr>
+<tr><td>CT weapon value</td><td>equip/5000</td><td>0</td></tr>
+<tr><td>T yaw (sin/cos)</td><td>sin(yaw), cos(yaw)</td><td>0</td></tr>
+<tr><td>CT yaw (sin/cos)</td><td>sin(yaw), cos(yaw)</td><td>0</td></tr>
+<tr><td>T velocity</td><td>speed/max</td><td>0</td></tr>
+<tr><td>CT velocity</td><td>speed/max</td><td>0</td></tr>
+<tr><td>Smoke active</td><td>1.0 within radius</td><td>0</td></tr>
+<tr><td>Fire active</td><td>1.0 within radius</td><td>0</td></tr>
+<tr><td>T/CT flash blind</td><td>duration/5.0</td><td>0</td></tr>
+<tr><td>T/CT is_scoped</td><td>1.0 if scoped</td><td>0</td></tr>
+<tr><td>Bomb location</td><td>1.0 at bomb tile</td><td>0</td></tr>
+</table>
+
+<h3>Recommended Architecture: Hierarchical</h3>
+<pre>
+Raw tick data
+  → Encode: [2248 tiles, 21 channels] — raw values at player tiles
+  → Aggregate: [25 regions, 21 channels] — using place mapping
+  → Temporal stack: [T timesteps, 25 regions, 21 channels]
+  → Factored attention: spatial × channel × temporal
+  → Output: win probability, strategy class, IGL suggestions
+</pre>
+<p class="note">25 regions × 21 channels = 525 values per tick. Tiny input. Fast training. Interpretable attention maps.</p>
+
+<h3>Explainability</h3>
+<ul>
+<li><b>Attention visualization:</b> Which region-channel pairs mattered? "Model focused on T weapon_value at Long"</li>
+<li><b>Channel ablation:</b> Zero out one channel, measure AUC drop</li>
+<li><b>Learned spread patterns:</b> Look at attention from a player's tile — if it forms a cone aligned with yaw, the model learned directional threat</li>
+<li><b>Comparison with hand-coded BFS:</b> Where do they disagree? Those are the model's novel insights</li>
+</ul>
+
+<h3>Minimum Viable Experiment</h3>
+<p>3 channels (T_presence, CT_presence, T_weapon_value) × 25 regions × 50 demos. Logistic regression. If it beats alive-count baseline → approach has legs. <b>~1.5 days.</b></p>
+</div>
+</details>
+
+<!-- ═══════ GROUP 4: MODELS ═══════ -->
+<div class="group-heading group-models">Models</div>
+
+<!-- Win Prob + SHAP -->
+<details id="sec-winprob">
+<summary>Win Prob + SHAP <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Win Probability Model &amp; Map Control Feature Importance</h2>
+<p>Based on <a href="https://arxiv.org/pdf/2011.01324" style="color:#8cf">Xenopoulos et al. 2020</a> — same author as awpy.</p>
+
+<h3>Paper Results (Baseline to Beat)</h3>
+<table>
+<tr><th>Model</th><th>AUC</th><th>Log Loss</th><th>Brier Score</th></tr>
+<tr><td>Logistic Regression</td><td>0.774</td><td>0.564</td><td>0.194</td></tr>
+<tr><td>XGBoost</td><td>0.791</td><td>0.535</td><td>0.184</td></tr>
+<tr><td>CatBoost</td><td>0.785</td><td>0.540</td><td>0.186</td></tr>
+</table>
+<p class="note">Their top feature: equipment value, then HP remaining, then player count.</p>
+
+<h3>Features Extractable from awpy</h3>
+<table>
+<tr><th>Feature</th><th>Source</th><th>Notes</th></tr>
+<tr><td>t_alive, ct_alive</td><td><code>ticks.filter(health > 0).group_by(side).count()</code></td><td>Core feature</td></tr>
+<tr><td>t_hp, ct_hp</td><td><code>sum(health) per team</code></td><td>Paper's #2 feature</td></tr>
+<tr><td>t_equip, ct_equip</td><td><code>sum(current_equip_value)</code></td><td>Paper's #1 feature</td></tr>
+<tr><td>bomb_planted, bomb_site</td><td><code>demo.bomb</code></td><td>Boolean + A/B</td></tr>
+<tr><td>time_remaining</td><td><code>round_end - current_tick</code></td><td>Timing context</td></tr>
+<tr><td>map_name</td><td><code>demo.header["map_name"]</code></td><td>Categorical</td></tr>
+</table>
+
+<h3>Map Control Features to Add</h3>
+<table>
+<tr><th>Feature</th><th>Description</th><th>Extraction Cost</th></tr>
+<tr><td><code>mc_metric</code></td><td>Overall map control [0,1]</td><td>~0.3s/tick</td></tr>
+<tr><td><code>mc_momentum_5s</code></td><td>Metric change over last 5 sec</td><td>Derived</td></tr>
+<tr><td><code>mc_a_site</code>, <code>mc_b_site</code>, <code>mc_mid</code></td><td>Per-region control averages</td><td>From tile metrics</td></tr>
+<tr><td><code>mc_contested_count</code></td><td>Number of contested tiles (metric 0.4-0.6)</td><td>From tile metrics</td></tr>
+<tr><td><code>mc_std</code></td><td>Std dev of tile metrics (polarization)</td><td>From tile metrics</td></tr>
+</table>
+
+<h3>Experiment Design: Ablation Study</h3>
+<table>
+<tr><th>Model</th><th>Features</th><th>Purpose</th></tr>
+<tr><td>Baseline</td><td>Paper features only</td><td>Reproduce results</td></tr>
+<tr><td>+MC Scalar</td><td>Baseline + mc_metric</td><td>Does overall MC help?</td></tr>
+<tr><td>+MC Full</td><td>Baseline + all MC features</td><td>Maximum MC signal</td></tr>
+<tr><td>MC Only</td><td>MC features alone</td><td>How predictive is MC without anything else?</td></tr>
+</table>
+
+<h3>Feature Importance via SHAP</h3>
+<pre>
+import shap
+explainer = shap.TreeExplainer(xgb_model)
+shap_values = explainer.shap_values(X_test)
+shap.summary_plot(shap_values, X_test)  # Global ranking
+shap.dependence_plot("mc_metric", shap_values, X_test)  # MC dependence
+shap.dependence_plot(("mc_metric", "bomb_planted"), shap_values, X_test)  # Interaction
+</pre>
+
+<h3>Critical: Train/Test Split</h3>
+<p><b>Split by MATCH, not by round or tick.</b> Rounds within a match are correlated. Splitting within a match causes massive data leakage. Use temporal split (older matches train, newer test) or random match-level split.</p>
+
+<h3>Timeline: ~2-3 weeks</h3>
+<p>Phase 1: Feature extraction (3 days). Phase 2: Baseline model (2 days). Phase 3: MC computation at scale (5 days — bottleneck). Phase 4: Ablation + SHAP (3 days).</p>
+</div>
+</details>
+
+<!-- IGL Model -->
+<details id="sec-igl">
+<summary>IGL Model <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>IGL Navigation Model: Data-Driven In-Game Leader</h2>
+<p>Given current map control state (or sequence of recent states), suggest what the team should do next.</p>
+
+<h3>Step 1: Win Probability Foundation</h3>
+<p class="rec">Start with win probability, not action prediction.</p>
+<p>The label is unambiguous (round has a winner), requires no manual annotation, and serves as the foundation for everything else. Once you have win probability, you evaluate actions by: "does this increase our win prob?"</p>
+
+<h3>Recommended Feature Vector (93 dims per snapshot)</h3>
+<table>
+<tr><th>Category</th><th>Features</th><th>Dims</th></tr>
+<tr><td>Per team (x2)</td><td>5 player (x,y,z), 5 health, 5 velocity, 5 yaw (sin/cos), alive_count, equip_value, centroid, spread, has_awp</td><td>42 × 2 = 84</td></tr>
+<tr><td>Global</td><td>mc_metric, bomb x/y, bomb_planted, bomb_site (one-hot), time_remaining, score_diff</td><td>9</td></tr>
+<tr><td><b>Total per snapshot</b></td><td></td><td><b>93</b></td></tr>
+<tr><td>With 5-frame history</td><td>Stack last 5 seconds</td><td>465</td></tr>
+</table>
+<p class="note">Entirely extractable from tick data without BFS. The single mc_metric can be added at 1/sec sampling as supplementary.</p>
+
+<h3>Architecture Progression</h3>
+<table>
+<tr><th>Phase</th><th>Model</th><th>Time</th><th>Expected AUC</th></tr>
+<tr><td>1</td><td class="rec">Win Probability MLP (93-dim input, ~60K params)</td><td>1 day</td><td>0.75-0.80</td></tr>
+<tr><td>2</td><td>Temporal Win Prob LSTM (sequence of 5-10 snapshots)</td><td>3 days</td><td>0.80-0.85</td></tr>
+<tr><td>3</td><td>Strategy Classifier (K-means on team formations → predict next)</td><td>3 days</td><td>Top-1 ~40%, Top-3 ~70%</td></tr>
+<tr><td>4</td><td>Multi-task: [P(win), P(site_A), P(site_B), P(rotate)]</td><td>3 days</td><td>—</td></tr>
+</table>
+
+<h3>Strategy Clustering</h3>
+<p>Cluster 5-player position configurations into ~20-50 "formations" via K-means. Clusters naturally correspond to strategies ("5-man B rush", "A-split with mid control", "default spread"). Label clusters once manually. "Next action" = cluster ID at t+5sec.</p>
+
+<h3>Validation</h3>
+<ul>
+<li><b>Split by match</b> (not round) — 120 train / 20 val / 20 test</li>
+<li><b>Calibration curves</b> — "65% win" must mean roughly 65%</li>
+<li><b>Backtesting</b> — find rounds where model was most surprised (high P but lost), generate GIF, sanity check</li>
+<li><b>Cross-map model</b> with learned map embedding (pools all 300K snapshots vs splitting per map)</li>
+</ul>
+
+<h3>Data Volume</h3>
+<p>160 demos → ~3,840 rounds → ~300K snapshots at 1/sec. ~110 MB as float32. Trains MLP in minutes on laptop.</p>
+</div>
+</details>
+
+<!-- GNN & Attention -->
+<details id="sec-gnn">
+<summary>GNN &amp; Attention <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>GNN &amp; Attention Architectures for Map Control</h2>
+<p class="warn">Critical finding: Nav mesh is a CORRIDOR graph (avg degree 2.9, diameter ~100). Standard GCN/GAT fail because 3-layer message passing sees &lt;1% of the graph.</p>
+
+<h3>Architecture Comparison</h3>
+<table>
+<tr><th>Approach</th><th>Handles Corridor?</th><th>Min Data</th><th>Min Compute</th><th>Time</th><th>Verdict</th></tr>
+<tr><td class="rec">Hierarchical Regions (spectral cluster → 20 zones)</td><td>Bypasses it</td><td>20 demos</td><td>Laptop CPU</td><td>1 day</td><td class="rec">DO FIRST</td></tr>
+<tr><td class="rec">VAE on region features</td><td>Bypasses it</td><td>30 demos</td><td>Laptop CPU</td><td>1-2 days</td><td class="rec">Discovers archetypes</td></tr>
+<tr><td>Spatial Transformer + Laplacian PE</td><td>Yes (global attention)</td><td>40 demos</td><td>Laptop GPU 4GB</td><td>3-4 days</td><td>Best learned model</td></tr>
+<tr><td>Player-to-Tile Attention</td><td>Yes (cross-attn)</td><td>40 demos</td><td>Laptop CPU</td><td>2-3 days</td><td>Best interpretability</td></tr>
+<tr><td>Temporal Attention (frame sequences)</td><td>N/A (time dim)</td><td>60 demos</td><td>Laptop GPU</td><td>2 days</td><td>Finds pivotal moments</td></tr>
+<tr><td>GPS Graph Transformer</td><td>Yes (local+global)</td><td>40 demos</td><td>Laptop GPU</td><td>3-4 days</td><td>Best GNN variant</td></tr>
+<tr><td>Contrastive pretraining</td><td>Depends on encoder</td><td>80 demos</td><td>Laptop GPU</td><td>3-4 days</td><td>Good pretraining</td></tr>
+<tr><td style="color:#888">Standard GCN/GAT</td><td style="color:#f88">NO — diameter kills it</td><td>20 demos</td><td>CPU</td><td>2-3 days</td><td style="color:#f88">AVOID</td></tr>
+<tr><td style="color:#888">GraphSAGE</td><td style="color:#f88">Solves wrong problem</td><td>20 demos</td><td>CPU</td><td>1 day</td><td style="color:#f88">AVOID (not a scale issue)</td></tr>
+<tr><td style="color:#888">Diffusion model</td><td>Overkill</td><td>100+ demos</td><td>Cloud GPU</td><td>1-2 wks</td><td style="color:#888">FAR FUTURE</td></tr>
+</table>
+
+<h3>Nav Area Place Names (Regions)</h3>
+<p class="rec">Nav mesh JSON does NOT have place names. But tick data has <code>last_place_name</code> with 25 named regions for dust2. We can build a tile→place mapping by cross-referencing player (X,Y,Z) with nav areas from any parsed demo.</p>
+<pre>
+de_dust2 place names (from tick data):
+  ARamp, BDoors, BombsiteA, BombsiteB, CTSpawn, Catwalk, ExtendedA,
+  Hole, LongA, LongDoors, LowerTunnel, MidDoors, Middle, OutsideLong,
+  OutsideTunnel, Pit, ShortStairs, Side, TRamp, TSpawn, TopofMid,
+  TunnelStairs, UnderA, UpperTunnel
+
+→ Map each nav area to its majority-vote place name from ~1000 tick samples.
+→ Use these 25 regions as the hierarchical grouping (no spectral clustering needed!)
+</pre>
+
+<h3>Recommended Experiment Order</h3>
+<ol>
+<li><b>Build tile→place mapping</b> from tick data (1-2 hours)</li>
+<li><b>Hierarchical regions</b> using place names — 25-dim feature vector per tick (1 day)</li>
+<li><b>VAE on region features</b> — discover situation archetypes (1-2 days)</li>
+<li><b>Player-to-tile attention</b> — per-player control attribution (2-3 days)</li>
+<li><b>Spatial transformer with Laplacian PE</b> on full 2,248 tiles (3-4 days)</li>
+</ol>
+</div>
+</details>
+
+<!-- Fog of War -->
+<details id="sec-fogofwar">
+<summary>Fog of War <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Fog of War — Information Asymmetry in Win Probability</h2>
+<p>Current WP models use "god view" — all 10 player positions visible. In reality, each team only sees spotted enemies.</p>
+
+<h3>Core Question</h3>
+<p>How much does perfect information inflate WP accuracy? If god-view AUC >> team-perspective AUC, then <b>hidden information is the dominant factor in round outcomes</b>, meaning map control (as information gathering) is even more valuable than we thought.</p>
+
+<h3>6 Experiments</h3>
+<table>
+<tr><th>#</th><th>Experiment</th><th>Comparison</th><th>What It Measures</th></tr>
+<tr><td>1</td><td class="rec">God View vs Fog of War</td><td>AUC with all positions vs only spotted positions</td><td>How much "cheating" does perfect info provide</td></tr>
+<tr><td>2</td><td>Team-Perspective WP</td><td>Model using only what one team knows</td><td>Practical WP from player's viewpoint</td></tr>
+<tr><td>3</td><td class="rec">Information Value</td><td>WP delta when a spot event occurs</td><td>Tactical value of each piece of information</td></tr>
+<tr><td>4</td><td>Radar-Only Model</td><td>Only HUD-visible info (own team + spotted fading)</td><td>What players can actually act on</td></tr>
+<tr><td>5</td><td>The Prediction Paradox</td><td>Correlate info advantage with round outcome</td><td>Does map control ≈ information control?</td></tr>
+<tr><td>6</td><td>Uncertainty Estimation</td><td>WP distribution width per perspective</td><td>How much does hidden info matter at each moment</td></tr>
+</table>
+
+<h3>Feature Construction: T-Perspective</h3>
+<pre>
+For each CT player at tick T:
+  If spotted == True:       use actual X/Y/Z (known position)
+  If spotted recently (&lt;5s): use last-spotted position + staleness feature
+  If never spotted:          encode as "unknown" (zero vector or prior)
+  CT health:                 only known if spotted, else assume full (100)
+  CT weapon:                 only known if spotted, else assume rifle
+</pre>
+<p class="note">Available data: <code>m_bSpotted</code> (bool per player per tick) confirmed in demoparser2. Place names from radar are the natural representation for partial info.</p>
+
+<h3>Connection to Multi-Channel Design</h3>
+<p>The "presence" channel should have TWO variants: actual positions (for training label) and spotted-only positions (for team-perspective models). The <b>gap between them IS the information asymmetry</b>.</p>
+</div>
+</details>
+
+<!-- ═══════ GROUP 5: DATA ═══════ -->
+<div class="group-heading group-data">Data</div>
+
+<!-- Demo Data Inventory -->
+<details id="sec-data">
+<summary>Demo Data Inventory <span class="badge badge-done">Done</span></summary>
+<div class="section-content">
+<h2>Available Demo Data for Bulk Analysis</h2>
+
+<h3>BO1 Matches (158 total, map in filename)</h3>
+<table>
+<tr><th>Map</th><th>BO1 Demos</th><th>Bar</th></tr>
+<tr><td>de_ancient</td><td>29</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:290px"></div></td></tr>
+<tr><td>de_inferno</td><td>26</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:260px"></div></td></tr>
+<tr><td>de_anubis</td><td>24</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:240px"></div></td></tr>
+<tr><td>de_dust2</td><td>23</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:230px"></div></td></tr>
+<tr><td>de_nuke</td><td>22</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:220px"></div></td></tr>
+<tr><td>de_mirage</td><td>19</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:190px"></div></td></tr>
+<tr><td>de_vertigo</td><td>11</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:110px"></div></td></tr>
+<tr><td>de_train</td><td>4</td><td><div style="background:#4a6fa5;height:16px;border-radius:3px;display:inline-block;width:40px"></div></td></tr>
+</table>
+
+<h3>Full Archive Breakdown</h3>
+<p>906 total .rar files = 725 BO3 + 21 BO5 + 158 BO1 + 2 unmatched</p>
+<p>BO3 archives contain 2-3 demos each → estimated <b>2000+ total demos</b> across all maps.</p>
+<p>dust2 has 23 BO1s + 8 already-parsed = <b>31 total available demos</b> (most of any map when including parsed).</p>
+<p>Location: <code>D:\projects\fps\misc_cs\hltv-scrape\data\</code></p>
+</div>
+</details>
+
+<!-- Place Mapping -->
+<details id="sec-places">
+<summary>Place Mapping <span class="badge badge-done">Done</span></summary>
+<div class="section-content">
+<h2>Tile-to-Place Mapping — Self-Improving System</h2>
+<p class="rec">100% coverage achieved on dust2 (10 demos, 504K samples, 24 regions). System designed to learn incrementally as more demos are parsed.</p>
+
+<h3>How It Works</h3>
+<pre>
+Demo parse → extract (X,Y,Z, last_place_name) per tick
+  → cKDTree nearest-neighbor → nav area ID
+  → accumulate vote: area_id → place_name += 1
+  → merge into persistent mapping file
+  → if coverage > 70% and 3+ demos: BFS gap-fill
+  → bump version if any tile's winner changed
+</pre>
+
+<h3>Validated Results (dust2)</h3>
+<table>
+<tr><th>Demos</th><th>Direct Coverage</th><th>After BFS Fill</th></tr>
+<tr><td>1</td><td>71.4%</td><td>—</td></tr>
+<tr><td>3</td><td>89.6%</td><td>~98%</td></tr>
+<tr><td>6</td><td>94.7%</td><td>~99%</td></tr>
+<tr><td>10</td><td>96.2%</td><td class="rec">100% (85 tiles BFS-filled, avg 1.4 hops)</td></tr>
+</table>
+<p class="note">Cross-demo accuracy: 96.3%. Average confidence: 0.97. Only 15 low-confidence tiles (all at legitimate region boundaries).</p>
+
+<h3>Incremental Learning Architecture</h3>
+<table>
+<tr><th>Concept</th><th>Design</th></tr>
+<tr><td>Storage</td><td><code>~/.awpy/place_mappings/{map_name}.json</code> — one file per map, auto-created</td></tr>
+<tr><td>Merge strategy</td><td>Additive vote accumulation — never discard historical data</td></tr>
+<tr><td>Confidence</td><td>Bayesian-smoothed: <code>(winner_votes + 10) / (total_votes + 20)</code> — needs ~20 votes to stabilize</td></tr>
+<tr><td>Versioning</td><td>major.minor.patch — major bumps when >5% of tile winners change (possible game update)</td></tr>
+<tr><td>Lifecycle</td><td>EMPTY → PROVISIONAL (1-4 demos) → STABLE (5+ demos, >90% consistency) → STALE (patch change or >90 days)</td></tr>
+</table>
+
+<h3>Anomaly Detection</h3>
+<table>
+<tr><th>Anomaly</th><th>Detection</th><th>Auto-Action</th></tr>
+<tr><td>Place name drift</td><td>High-confidence tile (>100 votes, >0.9) gets contradicted</td><td>Flag but DON'T overwrite until 3+ demos confirm</td></tr>
+<tr><td>New place name</td><td>Name not in known set for this map</td><td>Add to pending; promote after 3+ demos</td></tr>
+<tr><td>Coverage drop</td><td>Coverage % decreases after merge (should only increase)</td><td>Log warning, investigate</td></tr>
+<tr><td>Patch staleness</td><td><code>cs2_build_id != CURRENT_BUILD_ID</code></td><td>Set <code>needs_refresh=true</code>, warn on access</td></tr>
+<tr><td>Low consistency</td><td>Cross-demo agreement < 0.8 for a tile</td><td>Apply 2x recency weight to recent demo votes</td></tr>
+</table>
+
+<h3>ETL Integration Hooks</h3>
+<ol>
+<li><b>On each demo parse:</b> Extract votes, detect anomalies, merge, log coverage</li>
+<li><b>After 3+ demos (>70% coverage):</b> Trigger BFS gap-fill</li>
+<li><b>On CS2 patch update:</b> Flag all mappings as potentially stale</li>
+<li><b>CLI:</b> <code>awpy place-mapping status de_dust2</code> — show coverage, version, anomalies</li>
+</ol>
+
+<h3>Multi-Map Bootstrap</h3>
+<p>For a new map: auto-detect from demo header → create empty mapping → accumulate votes → BFS fill at 70% → promote to STABLE at 5 demos + 90% consistency. Works automatically for any map with a nav mesh.</p>
+
+<h3>Key Design Decisions</h3>
+<ul>
+<li><b>Never auto-delete data</b> — a stale 10K-vote mapping is better than no mapping</li>
+<li><b>cKDTree for speed</b> — O(log n) lookups, processes 500K samples in <0.1s per demo</li>
+<li><b>BFS fill at 70%</b> threshold — enough anchor points for accurate extrapolation</li>
+<li><b>Store full vote distribution</b> per tile — enables retroactive analysis and drift detection</li>
+</ul>
+
+<h3>demoparser2 Findings</h3>
+<p class="warn">No nav area ID in demo data (server-only, confirmed). <code>connected_place</code> and <code>place_name</code> props accepted but return zero data.</p>
+<p>Bonus props found: <code>m_bIsScoped</code>, <code>m_bSpotted</code>, <code>m_bIsWalking</code>, <code>m_nWhichBombZone</code> (1=A, 2=B), <code>m_flVelocityModifier</code></p>
+</div>
+</details>
+
+<!-- Min Demos + Ideas -->
+<details id="sec-mindemos">
+<summary>Min Demos + Ideas <span class="badge badge-research">Research</span></summary>
+<div class="section-content">
+<h2>Minimum Demos for WP Baseline + Creative Ideas</h2>
+
+<h3>Demo Count → Expected Performance</h3>
+<table>
+<tr><th>Demos</th><th>Rounds</th><th>Samples</th><th>Est. AUC</th><th>95% CI</th><th>Quality</th></tr>
+<tr><td>50</td><td>1,200</td><td>96K</td><td>0.620</td><td>±0.027</td><td>Noisy</td></tr>
+<tr><td class="rec">100</td><td>2,400</td><td>192K</td><td>0.640</td><td>±0.019</td><td>Usable baseline</td></tr>
+<tr><td class="rec">158 (our BO1s)</td><td>3,792</td><td>303K</td><td>0.653</td><td>±0.015</td><td>Trustworthy baseline</td></tr>
+<tr><td class="warn">375 (for comparison)</td><td>9,000</td><td>720K</td><td>0.676</td><td>±0.010</td><td>Can detect 0.02 AUC improvement</td></tr>
+<tr><td>750</td><td>18,000</td><td>1.4M</td><td>0.698</td><td>±0.007</td><td>Publication quality</td></tr>
+<tr><td>2,174 (all demos)</td><td>52K</td><td>4.2M</td><td>0.728</td><td>±0.004</td><td>Maximum</td></tr>
+</table>
+<p class="note">Paper achieved 0.79 with equipment value as top feature. Without it, ceiling ~0.73-0.75. Diminishing returns kick in at ~300 demos.</p>
+
+<h3>Recommendation</h3>
+<p><b>Start with 158 BO1s</b> (already have them). If you need comparison power, expand to ~375 by pulling BO3 maps. Going beyond 750 has marginal returns unless writing a paper.</p>
+
+<h3>15 Creative Spatial Encoding Ideas</h3>
+<table>
+<tr><th>ID</th><th>Name</th><th>Core Concept</th><th>Complexity</th><th>Priority</th></tr>
+<tr><td>I9</td><td class="rec">Multi-Scale BFS</td><td>BFS at depths {3, 7, 15, 25} simultaneously — captures both doorway and zone control</td><td>Low</td><td>1st</td></tr>
+<tr><td>I8</td><td class="rec">Momentum Encoding</td><td>First/second derivatives of map control over sliding window — captures execution speed</td><td>Low</td><td>2nd</td></tr>
+<tr><td>I5</td><td class="rec">Rotation Cost Heatmap</td><td>Shortest-path cost to each bombsite per team — captures site-race dynamics</td><td>Low</td><td>3rd</td></tr>
+<tr><td>I13</td><td>Site-Centric Polar</td><td>Polar coords centered on bombsites — enables cross-map transfer learning</td><td>Low</td><td>4th</td></tr>
+<tr><td>I4</td><td>Chokepoint Flow</td><td>Encode only ~15-25 critical chokepoints (min-cut edges) — compact strategic summary</td><td>Medium</td><td>5th</td></tr>
+<tr><td>I6</td><td>Weapon-Range Zones</td><td>AWP=depth 15, SMG=depth 7, knife=depth 2 — spatializes equipment value</td><td>Medium</td><td>6th</td></tr>
+<tr><td>I3</td><td>Trade Potential Graph</td><td>Pairwise refrag potential between teammates — captures coordination geometry</td><td>Medium</td><td>7th</td></tr>
+<tr><td>I11</td><td>Strategic Templates</td><td>K-means on map control states → 50 canonical situations — interpretable compact encoding</td><td>Medium</td><td>8th</td></tr>
+<tr><td>I12</td><td>Permutation-Invariant</td><td>DeepSets on player features — correct inductive bias (player order doesn't matter)</td><td>Medium</td><td>9th</td></tr>
+<tr><td>I1</td><td>Sightline Threat Tensor</td><td>Precomputed visibility matrix × enemy presence — captures actual danger topology</td><td>High</td><td>10th</td></tr>
+<tr><td>I2</td><td>Information Asymmetry Map</td><td>Fog-of-war layers showing what each team knows vs truth — captures lurk value</td><td>High</td><td>11th</td></tr>
+<tr><td>I10</td><td>GCN Learned Spread</td><td>Replace BFS with Graph Neural Network that learns map-specific propagation</td><td>High</td><td>12th</td></tr>
+<tr><td>I14</td><td>LLM Narrative Features</td><td>Feed state to LLM → tactical assessment text → sentence embedding as feature</td><td>High</td><td>13th</td></tr>
+<tr><td>I15</td><td>Causal Graph Encoding</td><td>Trace WHY the current state exists (kill chains, utility sequences)</td><td>High</td><td>14th</td></tr>
+<tr><td>I7</td><td>Utility Occlusion Layers</td><td>Smokes/molotovs as temporary terrain changes that modify nav graph</td><td>High</td><td>15th</td></tr>
+</table>
+<p class="note">Ideas I9, I8, I5 are direct extensions of existing BFS code — zero new infrastructure. Start there.</p>
+</div>
+</details>
+
+</div><!-- end .main -->
+
+<script>
+// ── Sidebar click → scroll to + open section ──
+document.querySelectorAll('.sidebar-item').forEach(item => {
+  item.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = item.dataset.target;
+    const section = document.getElementById(targetId);
+    if (!section) return;
+    // Open the details element
+    section.open = true;
+    // Scroll into view
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Update active state
+    setActiveSidebarItem(item);
+  });
+});
+
+function setActiveSidebarItem(activeItem) {
+  document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+  activeItem.classList.add('active');
+}
+
+// ── Scroll tracking → highlight sidebar ──
+const sectionIds = [...document.querySelectorAll('details[id]')].map(d => d.id);
+const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+function updateSidebarFromScroll() {
+  const scrollY = document.querySelector('.main').scrollTop;
+  let currentId = sectionIds[0];
+
+  for (const id of sectionIds) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    // offsetTop relative to .main
+    const top = el.offsetTop - 80;
+    if (scrollY >= top) {
+      currentId = id;
+    }
+  }
+
+  sidebarItems.forEach(item => {
+    item.classList.toggle('active', item.dataset.target === currentId);
+  });
+}
+
+document.querySelector('.main').addEventListener('scroll', updateSidebarFromScroll);
+
+// ── Arrow key navigation ──
+document.addEventListener('keydown', e => {
+  if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+  e.preventDefault();
+
+  const items = [...sidebarItems];
+  const activeIdx = items.findIndex(i => i.classList.contains('active'));
+
+  let nextIdx;
+  if (e.key === 'ArrowDown') {
+    nextIdx = Math.min(activeIdx + 1, items.length - 1);
+  } else {
+    nextIdx = Math.max(activeIdx - 1, 0);
+  }
+
+  items[nextIdx].click();
+});
+
+// ── Initial state: activate Roadmap ──
+setActiveSidebarItem(document.querySelector('[data-target="sec-roadmap"]'));
+</script>
+</body>
+</html>

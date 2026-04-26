@@ -155,3 +155,30 @@ dmypy.json
 # github actions
 cs_go/
 node_modules/
+
+# ---------------------------------------------------------------------------
+# Map control project — local-only files
+# ---------------------------------------------------------------------------
+
+# Personal application materials
+docs/fellows/
+
+# Local-only design / scratch docs (kitchen-sink reference, superseded by docs/map_control/)
+MAP_CONTROL_FEATURE.md
+
+# Generated outputs (regenerate via scripts/etl_pipeline.py + train_wp_model_v2.py)
+output/
+test_data/
+
+# Local agent / IDE caches
+.aca/
+.claude/
+
+# Exploratory / scratch
+docs/examples/sandbox.ipynb
+docs/examples/test.csv
+docs/examples/tmp/
+tmp/
+
+# Stray cross-platform binary (regenerate via `awpy get`)
+awpy/data/de_dust2

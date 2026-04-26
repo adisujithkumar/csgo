@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map Control Visualization Review</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: #1a1a2e; color: #e0e0e0; }
+  h1 { text-align: center; padding: 20px; color: #fff; font-size: 1.6rem; }
+  .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 10px 20px; position: sticky; top: 0; background: #1a1a2e; z-index: 10; border-bottom: 1px solid #333; }
+  .nav button { padding: 8px 16px; border: 1px solid #555; background: #2a2a4a; color: #e0e0e0; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+  .nav button:hover { background: #3a3a6a; }
+  .nav button.active { background: #4a6fa5; border-color: #6a9fd5; color: #fff; }
+  .section { display: none; padding: 20px; }
+  .section.visible { display: block; }
+  .section h2 { text-align: center; margin-bottom: 16px; color: #aac; font-size: 1.2rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto; }
+  .card { background: #222244; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
+  .card h3 { padding: 10px 14px; font-size: 0.9rem; color: #bbd; background: #1e1e3a; }
+  .card img { width: 100%; display: block; cursor: zoom-in; }
+  .card img.zoomed { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: contain; background: rgba(0,0,0,0.9); z-index: 100; cursor: zoom-out; }
+  .verdict { display: flex; gap: 8px; padding: 10px 14px; background: #1e1e3a; border-top: 1px solid #333; }
+  .verdict button { padding: 4px 14px; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+  .verdict .pass { background: #2a6a2a; color: #8f8; }
+  .verdict .pass:hover { background: #3a8a3a; }
+  .verdict .fail { background: #6a2a2a; color: #f88; }
+  .verdict .fail:hover { background: #8a3a3a; }
+  .verdict .note { background: #4a4a2a; color: #ee8; }
+  .verdict .note:hover { background: #6a6a3a; }
+  .verdict span { margin-left: auto; font-size: 0.8rem; color: #888; line-height: 28px; }
+  .summary { max-width: 800px; margin: 30px auto; padding: 20px; background: #222244; border-radius: 8px; border: 1px solid #333; }
+  .summary h2 { margin-bottom: 12px; }
+  .summary table { width: 100%; border-collapse: collapse; }
+  .summary td, .summary th { padding: 6px 10px; text-align: left; border-bottom: 1px solid #333; font-size: 0.85rem; }
+  #results-body td.status { font-weight: bold; }
+  .legend { text-align: center; padding: 10px; font-size: 0.8rem; color: #888; }
+</style>
+</head>
+<body>
+
+<h1>Map Control Visualization Review</h1>
+<p class="legend">Red = T control (0.0) | Yellow = Neutral (0.5) | Green = CT control (1.0) | Click images to zoom</p>
+
+<div class="nav" id="nav"></div>
+
+<!-- Synthetic maps -->
+<div class="section" id="sec-dust2" data-map="de_dust2">
+  <h2>de_dust2 (Synthetic)</h2>
+  <div class="grid">
+    <div class="card" data-id="dust2-heatmap">
+      <h3>Frame Heatmap</h3>
+      <img src="de_dust2_frame_heatmap.png" alt="dust2 heatmap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('dust2-heatmap','pass')">Pass</button>
+        <button class="fail" onclick="mark('dust2-heatmap','fail')">Fail</button>
+        <button class="note" onclick="mark('dust2-heatmap','note')">Note</button>
+        <span id="dust2-heatmap-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="dust2-players">
+      <h3>Frame With Players</h3>
+      <img src="de_dust2_frame_with_players.png" alt="dust2 players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('dust2-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('dust2-players','fail')">Fail</button>
+        <button class="note" onclick="mark('dust2-players','note')">Note</button>
+        <span id="dust2-players-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-mirage" data-map="de_mirage">
+  <h2>de_mirage (Synthetic)</h2>
+  <div class="grid">
+    <div class="card" data-id="mirage-heatmap">
+      <h3>Frame Heatmap</h3>
+      <img src="de_mirage_frame_heatmap.png" alt="mirage heatmap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('mirage-heatmap','pass')">Pass</button>
+        <button class="fail" onclick="mark('mirage-heatmap','fail')">Fail</button>
+        <button class="note" onclick="mark('mirage-heatmap','note')">Note</button>
+        <span id="mirage-heatmap-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="mirage-players">
+      <h3>Frame With Players</h3>
+      <img src="de_mirage_frame_with_players.png" alt="mirage players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('mirage-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('mirage-players','fail')">Fail</button>
+        <button class="note" onclick="mark('mirage-players','note')">Note</button>
+        <span id="mirage-players-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-inferno" data-map="de_inferno">
+  <h2>de_inferno (Synthetic)</h2>
+  <div class="grid">
+    <div class="card" data-id="inferno-heatmap">
+      <h3>Frame Heatmap</h3>
+      <img src="de_inferno_frame_heatmap.png" alt="inferno heatmap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('inferno-heatmap','pass')">Pass</button>
+        <button class="fail" onclick="mark('inferno-heatmap','fail')">Fail</button>
+        <button class="note" onclick="mark('inferno-heatmap','note')">Note</button>
+        <span id="inferno-heatmap-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="inferno-players">
+      <h3>Frame With Players</h3>
+      <img src="de_inferno_frame_with_players.png" alt="inferno players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('inferno-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('inferno-players','fail')">Fail</button>
+        <button class="note" onclick="mark('inferno-players','note')">Note</button>
+        <span id="inferno-players-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-nuke" data-map="de_nuke">
+  <h2>de_nuke (Synthetic)</h2>
+  <div class="grid">
+    <div class="card" data-id="nuke-heatmap">
+      <h3>Frame Heatmap</h3>
+      <img src="de_nuke_frame_heatmap.png" alt="nuke heatmap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('nuke-heatmap','pass')">Pass</button>
+        <button class="fail" onclick="mark('nuke-heatmap','fail')">Fail</button>
+        <button class="note" onclick="mark('nuke-heatmap','note')">Note</button>
+        <span id="nuke-heatmap-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="nuke-players">
+      <h3>Frame With Players</h3>
+      <img src="de_nuke_frame_with_players.png" alt="nuke players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('nuke-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('nuke-players','fail')">Fail</button>
+        <button class="note" onclick="mark('nuke-players','note')">Note</button>
+        <span id="nuke-players-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-anubis" data-map="de_anubis">
+  <h2>de_anubis (Synthetic)</h2>
+  <div class="grid">
+    <div class="card" data-id="anubis-heatmap">
+      <h3>Frame Heatmap</h3>
+      <img src="de_anubis_frame_heatmap.png" alt="anubis heatmap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('anubis-heatmap','pass')">Pass</button>
+        <button class="fail" onclick="mark('anubis-heatmap','fail')">Fail</button>
+        <button class="note" onclick="mark('anubis-heatmap','note')">Note</button>
+        <span id="anubis-heatmap-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="anubis-players">
+      <h3>Frame With Players</h3>
+      <img src="de_anubis_frame_with_players.png" alt="anubis players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('anubis-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('anubis-players','fail')">Fail</button>
+        <button class="note" onclick="mark('anubis-players','note')">Note</button>
+        <span id="anubis-players-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-ancient" data-map="de_ancient">
+  <h2>de_ancient (Synthetic)</h2>
+  <div class="grid">
+    <div class="card" data-id="ancient-heatmap">
+      <h3>Frame Heatmap</h3>
+      <img src="de_ancient_frame_heatmap.png" alt="ancient heatmap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('ancient-heatmap','pass')">Pass</button>
+        <button class="fail" onclick="mark('ancient-heatmap','fail')">Fail</button>
+        <button class="note" onclick="mark('ancient-heatmap','note')">Note</button>
+        <span id="ancient-heatmap-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="ancient-players">
+      <h3>Frame With Players</h3>
+      <img src="de_ancient_frame_with_players.png" alt="ancient players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('ancient-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('ancient-players','fail')">Fail</button>
+        <button class="note" onclick="mark('ancient-players','note')">Note</button>
+        <span id="ancient-players-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="sec-vertigo" data-map="de_vertigo">
+  <h2>de_vertigo (Synthetic)</h2>
+  <div class="grid">
+    <div class="card" data-id="vertigo-heatmap">
+      <h3>Frame Heatmap</h3>
+      <img src="de_vertigo_frame_heatmap.png" alt="vertigo heatmap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('vertigo-heatmap','pass')">Pass</button>
+        <button class="fail" onclick="mark('vertigo-heatmap','fail')">Fail</button>
+        <button class="note" onclick="mark('vertigo-heatmap','note')">Note</button>
+        <span id="vertigo-heatmap-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="vertigo-players">
+      <h3>Frame With Players</h3>
+      <img src="de_vertigo_frame_with_players.png" alt="vertigo players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('vertigo-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('vertigo-players','fail')">Fail</button>
+        <button class="note" onclick="mark('vertigo-players','note')">Note</button>
+        <span id="vertigo-players-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Visibility comparison -->
+<div class="section" id="sec-visibility" data-map="visibility">
+  <h2>Sightline Analysis — BFS vs VisibilityChecker (CT player, dust2 real demo)</h2>
+  <div class="grid">
+    <div class="card" data-id="vis-triptych">
+      <h3>Triptych: BFS Reach | Visible Only | Blocked (BFS but no sightline)</h3>
+      <img src="visibility_comparison_triptych.png" alt="triptych">
+      <div class="verdict">
+        <button class="pass" onclick="mark('vis-triptych','pass')">Pass</button>
+        <button class="fail" onclick="mark('vis-triptych','fail')">Fail</button>
+        <button class="note" onclick="mark('vis-triptych','note')">Note</button>
+        <span id="vis-triptych-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="vis-bfs">
+      <h3>BFS Only (current approach) — all tiles reached by depth-10 BFS</h3>
+      <img src="visibility_comparison_bfs_only.png" alt="bfs only">
+      <div class="verdict">
+        <button class="pass" onclick="mark('vis-bfs','pass')">Pass</button>
+        <button class="fail" onclick="mark('vis-bfs','fail')">Fail</button>
+        <button class="note" onclick="mark('vis-bfs','note')">Note</button>
+        <span id="vis-bfs-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="vis-visible">
+      <h3>Visible Tiles Only — tiles player can actually see (ray-triangle check)</h3>
+      <img src="visibility_comparison_visible_only.png" alt="visible only">
+      <div class="verdict">
+        <button class="pass" onclick="mark('vis-visible','pass')">Pass</button>
+        <button class="fail" onclick="mark('vis-visible','fail')">Fail</button>
+        <button class="note" onclick="mark('vis-visible','note')">Note</button>
+        <span id="vis-visible-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Real demo -->
+<div class="section" id="sec-real" data-map="real">
+  <h2>de_dust2 — Real Demo (Aurora vs Heroic)</h2>
+  <div class="grid">
+    <div class="card" data-id="real-frame">
+      <h3>Real Frame Heatmap</h3>
+      <img src="de_dust2_real_frame.png" alt="real frame">
+      <div class="verdict">
+        <button class="pass" onclick="mark('real-frame','pass')">Pass</button>
+        <button class="fail" onclick="mark('real-frame','fail')">Fail</button>
+        <button class="note" onclick="mark('real-frame','note')">Note</button>
+        <span id="real-frame-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="real-players">
+      <h3>Real Frame With Players</h3>
+      <img src="de_dust2_real_frame_players.png" alt="real players">
+      <div class="verdict">
+        <button class="pass" onclick="mark('real-players','pass')">Pass</button>
+        <button class="fail" onclick="mark('real-players','fail')">Fail</button>
+        <button class="note" onclick="mark('real-players','note')">Note</button>
+        <span id="real-players-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="real-timeline">
+      <h3>Round Timeline</h3>
+      <img src="de_dust2_real_timeline.png" alt="real timeline">
+      <div class="verdict">
+        <button class="pass" onclick="mark('real-timeline','pass')">Pass</button>
+        <button class="fail" onclick="mark('real-timeline','fail')">Fail</button>
+        <button class="note" onclick="mark('real-timeline','note')">Note</button>
+        <span id="real-timeline-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="real-gif">
+      <h3>Round GIF Animation</h3>
+      <img src="de_dust2_real_round.gif" alt="real gif">
+      <div class="verdict">
+        <button class="pass" onclick="mark('real-gif','pass')">Pass</button>
+        <button class="fail" onclick="mark('real-gif','fail')">Fail</button>
+        <button class="note" onclick="mark('real-gif','note')">Note</button>
+        <span id="real-gif-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Overlap Analysis -->
+<div class="section" id="sec-overlap" data-map="overlap">
+  <h2>Overlap Coloring — How contested tiles look when both teams have BFS values</h2>
+  <div class="grid">
+    <div class="card" data-id="overlap-legend">
+      <h3>Color Legend: Red(T) → Yellow(Contested) → Green(CT)</h3>
+      <img src="overlap_color_legend.png" alt="color legend">
+    </div>
+    <div class="card" data-id="overlap-max">
+      <h3>Maximum Overlap — Round 4, 2v2 close quarters (140 contested tiles!)</h3>
+      <img src="max_overlap_round4_tick31815.png" alt="max overlap">
+      <div class="verdict">
+        <button class="pass" onclick="mark('overlap-max','pass')">Pass</button>
+        <button class="fail" onclick="mark('overlap-max','fail')">Fail</button>
+        <button class="note" onclick="mark('overlap-max','note')">Note</button>
+        <span id="overlap-max-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="overlap-r2">
+      <h3>Round 2 — T wins (bomb B) — Early / Mid / Late phases</h3>
+      <img src="overlap_round2_phases.png" alt="round 2 phases">
+      <div class="verdict">
+        <button class="pass" onclick="mark('overlap-r2','pass')">Pass</button>
+        <button class="fail" onclick="mark('overlap-r2','fail')">Fail</button>
+        <button class="note" onclick="mark('overlap-r2','note')">Note</button>
+        <span id="overlap-r2-status"></span>
+      </div>
+    </div>
+    <div class="card" data-id="overlap-r11">
+      <h3>Round 11 — T wins (bomb B) — Early / Mid / Late phases</h3>
+      <img src="overlap_round11_phases.png" alt="round 11 phases">
+      <div class="verdict">
+        <button class="pass" onclick="mark('overlap-r11','pass')">Pass</button>
+        <button class="fail" onclick="mark('overlap-r11','fail')">Fail</button>
+        <button class="note" onclick="mark('overlap-r11','note')">Note</button>
+        <span id="overlap-r11-status"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Demo Data Survey -->
+<div class="section" id="sec-demos" data-map="demos">
+  <h2>Available Demo Data — BO1 Matches by Map</h2>
+  <div class="summary" style="max-width:1000px;">
+    <h2>158 BO1 Demos Across 8 Maps (from 906 total .rar files)</h2>
+    <table>
+      <thead><tr><th>Map</th><th>BO1 Demos</th><th>Bar</th></tr></thead>
+      <tbody>
+        <tr><td>de_ancient</td><td>29</td><td><div style="background:#4a6fa5;height:18px;width:${29/29*300}px;border-radius:3px;display:inline-block;width:300px"></div></td></tr>
+        <tr><td>de_inferno</td><td>26</td><td><div style="background:#4a6fa5;height:18px;border-radius:3px;display:inline-block;width:269px"></div></td></tr>
+        <tr><td>de_anubis</td><td>24</td><td><div style="background:#4a6fa5;height:18px;border-radius:3px;display:inline-block;width:248px"></div></td></tr>
+        <tr><td>de_dust2</td><td>23</td><td><div style="background:#4a6fa5;height:18px;border-radius:3px;display:inline-block;width:238px"></div></td></tr>
+        <tr><td>de_nuke</td><td>22</td><td><div style="background:#4a6fa5;height:18px;border-radius:3px;display:inline-block;width:228px"></div></td></tr>
+        <tr><td>de_mirage</td><td>19</td><td><div style="background:#4a6fa5;height:18px;border-radius:3px;display:inline-block;width:197px"></div></td></tr>
+        <tr><td>de_vertigo</td><td>11</td><td><div style="background:#4a6fa5;height:18px;border-radius:3px;display:inline-block;width:114px"></div></td></tr>
+        <tr><td>de_train</td><td>4</td><td><div style="background:#4a6fa5;height:18px;border-radius:3px;display:inline-block;width:41px"></div></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;font-size:0.85rem;color:#aac;">
+      <strong>Total breakdown:</strong> 906 .rar files = 725 BO3 + 21 BO5 + 158 BO1 + 2 unmatched<br>
+      <strong>Recommendation:</strong> de_ancient (29) or de_inferno (26) for max BO1 coverage.<br>
+      de_dust2 has 23 BO1s plus 8 already-parsed demos = best overall if including parsed data.<br>
+      <strong>Location:</strong> <code>D:\projects\fps\misc_cs\hltv-scrape\data\</code><br>
+      <strong>Note:</strong> BO3/BO5 archives contain 2-5 demos each (map names inside the .rar), so total available demos across all maps is likely 2000+.
+    </p>
+  </div>
+</div>
+
+<!-- Sightline Research -->
+<div class="section" id="sec-sightline" data-map="sightline">
+  <h2>Sightline Integration — How to incorporate player view direction into map control</h2>
+  <div class="summary" style="max-width:1100px;">
+    <p style="color:#aac;margin-bottom:16px;">Player <code>yaw</code> (0-360 degrees horizontal look direction) is available per tick. CS2 FOV is ~90 degrees. Currently BFS propagates omnidirectionally — all tiles within depth 10 get equal treatment regardless of where the player is looking.</p>
+
+    <h2>Approaches (Recommended Order)</h2>
+    <table>
+      <thead><tr><th>Approach</th><th>Description</th><th>Complexity</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>C: Zoned Awareness</strong></td>
+          <td>3 zones: Focus (0-45deg, 1.0x), Peripheral (45-90deg, 1.0→0.3x), Rear (90+deg, 0.1x). Maps well to CS2 experience.</td>
+          <td>Low-Med</td>
+          <td style="color:#8f8"><strong>START HERE</strong> — best effort/impact ratio</td>
+        </tr>
+        <tr>
+          <td><strong>B: Angular Decay</strong></td>
+          <td>Smooth cosine decay: <code>weight = (1 + cos(angle)) / 2</code>. No sharp boundaries.</td>
+          <td>Low</td>
+          <td>Simpler alternative to C</td>
+        </tr>
+        <tr>
+          <td><strong>A: Binary FOV Cone</strong></td>
+          <td>Hard cutoff at 45deg half-angle. Tiles outside FOV = 0 value.</td>
+          <td>Low</td>
+          <td>Too harsh — sharp boundary is unrealistic</td>
+        </tr>
+        <tr>
+          <td><strong>F: Reaction Time Decay</strong></td>
+          <td><code>weight = exp(-2 * (angle/720 + 0.25))</code>. Based on human turn speed + reaction time. Flash integration natural.</td>
+          <td>Medium</td>
+          <td>Good 2nd iteration — principled temporal model</td>
+        </tr>
+        <tr>
+          <td><strong>D: Angular + VisibilityChecker</strong></td>
+          <td>Combine angular weight with geometric sightline check. Most accurate but ~0.5s/tick.</td>
+          <td>High</td>
+          <td>Defer until pre-computed visibility cache exists</td>
+        </tr>
+        <tr>
+          <td><strong>E: Pitch for multi-level</strong></td>
+          <td>Add pitch penalty when Z-delta is large (Nuke/Vertigo). Same-floor tiles unaffected.</td>
+          <td>Medium</td>
+          <td>Only needed for 2-3 maps</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:20px;">Flash Integration (add to any approach)</h3>
+    <p style="color:#bbd;font-size:0.85rem;">Multiply angular weights by <code>max(0, 1 - flash_duration/5.0)</code> for blinded players. A flashed player controlling nothing is more realistic. <code>flash_duration</code> is already available in tick data.</p>
+
+    <h3 style="margin-top:20px;">Implementation Impact</h3>
+    <p style="color:#bbd;font-size:0.85rem;">
+      <strong>Functions to modify:</strong> <code>_bfs_helper()</code> accepts player_pos + look_dir, computes angular weight per neighbor. <code>_positions_to_map_control_values()</code> passes orientation. <code>get_tick_map_control_tile_values()</code> reads yaw/pitch columns.<br>
+      <strong>Backward compat:</strong> Add <code>use_sightline: bool = False</code> parameter to public functions.
+    </p>
+  </div>
+</div>
+
+<!-- Weapon Research -->
+<div class="section" id="sec-weapon" data-map="weapon">
+  <h2>Weapon Integration — How weapon type should affect map control</h2>
+  <div class="summary" style="max-width:1100px;">
+    <p style="color:#aac;margin-bottom:16px;"><code>current_equip_value</code> (dollar amount) is available per tick. An AWP ($4750) threatens tiles thousands of units away; a pistol ($200) barely threatens the next room. Currently all players contribute equally.</p>
+
+    <h2>Approaches (Recommended Order)</h2>
+    <table>
+      <thead><tr><th>Approach</th><th>Description</th><th>Complexity</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>E: Equip Value Proxy</strong></td>
+          <td>Use <code>current_equip_value / 5000</code> as continuous multiplier on source value + BFS depth. No weapon classification needed.</td>
+          <td>Low</td>
+          <td style="color:#8f8"><strong>START HERE</strong> — zero new data dependencies</td>
+        </tr>
+        <tr>
+          <td><strong>A: Weapon-Class Depth</strong></td>
+          <td>AWP depth=20, Rifle=12, SMG=8, Pistol=6, Knife=2. Extends range of powerful weapons.</td>
+          <td>Low</td>
+          <td>Simple but needs weapon classification</td>
+        </tr>
+        <tr>
+          <td><strong>B: Source Value Multiplier</strong></td>
+          <td>AWP=1.5x, Rifle=1.0x, SMG=0.7x, Pistol=0.5x, Knife=0.1x. Same depth, different strength.</td>
+          <td>Low</td>
+          <td>Doesn't extend range — misses AWP's key property</td>
+        </tr>
+        <tr>
+          <td><strong>C: Distance-Based Decay</strong></td>
+          <td>Replace hop-count BFS with Euclidean distance + weapon-specific exponential decay curves.</td>
+          <td>Medium</td>
+          <td>Correct long-term architecture — nav-density independent</td>
+        </tr>
+        <tr>
+          <td><strong>G: Utility Area Denial</strong></td>
+          <td>Smokes → set tiles to 0.5 (neutral). Molotovs → set tiles to thrower's team control. Uses grenade events.</td>
+          <td>Medium</td>
+          <td style="color:#ee8"><strong>PARALLEL workstream</strong> — independent, high tactical value</td>
+        </tr>
+        <tr>
+          <td><strong>F: Best vs Equipped Weapon</strong></td>
+          <td>Blend immediate threat (equipped) with potential threat (best in inventory) via switch-time penalty.</td>
+          <td>Med-High</td>
+          <td>Needs inventory parsing — defer</td>
+        </tr>
+        <tr>
+          <td><strong>D: Directional Threat</strong></td>
+          <td>Combine sightline + weapon range. AWP watching Long = deep narrow cone. SMG in tunnels = wide shallow zone.</td>
+          <td>High</td>
+          <td>The dream — combine sightline + weapon work</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:20px;">Weapon Reference Table</h3>
+    <table>
+      <thead><tr><th>Category</th><th>Examples</th><th>Equip Value</th><th>Suggested Depth</th><th>Suggested Mult</th></tr></thead>
+      <tbody>
+        <tr><td>AWP</td><td>awp</td><td>$4750</td><td>20</td><td>1.4x</td></tr>
+        <tr><td>Sniper</td><td>ssg08</td><td>$1700</td><td>16</td><td>1.1x</td></tr>
+        <tr><td>Rifle</td><td>ak47, m4a4, aug</td><td>$1800-3300</td><td>12</td><td>1.0x</td></tr>
+        <tr><td>SMG</td><td>mac10, mp9, ump</td><td>$1050-2350</td><td>8</td><td>0.7x</td></tr>
+        <tr><td>Heavy Pistol</td><td>deagle</td><td>$700</td><td>8</td><td>0.7x</td></tr>
+        <tr><td>Pistol</td><td>glock, usp</td><td>$200-500</td><td>6</td><td>0.5x</td></tr>
+        <tr><td>Shotgun</td><td>nova, mag7</td><td>$1050-1800</td><td>5</td><td>0.6x</td></tr>
+        <tr><td>Knife</td><td>knife</td><td>$0</td><td>2</td><td>0.1x</td></tr>
+        <tr><td>Grenade</td><td>smoke, flash, molly</td><td>$200-600</td><td>3</td><td>0.2x</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:20px;">Combined Roadmap</h3>
+    <table>
+      <thead><tr><th>Phase</th><th>What</th><th>Effort</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Zoned Awareness sightline</td><td>1-2 days</td><td style="color:#8f8">High</td></tr>
+        <tr><td>2</td><td>Equipment Value weapon scaling</td><td>0.5-1 day</td><td style="color:#ee8">Medium</td></tr>
+        <tr><td>3</td><td>Flash duration integration</td><td>0.5 day</td><td style="color:#ee8">Medium</td></tr>
+        <tr><td>4</td><td>Utility area denial (smoke/molotov)</td><td>1-2 days</td><td style="color:#8f8">High</td></tr>
+        <tr><td>5</td><td>Distance-based weapon decay</td><td>1-2 days</td><td style="color:#ee8">Medium</td></tr>
+        <tr><td>6</td><td>Pre-computed visibility cache</td><td>2-3 days</td><td style="color:#8f8">High</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Summary -->
+<div class="section visible" id="sec-summary">
+  <div class="summary">
+    <h2>Review Summary</h2>
+    <table>
+      <thead><tr><th>Image</th><th>Status</th></tr></thead>
+      <tbody id="results-body"></tbody>
+    </table>
+    <p style="margin-top:14px; font-size:0.8rem; color:#888;">Click map tabs above to review each visualization, then mark pass/fail/note.</p>
+  </div>
+</div>
+
+<script>
+const maps = [
+  { id: 'dust2', label: 'de_dust2' },
+  { id: 'mirage', label: 'de_mirage' },
+  { id: 'inferno', label: 'de_inferno' },
+  { id: 'nuke', label: 'de_nuke' },
+  { id: 'anubis', label: 'de_anubis' },
+  { id: 'ancient', label: 'de_ancient' },
+  { id: 'vertigo', label: 'de_vertigo' },
+  { id: 'visibility', label: 'Sightline Analysis' },
+  { id: 'real', label: 'Real Demo' },
+  { id: 'overlap', label: 'Overlap' },
+  { id: 'demos', label: 'Demo Data' },
+  { id: 'sightline', label: 'Sightline Ideas' },
+  { id: 'weapon', label: 'Weapon Ideas' },
+  { id: 'summary', label: 'Summary' },
+];
+
+const verdicts = {};
+
+// Build nav
+const nav = document.getElementById('nav');
+maps.forEach(m => {
+  const btn = document.createElement('button');
+  btn.textContent = m.label;
+  btn.dataset.target = m.id;
+  btn.onclick = () => showSection(m.id);
+  nav.appendChild(btn);
+});
+
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+  document.getElementById('sec-' + id).classList.add('visible');
+  document.querySelectorAll('.nav button').forEach(b => {
+    b.classList.toggle('active', b.dataset.target === id);
+  });
+  if (id === 'summary') updateSummary();
+}
+
+function mark(id, status) {
+  verdicts[id] = status;
+  const span = document.getElementById(id + '-status');
+  const labels = { pass: 'PASS', fail: 'FAIL', note: 'NEEDS NOTE' };
+  const colors = { pass: '#8f8', fail: '#f88', note: '#ee8' };
+  span.textContent = labels[status];
+  span.style.color = colors[status];
+}
+
+function updateSummary() {
+  const tbody = document.getElementById('results-body');
+  tbody.innerHTML = '';
+  const allCards = document.querySelectorAll('.card[data-id]');
+  allCards.forEach(card => {
+    const id = card.dataset.id;
+    const title = card.querySelector('h3').textContent;
+    const map = card.closest('.section').querySelector('h2')?.textContent || '';
+    const status = verdicts[id] || 'not reviewed';
+    const tr = document.createElement('tr');
+    const colors = { pass: '#8f8', fail: '#f88', note: '#ee8', 'not reviewed': '#888' };
+    tr.innerHTML = `<td>${map} — ${title}</td><td class="status" style="color:${colors[status]}">${status.toUpperCase()}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// Zoom on click
+document.addEventListener('click', e => {
+  if (e.target.tagName === 'IMG' && e.target.closest('.card')) {
+    e.target.classList.toggle('zoomed');
+  }
+});
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('img.zoomed').forEach(i => i.classList.remove('zoomed'));
+  }
+  const btns = [...nav.querySelectorAll('button')];
+  const active = btns.findIndex(b => b.classList.contains('active'));
+  if (e.key === 'ArrowRight' && active < btns.length - 1) btns[active + 1].click();
+  if (e.key === 'ArrowLeft' && active > 0) btns[active - 1].click();
+});
+
+// Start on summary
+showSection('dust2');
+</script>
+</body>
+</html>
